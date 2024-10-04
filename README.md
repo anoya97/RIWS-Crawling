@@ -13,6 +13,6 @@ Grupos: de hasta 3 personas
   - Tecnologías usadas.
  
 # Entregables:
-- [Código fuente](https://www.thefork.es/restaurantes/madrid-c328022/con-estrella-michelin-t4423)
+- https://www.thefork.es/restaurantes/madrid-c328022/con-estrella-michelin-t4423
 - https://guide.michelin.com/es/es
 - https://guiarepsol.com/es/soles-repsol/ediciones-de-soles-guia-repsol/
