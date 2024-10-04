@@ -12,7 +12,7 @@ Grupos: de hasta 3 personas
   - Funcionalidades implementadas.
   - Tecnologías usadas.
  
-# Entregables:
+# Webs:
 - https://www.thefork.es/restaurantes/madrid-c328022/con-estrella-michelin-t4423
 - https://guide.michelin.com/es/es
 - https://guiarepsol.com/es/soles-repsol/ediciones-de-soles-guia-repsol/
