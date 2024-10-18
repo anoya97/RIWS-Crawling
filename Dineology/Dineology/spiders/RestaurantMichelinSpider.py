@@ -9,7 +9,7 @@ class RestaurantMichelinSpider(scrapy.Spider):
 
     # Esta URL mejor que la que está puesta: https://guide.michelin.com/es/es/restaurantes/restaurantes-con-estrellas
     # Dejo esta porque así lo podemos ver nosotros mejor porque se ordena por ubicación
-    start_urls = ['https://guide.michelin.com/es/es/comunidad-de-madrid/restaurantes']
+    start_urls = ['https://guide.michelin.com/es/es/comunidad-de-madrid/restaurantes/restaurantes-con-estrellas']
 
     def parse(self, response):
         for restaurant in response.css('div.card__menu'):  # Selecciona cada bloque de restaurante
@@ -63,8 +63,9 @@ class RestaurantMichelinSpider(scrapy.Spider):
         item['restaurant_photo_url'] = response.css('div.masthead__gallery-image::attr(data-bg)').get()
         # item['restaurant_photo_url'] = response.css('img.ci-image .lazyload .entered .ci-image-loaded .loaded::attr(ci-src)').get()
 
-        item['star_number'] = response.css('div.restaurant-details__classification img.michelin-award').getall()
-        print(item['star_number'])
+        #item['star_number'] = response.css('div.restaurant-details__classification img.michelin-award').getall()
+        star_icons = response.css('div.restaurant-details__classification img.michelin-award').getall()
+        item['star_number'] = len(star_icons)
 
 
         item['description'] = ''
