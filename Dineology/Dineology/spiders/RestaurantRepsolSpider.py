@@ -1,5 +1,5 @@
 import scrapy
-from ..items import DineologyItem
+from ..items import DineologyItemRepsol
 
 class RestaurantRepsolSpider(scrapy.Spider):
     name = "RestaurantRepsolSpider"
@@ -9,7 +9,7 @@ class RestaurantRepsolSpider(scrapy.Spider):
     def parse(self, response):
         for restaurant in response.css(''):  # Selecciona cada bloque de restaurante
 
-            item = DineologyItem()
+            item = DineologyItemRepsol()
             item['name'] = ""
             item['direction'] = ""
             item['price'] = ""

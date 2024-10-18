@@ -1,7 +1,8 @@
 import re
 
 import scrapy
-from ..items import DineologyItem
+from ..items import DineologyItemMichelin
+
 
 class RestaurantMichelinSpider(scrapy.Spider):
     name = "RestaurantMichelinSpider"
@@ -11,8 +12,8 @@ class RestaurantMichelinSpider(scrapy.Spider):
     start_urls = ['https://guide.michelin.com/es/es/comunidad-de-madrid/restaurantes']
 
     def parse(self, response):
-        for restaurant in response.css('div.card__menu-content'):  # Selecciona cada bloque de restaurante
-            item = DineologyItem()
+        for restaurant in response.css('div.card__menu'):  # Selecciona cada bloque de restaurante
+            item = DineologyItemMichelin()
 
             # Limpia el nombre del restaurante
             item['name'] = restaurant.css('h3.card__menu-content--title a::text').get().strip()
@@ -25,7 +26,10 @@ class RestaurantMichelinSpider(scrapy.Spider):
             item['price'] = price_parts[1].strip().split('·')[0].strip()
             item['meal_type'] = price_parts[1].strip().split('·')[1].strip()
 
-            yield item
+            detail_page = restaurant.css('div.card__menu-image a::attr(href)').get()
+            detail_page_url = response.urljoin(detail_page)
+            yield scrapy.Request(detail_page_url, callback=self.parse_detail_page, meta={'item': item})
+
 
 
         #Follow the next page
@@ -50,3 +54,21 @@ class RestaurantMichelinSpider(scrapy.Spider):
         # Extraer el número de página actual de la URL
         match = re.search(r'page/(\d+)', url)
         return int(match.group(1)) if match else 1  # Devuelve 1 si no se encuentra el número de página
+
+
+    def parse_detail_page(self, response):
+
+        item = response.meta['item']
+
+        item['restaurant_photo_url'] = response.css('div.masthead__gallery-image::attr(data-bg)').get()
+        # item['restaurant_photo_url'] = response.css('img.ci-image .lazyload .entered .ci-image-loaded .loaded::attr(ci-src)').get()
+
+        item['star_number'] = response.css('div.restaurant-details__classification img.michelin-award').getall()
+        print(item['star_number'])
+
+
+        item['description'] = ''
+        item['contact_number'] = ''
+        item['working_hours'] = ''
+
+        yield item

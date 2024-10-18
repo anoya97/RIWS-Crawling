@@ -5,11 +5,29 @@
 
 import scrapy
 
-class DineologyItem(scrapy.Item):
+class DineologyItemMichelin(scrapy.Item):
     # define the fields for your item here like:
     name = scrapy.Field()
     direction = scrapy.Field()
     price = scrapy.Field()
     meal_type = scrapy.Field()
+    star_number = scrapy.Field()
+    description = scrapy.Field()
+    contact_number = scrapy.Field()
+    working_hours = scrapy.Field()
+    restaurant_photo_url = scrapy.Field()
+
+    pass
+
+class DineologyItemRepsol(scrapy.Item):
+    # define the fields for your item here like:
+    name = scrapy.Field()
+    soles_number = scrapy.Field()
+    short_menu_description = scrapy.Field()
+    menu_options = scrapy.Field()
+    restaurant_services =  scrapy.Field()
+    owners_name = scrapy.Field()
+    web_url = scrapy.Field()
+    instagram_user = scrapy.Field()
 
     pass
