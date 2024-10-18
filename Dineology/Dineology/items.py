@@ -10,5 +10,6 @@ class DineologyItem(scrapy.Item):
     name = scrapy.Field()
     direction = scrapy.Field()
     price = scrapy.Field()
+    meal_type = scrapy.Field()
 
     pass

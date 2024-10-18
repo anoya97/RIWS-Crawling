@@ -1,9 +1,13 @@
+import re
+
 import scrapy
 from ..items import DineologyItem
 
 class RestaurantMichelinSpider(scrapy.Spider):
     name = "RestaurantMichelinSpider"
 
+    # Esta URL mejor que la que está puesta: https://guide.michelin.com/es/es/restaurantes/restaurantes-con-estrellas
+    # Dejo esta porque así lo podemos ver nosotros mejor porque se ordena por ubicación
     start_urls = ['https://guide.michelin.com/es/es/comunidad-de-madrid/restaurantes']
 
     def parse(self, response):
@@ -18,13 +22,31 @@ class RestaurantMichelinSpider(scrapy.Spider):
 
             # Extrae solo el precio, limpiando los saltos de línea y espacios adicionales
             price_parts = restaurant.css('div.card__menu-footer--score.pl-text::text').getall()
-            item['price'] = price_parts[0].strip() if price_parts else ''
+            item['price'] = price_parts[1].strip().split('·')[0].strip()
+            item['meal_type'] = price_parts[1].strip().split('·')[1].strip()
 
             yield item
 
 
-    #Follow the next page
-        next_page = response.css('li.next a::attr(href)').get()
-        if next_page is not None:
-            next_page = response.urljoin(next_page)  # Construir la URL completa
-            yield scrapy.Request(next_page, callback=self.parse)
+        #Follow the next page
+        # Obtener todos los enlaces a páginas siguientes
+        # HAY QUE CAMBIAR NEXT POR ARROW, ESTÁ ASÍ PARA QUE NO COJA TANTAS PÁGINAS DE GOLPE Y PODAMOS PROBAR CON UNAS POCAS SOLO
+        next_pages = response.css('li.next a::attr(href)').getall()
+
+        # Extraer el número actual de la página de la URL
+        current_page_number = self.extract_current_page_number(response.url)
+
+        # Calcular el número de la siguiente página
+        next_page_number = current_page_number + 1
+
+        # Filtrar y seguir el enlace correcto
+        for link in next_pages:
+            if f'page/{next_page_number}' in link:
+                next_page_url = response.urljoin(link)  # Construir la URL completa
+                yield scrapy.Request(next_page_url, callback=self.parse)
+
+
+    def extract_current_page_number(self, url):
+        # Extraer el número de página actual de la URL
+        match = re.search(r'page/(\d+)', url)
+        return int(match.group(1)) if match else 1  # Devuelve 1 si no se encuentra el número de página

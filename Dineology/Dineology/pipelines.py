@@ -20,7 +20,7 @@ class DineologyJsonPipeline:
 
     def process_item(self, item, spider):
         # Reemplazar la ñ por n y caracteres especiales en dirección
-        item['direction'] = item['direction'].replace('ñ', 'n').replace('Ñ', 'N')
+        # item['direction'] = item['direction'].replace('ñ', 'n').replace('Ñ', 'N')
 
         # Limpiar cada campo del item antes de escribirlo
         item = {key: value.strip() if isinstance(value, str) else value for key, value in item.items()}
