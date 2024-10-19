@@ -7,12 +7,11 @@ class RestaurantRepsolSpider(scrapy.Spider):
     start_urls = ['https://guiarepsol.com/es/soles-repsol/ediciones-de-soles-guia-repsol/']
 
     def parse(self, response):
-        for restaurant in response.css(''):  # Selecciona cada bloque de restaurante
+        for restaurant in response.css('li.col-6 col-sm-4 -md-3'):  # Selecciona cada bloque de restaurante
 
             item = DineologyItemRepsol()
-            item['name'] = ""
-            item['direction'] = ""
-            item['price'] = ""
+            item['name'] = restaurant.css('')
+
 
             yield item
 

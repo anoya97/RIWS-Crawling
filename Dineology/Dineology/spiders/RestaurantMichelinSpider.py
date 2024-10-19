@@ -18,9 +18,6 @@ class RestaurantMichelinSpider(scrapy.Spider):
             # Limpia el nombre del restaurante
             item['name'] = restaurant.css('h3.card__menu-content--title a::text').get().strip()
 
-            # Limpia la dirección (si contiene varios fragmentos, puedes concatenarlos)
-            item['direction'] = restaurant.css('div.card__menu-footer--score.pl-text::text').get().strip()
-
             # Extrae solo el precio, limpiando los saltos de línea y espacios adicionales
             price_parts = restaurant.css('div.card__menu-footer--score.pl-text::text').getall()
             item['price'] = price_parts[1].strip().split('·')[0].strip()
@@ -29,8 +26,6 @@ class RestaurantMichelinSpider(scrapy.Spider):
             detail_page = restaurant.css('div.card__menu-image a::attr(href)').get()
             detail_page_url = response.urljoin(detail_page)
             yield scrapy.Request(detail_page_url, callback=self.parse_detail_page, meta={'item': item})
-
-
 
         #Follow the next page
         # Obtener todos los enlaces a páginas siguientes
@@ -58,18 +53,32 @@ class RestaurantMichelinSpider(scrapy.Spider):
 
     def parse_detail_page(self, response):
 
+        # Obtenemos el item completo
         item = response.meta['item']
-
+        
         item['restaurant_photo_url'] = response.css('div.masthead__gallery-image::attr(data-bg)').get()
-        # item['restaurant_photo_url'] = response.css('img.ci-image .lazyload .entered .ci-image-loaded .loaded::attr(ci-src)').get()
 
-        #item['star_number'] = response.css('div.restaurant-details__classification img.michelin-award').getall()
         star_icons = response.css('div.restaurant-details__classification img.michelin-award').getall()
         item['star_number'] = len(star_icons)
 
+        item['direction'] = response.css('ul.restaurant-details__heading--list li::text').get()
 
-        item['description'] = ''
-        item['contact_number'] = ''
-        item['working_hours'] = ''
+        item['description'] = response.css('div.restaurant-details__description--text p::text').get()
+        item['contact_number'] = response.css('div.d-flex span::text').get().strip()
+
+        # Seleccionar el contenedor padre que agrupa los días y horarios
+        schedule_rows = response.css('div.open__time.d-flex')
+
+        working_schedule = {}
+
+        for row in schedule_rows:
+            week_day = row.css('div.col-lg-5 .open__time-hour::text').get().strip()
+
+            hours = row.css('div.col-lg-7 div.open__time div::text').getall()
+            cleaned_hours = [hour.strip() for hour in hours if hour.strip()]
+
+            working_schedule[week_day] = cleaned_hours
+
+        item['working_hours'] = working_schedule
 
         yield item
