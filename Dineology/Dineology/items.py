@@ -23,6 +23,7 @@ class DineologyItemRepsol(scrapy.Item):
     # define the fields for your item here like:
     name = scrapy.Field()
     soles_number = scrapy.Field()
+    description = scrapy.Field()
     short_menu_description = scrapy.Field()
     menu_options = scrapy.Field()
     restaurant_services =  scrapy.Field()
