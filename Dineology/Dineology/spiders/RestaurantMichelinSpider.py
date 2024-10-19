@@ -65,6 +65,7 @@ class RestaurantMichelinSpider(scrapy.Spider):
 
         item['description'] = response.css('div.restaurant-details__description--text p::text').get()
         item['contact_number'] = response.css('div.d-flex span::text').get().strip()
+        item['web_url'] = response.css('div.collapse__block-item.link-item a::attr(href)').get()
 
         # Seleccionar el contenedor padre que agrupa los días y horarios
         schedule_rows = response.css('div.open__time.d-flex')

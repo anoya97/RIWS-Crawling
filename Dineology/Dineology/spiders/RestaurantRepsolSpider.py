@@ -34,8 +34,14 @@ class RestaurantRepsolSpider(scrapy.Spider):
         menu_options = []
         # [Nombre, descripción, precio]
         for menu_option in menu_option_list:
-            name = menu_option.css('span.title__item::text').get().strip()
-            price = menu_option.css('div.header__item span::text').re_first(r'\d+,\d{2}€')
+            # Captura el nombre de la opción del menú (dentro de un span.title__item)
+            name = menu_option.css('span.title__item *::text').getall()
+            name = ' '.join([n.strip() for n in name if n.strip()])  # Limpiar y unir el texto
+
+            # Captura el precio directamente del span que lo contiene
+            price = menu_option.css('div.header__item span:nth-child(2)::text').get()  # Segundo span contiene el precio
+            if price:
+                price = price.strip()  # Asegúrate de que no haya espacios adicionales
 
             description = menu_option.css('p.description__item::text').get()
             description = description.strip() if description else ''
@@ -48,19 +54,46 @@ class RestaurantRepsolSpider(scrapy.Spider):
 
         item['menu_options'] = menu_options
 
-        services_list = response.css('li.service__list__item').getall()
-        services_totals = []
-        for service in services_list:
-            services_totals = services_totals.append(service.css('span.rp-body-1.info::text').get())
-        item['restaurant_services'] = services_totals
+        servicios = response.css('ul.service__list li.service__list__item span.rp-body-1.info::text').getall()
+        item['restaurant_services'] = [servicio.strip() for servicio in servicios]
 
-        yield item
-#     name
-#     soles_number
-#     description
-#     short_menu_description
-#     menu_options
-#     restaurant_services
-#     owners_name
-#     web_url
-#     instagram_user
+        owners = response.xpath('//span[contains(text(), "Propietario")]/following-sibling::span/span/text()').getall()
+        item['owners_name'] = []
+        for i, owner in enumerate(owners):
+            cleaned_owner = owner.strip()  # Quitar espacios en blanco
+
+            # Quitar la coma si es el primer elemento
+            if i == 0 and cleaned_owner.endswith(','):
+                cleaned_owner = cleaned_owner[:-1]  # Quitar la última coma
+
+            item['owners_name'].append(cleaned_owner)
+
+        item['web_url'] = response.xpath('//li[div/span[contains(text(), "Web")]]/a/@href').get()
+
+
+        user = response.xpath('//span[contains(text(), "Instagram")]/following-sibling::p/text()').get()
+
+        if user.startswith("@"):
+             item['instagram_user'] = user
+        else:
+            item['instagram_user'] = '@' + user.rstrip('/').split('/')[-1]
+
+        item['contact_number'] = response.xpath('//li[@class="basic__list__item"]//span[contains(text(), "Teléfono")]/following-sibling::p/text()').get()
+
+        item['direction'] = response.xpath('//li[@class="basic__list__item"]//span[contains(text(), "Ubicación")]/following-sibling::p/text()').get()
+
+        item['restaurant_photo_url'] = 'https:://guiarepsol.com' + response.css('div.listado-imagenes div::attr(data-path)').get()
+
+
+        meals = response.xpath('//span[contains(text(), "Tipo de cocina")]/following-sibling::span/span/text()').getall()
+        item['meal_type'] = []
+        for i, meal in enumerate(meals):
+            cleaned_meal = meal.strip()  # Quitar espacios en blanco
+
+            # Quitar la coma si es el primer elemento
+            if i == 0 and cleaned_meal.endswith(','):
+                cleaned_meal = cleaned_meal[:-1]  # Quitar la última coma
+
+            item['meal_type'].append(cleaned_meal)
+            yield item
+

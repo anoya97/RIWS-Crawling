@@ -16,6 +16,7 @@ class DineologyItemMichelin(scrapy.Item):
     contact_number = scrapy.Field()
     working_hours = scrapy.Field()
     restaurant_photo_url = scrapy.Field()
+    web_url = scrapy.Field()
 
     pass
 
@@ -30,5 +31,9 @@ class DineologyItemRepsol(scrapy.Item):
     owners_name = scrapy.Field()
     web_url = scrapy.Field()
     instagram_user = scrapy.Field()
+    contact_number = scrapy.Field()
+    restaurant_photo_url = scrapy.Field()
+    direction = scrapy.Field()
+    meal_type = scrapy.Field()
 
     pass
