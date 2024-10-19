@@ -1,4 +1,6 @@
 import scrapy
+from openpyxl.utils.datetime import days_to_time
+
 from ..items import DineologyItemRepsol
 
 class RestaurantRepsolSpider(scrapy.Spider):
@@ -102,5 +104,38 @@ class RestaurantRepsolSpider(scrapy.Spider):
 
             item['meal_type'].append(cleaned_meal)
 
+        # opening_hours = {
+        #     "Lunes": [],
+        #     "Martes": [],
+        #     "Miércoles": [],
+        #     "Jueves": [],
+        #     "Viernes": [],
+        #     "Sábado": [],
+        #     "Domingo": []
+        # }
+        #
+        # # Seleccionar los elementos que contienen los días y horarios
+        # first_div = response.css('div.list-basic-component:first-of-type')
+        # print(first_div.getall())
+        # schedule_rows = first_div.css('ul.list-reset-appearance')
+        # print()
+        # print()
+        # print()
+        # print(schedule_rows.getall())
+        # print()
+        # print()
+        # print()
+        # for row in schedule_rows.css('li.title.rp-title-2'):
+        #     # Extraer el nombre del día
+        #     day_name = row.css('::text').get().strip()
+        #     day_schedule = row.css('span.rp-body-2::text').get()
+        #     if day_schedule:
+        #         if "Cerrado" in day_schedule:
+        #             opening_hours[day_name] = ["cerrado"]
+        #         else:
+        #             # Extrae horarios y los limpia
+        #             opening_hours[day_name] = [h.strip().replace(" - ", "-") for h in day_schedule.split(',')]
+        #
+        # item['working_schedule'] = opening_hours
         yield item
 

@@ -35,5 +35,6 @@ class DineologyItemRepsol(scrapy.Item):
     restaurant_photo_url = scrapy.Field()
     direction = scrapy.Field()
     meal_type = scrapy.Field()
+    working_schedule = scrapy.Field()
 
     pass
