@@ -63,7 +63,7 @@ class RestaurantMichelinSpider(scrapy.Spider):
 
         item['direction'] = response.css('ul.restaurant-details__heading--list li::text').get()
 
-        item['description'] = response.css('div.restaurant-details__description--text p::text').get()
+        item['description'] = ''.join(response.css('div.restaurant-details__description--text p *::text').getall()).strip()
         item['contact_number'] = response.css('div.d-flex span::text').get().strip()
         item['web_url'] = response.css('div.collapse__block-item.link-item a::attr(href)').get()
 
@@ -80,6 +80,6 @@ class RestaurantMichelinSpider(scrapy.Spider):
 
             working_schedule[week_day] = cleaned_hours
 
-        item['working_hours'] = working_schedule
+        item['working_schedule'] = working_schedule
 
         yield item

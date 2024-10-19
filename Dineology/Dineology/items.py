@@ -14,7 +14,7 @@ class DineologyItemMichelin(scrapy.Item):
     star_number = scrapy.Field()
     description = scrapy.Field()
     contact_number = scrapy.Field()
-    working_hours = scrapy.Field()
+    working_schedule = scrapy.Field()
     restaurant_photo_url = scrapy.Field()
     web_url = scrapy.Field()
 

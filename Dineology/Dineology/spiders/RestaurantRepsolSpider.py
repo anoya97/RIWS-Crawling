@@ -7,7 +7,12 @@ class RestaurantRepsolSpider(scrapy.Spider):
     start_urls = ['https://guiarepsol.com/es/soles-repsol/ediciones-de-soles-guia-repsol/']
 
     def parse(self, response):
-        for restaurant in response.css('li.col-6.col-sm-4.col-md-3'):  # Selecciona cada bloque de restaurante
+
+        restaurant_containers = response.css('div.container-gene-result.block--active.filter--active[data-category="sol-1"], '
+                                      'div.container-gene-result.block--active.filter--active[data-category="sol-2"], '
+                                      'div.container-gene-result.block--active.filter--active[data-category="sol-3"]')
+
+        for restaurant in restaurant_containers.css('li.col-6.col-sm-4.col-md-3'):  # Selecciona cada bloque de restaurante
 
             detail_page = restaurant.css('a::attr(href)').get()
             detail_page_url = response.urljoin(detail_page)
@@ -24,7 +29,7 @@ class RestaurantRepsolSpider(scrapy.Spider):
 
         item['soles_number'] = int(number_soles.replace("soles","").replace("sol","").replace("Recomendado","0"))
 
-        item['description'] = response.css('div.description-block p::text').get().strip()
+        item['description'] = ''.join(response.css('div.description-block p *::text').getall()).strip()
 
         item['short_menu_description'] = response.css('section.list-info-component p::text').get()
 
@@ -70,22 +75,23 @@ class RestaurantRepsolSpider(scrapy.Spider):
 
         item['web_url'] = response.xpath('//li[div/span[contains(text(), "Web")]]/a/@href').get()
 
+        instagram_user = response.xpath('//span[contains(text(), "Instagram")]/following-sibling::p/text()').get()
 
-        user = response.xpath('//span[contains(text(), "Instagram")]/following-sibling::p/text()').get()
-
-        if user.startswith("@"):
-             item['instagram_user'] = user
-        else:
-            item['instagram_user'] = '@' + user.rstrip('/').split('/')[-1]
+        if instagram_user:
+            if  instagram_user.startswith("@"):
+                item['instagram_user'] = instagram_user
+            else:
+                item['instagram_user'] = '@' + instagram_user.rstrip('/').split('/')[-1]
 
         item['contact_number'] = response.xpath('//li[@class="basic__list__item"]//span[contains(text(), "Teléfono")]/following-sibling::p/text()').get()
 
         item['direction'] = response.xpath('//li[@class="basic__list__item"]//span[contains(text(), "Ubicación")]/following-sibling::p/text()').get()
 
-        item['restaurant_photo_url'] = 'https:://guiarepsol.com' + response.css('div.listado-imagenes div::attr(data-path)').get()
-
+        if response.css('div.listado-imagenes div::attr(data-path)').get():
+            item['restaurant_photo_url'] = 'https:://guiarepsol.com' + response.css('div.listado-imagenes div::attr(data-path)').get()
 
         meals = response.xpath('//span[contains(text(), "Tipo de cocina")]/following-sibling::span/span/text()').getall()
+
         item['meal_type'] = []
         for i, meal in enumerate(meals):
             cleaned_meal = meal.strip()  # Quitar espacios en blanco
@@ -95,5 +101,6 @@ class RestaurantRepsolSpider(scrapy.Spider):
                 cleaned_meal = cleaned_meal[:-1]  # Quitar la última coma
 
             item['meal_type'].append(cleaned_meal)
-            yield item
+
+        yield item
 

@@ -10,7 +10,8 @@ import json
 
 class DineologyJsonPipeline:
     def open_spider(self, spider):
-        self.file = open('dineology.json', 'w', encoding='utf-8')
+        self.filename = f'dineology_{spider.name}.json'
+        self.file = open(self.filename, 'w', encoding='utf-8')
         self.file.write('[')
         self.first_item = True  # Check if is first
 
