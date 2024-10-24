@@ -3,9 +3,9 @@
     "price": "€€€€",
     "meal_type": "Pescados y mariscos",
     "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/81f9a52acb694eeca5a2a9246b9acf29.jpeg?width=1000",
-    "star_number": 1,
-    "direction": "Vivero 3, Madrid, 28040, España",
-    "description": "Esta casa es una auténtica oda al PRODUCTO, con mayúsculas, y debemos verla como... ¡el gran homenaje al mar y al legado familiar de la ya mítica Pescaderías Coruñesas!El amplio y sorprendente local, ubicado en una antigua nave industria que en su día funcionó como taller de bombas de bobinas eléctricas, presenta distintos espacios para la organización de eventos y un patio interior que resulta ideal para rematar la comida tomando una copa o un café. Como es lógico, aquí la oferta se centra en sus impresionantes pescados y mariscos; no en vano, suelen mostrárselos al comensal cuando presentan la carta, compuesta por cuatro opciones de menús (todos con un producto principal que cambian a diario y la opción de elegir de tres a seis entrantes). Siempre encontrará un plato crudo, otro marinado y uno de cuchara, así como unos magníficos carros de quesos y postres. ¡Completa bodega internacional!",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
     "contact_number": "+34 915 45 72 86",
     "web_url": "https://www.desde1911.es",
     "working_schedule": {
@@ -33,13 +33,367 @@
     }
 },
 {
+    "name": "Zuara Sushi",
+    "price": "€€€€",
+    "meal_type": "Japonesa",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/8b5805ee84d34b0ca653c87404406f53.jpg?width=1000",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 633 46 77 80",
+    "web_url": "http://www.zuarasushi.com",
+    "working_schedule": {
+        "Lunes": [
+            "14:00-14:15",
+            "21:00-21:15"
+        ],
+        "Martes": [
+            "14:00-14:15",
+            "21:00-21:15"
+        ],
+        "Miércoles": [
+            "14:00-14:15",
+            "21:00-21:15"
+        ],
+        "Jueves": [
+            "14:00-14:15",
+            "21:00-21:15"
+        ],
+        "Viernes": [
+            "14:00-14:15",
+            "21:00-21:15"
+        ],
+        "Sábado": [
+            "cerrado"
+        ],
+        "Domingo": [
+            "cerrado"
+        ]
+    }
+},
+{
+    "name": "Deessa",
+    "price": "€€€€",
+    "meal_type": "Creativa",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/2d74b605ddb443a5ab2ed64f327547ae.jpeg?width=1000",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 917 01 68 20",
+    "web_url": "https://www.mandarinoriental.es/",
+    "working_schedule": {
+        "Lunes": [
+            "cerrado"
+        ],
+        "Martes": [
+            "cerrado"
+        ],
+        "Miércoles": [
+            "13:30-17:00",
+            "20:00-00:00"
+        ],
+        "Jueves": [
+            "13:30-17:00",
+            "20:00-00:00"
+        ],
+        "Viernes": [
+            "13:30-17:00",
+            "20:00-00:00"
+        ],
+        "Sábado": [
+            "13:30-17:00",
+            "20:00-00:00"
+        ],
+        "Domingo": [
+            "cerrado"
+        ]
+    }
+},
+{
+    "name": "El Club Allard",
+    "price": "€€€€",
+    "meal_type": "Actual",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/a39be42584534dee9bafb5baebe4930a.jpg?width=1000",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 915 59 09 39",
+    "web_url": "http://www.allardmadrid.es",
+    "working_schedule": {
+        "Lunes": [
+            "cerrado"
+        ],
+        "Martes": [
+            "20:30-21:30"
+        ],
+        "Miércoles": [
+            "13:30-14:30",
+            "20:30-21:30"
+        ],
+        "Jueves": [
+            "13:30-14:30",
+            "20:30-21:30"
+        ],
+        "Viernes": [
+            "13:30-14:30",
+            "20:30-21:30"
+        ],
+        "Sábado": [
+            "13:30-14:30",
+            "20:30-21:30"
+        ],
+        "Domingo": [
+            "cerrado"
+        ]
+    }
+},
+{
+    "name": "Coque",
+    "price": "€€€€",
+    "meal_type": "Creativa",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/cfffdf8b5efb44bdbeaf671aabd04b5f.jpeg?width=1000",
+    "star_number": 1,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 916 04 02 02",
+    "web_url": "https://www.restaurantecoque.com/",
+    "working_schedule": {
+        "Lunes": [
+            "18:30-00:00"
+        ],
+        "Martes": [
+            "18:30-00:00"
+        ],
+        "Miércoles": [
+            "18:30-00:00"
+        ],
+        "Jueves": [
+            "13:00-17:00",
+            "19:00-00:00"
+        ],
+        "Viernes": [
+            "13:00-17:00",
+            "19:00-00:00"
+        ],
+        "Sábado": [
+            "13:00-17:00",
+            "19:00-00:00"
+        ],
+        "Domingo": [
+            "cerrado"
+        ]
+    }
+},
+{
+    "name": "Yugo The Bunker",
+    "price": "€€€€",
+    "meal_type": "Japonesa",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/30f7e9b9fd4f46f4929bf698859e578d.jpg?width=1000",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 914 44 90 34",
+    "web_url": "https://yugothebunker.com/",
+    "working_schedule": {
+        "Lunes": [
+            "cerrado"
+        ],
+        "Martes": [
+            "13:30-15:30",
+            "20:30-23:00"
+        ],
+        "Miércoles": [
+            "13:30-15:30",
+            "20:30-23:00"
+        ],
+        "Jueves": [
+            "13:30-15:30",
+            "20:30-23:00"
+        ],
+        "Viernes": [
+            "13:30-15:30",
+            "20:30-23:00"
+        ],
+        "Sábado": [
+            "13:30-15:30",
+            "20:30-23:00"
+        ],
+        "Domingo": [
+            "13:30-15:30"
+        ]
+    }
+},
+{
+    "name": "Chirón",
+    "price": "€€€",
+    "meal_type": "Moderna",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/151963580eeb48e1b24a6174db04de2e.jpg?width=1000",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 918 95 69 74",
+    "web_url": "https://www.restaurantechiron.com/",
+    "working_schedule": {
+        "Lunes": [
+            "cerrado"
+        ],
+        "Martes": [
+            "13:30-17:00"
+        ],
+        "Miércoles": [
+            "13:30-17:00"
+        ],
+        "Jueves": [
+            "13:30-17:00",
+            "20:30-00:00"
+        ],
+        "Viernes": [
+            "13:30-17:00",
+            "20:30-00:00"
+        ],
+        "Sábado": [
+            "13:30-17:00",
+            "20:30-00:00"
+        ],
+        "Domingo": [
+            "13:30-17:00"
+        ]
+    }
+},
+{
+    "name": "DSTAgE",
+    "price": "€€€€",
+    "meal_type": "Creativa",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/80a54923f6914601967c6add1e66beb0.jpg?width=1000",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 917 02 15 86",
+    "web_url": "https://dstageconcept.com",
+    "working_schedule": {
+        "Lunes": [
+            "cerrado"
+        ],
+        "Martes": [
+            "20:30-21:30"
+        ],
+        "Miércoles": [
+            "20:30-21:30"
+        ],
+        "Jueves": [
+            "20:30-21:30"
+        ],
+        "Viernes": [
+            "13:15-15:00",
+            "20:30-21:30"
+        ],
+        "Sábado": [
+            "13:30-15:00",
+            "20:30-21:30"
+        ],
+        "Domingo": [
+            "cerrado"
+        ]
+    }
+},
+{
+    "name": "Ugo Chan",
+    "price": "€€€€",
+    "meal_type": "Fusión",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/2d8b29386ea54a7193a3f1244e471903.jpeg?width=1000",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 913 50 65 78",
+    "web_url": "http://www.ugochan.com",
+    "working_schedule": {
+        "Lunes": [
+            "cerrado"
+        ],
+        "Martes": [
+            "13:30-16:00",
+            "20:30-00:00"
+        ],
+        "Miércoles": [
+            "13:30-16:00",
+            "20:30-00:00"
+        ],
+        "Jueves": [
+            "13:30-16:00",
+            "20:30-00:00"
+        ],
+        "Viernes": [
+            "13:30-16:00",
+            "20:30-00:00"
+        ],
+        "Sábado": [
+            "13:30-16:00",
+            "20:30-00:00"
+        ],
+        "Domingo": [
+            "cerrado"
+        ]
+    }
+},
+{
+    "name": "Corral de la Morería Gastronómico",
+    "price": "€€€",
+    "meal_type": "Moderna",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/ba77d9b59ba74a7396fb6ec121a3cb62.jpeg?width=1000",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 913 65 84 46",
+    "web_url": "https://www.moreriagastro.com/",
+    "working_schedule": {}
+},
+{
+    "name": "La Tasquería",
+    "price": "€€€",
+    "meal_type": "Moderna",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/39f9700320044dafbed47165e3236ee3.jpeg?width=1000",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 914 51 10 00",
+    "web_url": "https://latasqueria.com/",
+    "working_schedule": {
+        "Lunes": [
+            "13:30-15:30",
+            "20:30-22:15"
+        ],
+        "Martes": [
+            "13:30-15:30",
+            "20:30-22:15"
+        ],
+        "Miércoles": [
+            "13:30-15:30",
+            "20:30-22:15"
+        ],
+        "Jueves": [
+            "13:30-15:30",
+            "20:30-22:15"
+        ],
+        "Viernes": [
+            "13:30-15:30",
+            "20:30-22:15"
+        ],
+        "Sábado": [
+            "13:30-15:30"
+        ],
+        "Domingo": [
+            "cerrado"
+        ]
+    }
+},
+{
     "name": "Paco Roncero",
     "price": "€€€€",
     "meal_type": "Creativa",
     "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/9d658390eec04bc78b6b9cbc72e3db7d.jpeg?width=1000",
-    "star_number": 2,
-    "direction": "Alcalá 15, Madrid, 28014, España",
-    "description": "El chef Paco Roncero, que fiel a su espíritu \"running\" no deja de perseguir nuevas metas, reinventa cada año la propuesta de su restaurante, un espacio de elegante vanguardia ubicado en la última planta de un edificio decimonónico.En su espléndido salón podrás disfrutar de una experiencia culinaria completa, y cada vez más interactiva, que se concreta a través de dos interesantes menús: Esencia (solo jueves y viernes al mediodía) y Afirmación. El chef, que siente auténtica devoción por los aceites de oliva, despliega toda su creatividad e imaginación en los pases de los aperitivos (destaca un clásico, su Filipino de foie gras con chocolate blanco y cardamomo), gira hacia la sabrosa cocina de raíces tradicionales en los platos principales, siempre haciendo que el producto de temporada sea el protagonista, y sorprende en los postres al combinar bocados dulces con opciones más vegetales (como su original Remolacha y ajo negro). ¡No te pierdas la espectacular terraza!",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
     "contact_number": "+34 915 32 12 75",
     "web_url": "https://www.pacoroncerorestaurante.com",
     "working_schedule": {
@@ -70,13 +424,64 @@
     }
 },
 {
+    "name": "OSA",
+    "price": "€€€€",
+    "meal_type": "Moderna",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/aab06d37153a419d9d32781301a46850.jpeg?width=1000",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 670 83 55 07",
+    "web_url": "http://www.osarestaurante.com",
+    "working_schedule": {}
+},
+{
+    "name": "Smoked Room",
+    "price": "€€€€",
+    "meal_type": "Actual",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/a0284133438a4a3cad50414b6e982e29.jpeg?width=1000",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 911 08 62 77",
+    "web_url": "https://grupodanigarcia.com/es/",
+    "working_schedule": {
+        "Lunes": [
+            "cerrado"
+        ],
+        "Martes": [
+            "13:30-14:00",
+            "20:15-21:00"
+        ],
+        "Miércoles": [
+            "13:30-14:00",
+            "20:15-21:00"
+        ],
+        "Jueves": [
+            "13:30-14:00",
+            "20:15-21:00"
+        ],
+        "Viernes": [
+            "13:30-14:00",
+            "20:15-21:00"
+        ],
+        "Sábado": [
+            "13:30-14:00",
+            "20:15-21:00"
+        ],
+        "Domingo": [
+            "cerrado"
+        ]
+    }
+},
+{
     "name": "Ricardo Sanz Wellington",
     "price": "€€€€",
     "meal_type": "Japonesa",
     "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/e79357c5c81d469a96cf635ad8c1d321.jpeg?width=1000",
-    "star_number": 1,
-    "direction": "Velázquez 6, Madrid, 28001, España",
-    "description": "Espectaculares Nigiris elaborados con arroz del Delta del Ebro, Usuzukuri de carabinero con salsa de su propio coral, Tataki de atún con vitello tonnato… o grandes iconos de la casa, como los Huevos rotos, que versionan el gran clásico popular acompañando a los huevos con dados de papa canaria frita y atún toro en vez del jamón habitual.Estamos en la elegante casa (dentro del lujoso Hotel Wellington) donde oficia el laureado chef Ricardo Sanz, un hombre convertido en leyenda por ser el primero en transgredir las pautas de nuestra gastronomía al impulsar un concepto culinario que fusionaba la cocina nipona y la mediterránea, dejando la puerta abierta a otras pequeñas influencias (mexicanas, coreanas...) aunque siempre con el mejor producto ibérico como eje vertebrador. Déjese aconsejar por el sumiller a la hora de acompañar con un maridaje (vino, sake, té o cerveza) y, por nada del mundo, se pierda los delicados Mochis artesanales con los que suelen cerrar la experiencia.",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
     "contact_number": "+34 915 77 78 77",
     "web_url": "http://www.gruporicardosanz.com",
     "working_schedule": {
@@ -110,64 +515,25 @@
     }
 },
 {
-    "name": "Corral de la Morería Gastronómico",
-    "price": "€€€",
-    "meal_type": "Moderna",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/ba77d9b59ba74a7396fb6ec121a3cb62.jpeg?width=1000",
-    "star_number": 1,
-    "direction": "Morería 17, Madrid, 28005, España",
-    "description": "Pues sí, nos hallamos en \"el mejor tablao flamenco del mundo\", un establecimiento histórico que hoy enriquece su propuesta con dos zonas bien diferenciadas: el restaurante Tablao, donde se puede comer algo mientras disfruta del flamenco en vivo, y el espacio gastronómico como tal, convenientemente separado, contemporáneo, mucho más tranquilo y... ¡pensado para solo ocho comensales!La oferta de este último, en manos del chef David García, brilla tanto por la puesta en escena como por el servicio, con un único menú degustación (Gargantua), de tinte moderno, donde no faltan los guiños a la cocina vasca, la tierra de origen del chef. ¿Curiosidades? La excelsa bodega destaca por su selección de vinos del Marco de Jerez, con una colección de botellas ya desaparecidas que es realmente única.",
-    "contact_number": "+34 913 65 84 46",
-    "web_url": "https://www.moreriagastro.com/",
+    "name": "Toki",
+    "price": "€€€€",
+    "meal_type": "Japonesa",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/a835d8399821407480619450f5973ef0.jpg?width=1000",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 918 02 28 16",
+    "web_url": "http://restaurantetoki.com",
     "working_schedule": {}
-},
-{
-    "name": "La Tasquería",
-    "price": "€€€",
-    "meal_type": "Moderna",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/39f9700320044dafbed47165e3236ee3.jpeg?width=1000",
-    "star_number": 1,
-    "direction": "Modesto Lafuente 82, Madrid, 28003, España",
-    "description": "El chef Javi Estévez, que revolucionó la gastronomía madrileña al llevar el mundo de la humilde casquería a la alta cocina, ha dado un paso más en su recorrido profesional al trasladarse a este nuevo local, ocupado durante muchos años por Los Galetos de Tijuca, un restaurante brasileño que fue muy popular por sus pequeños pollitos (los galetos) al carbón.Hoy, tras una remodelación total para ofrecer mayor confort y espacio a sus clientes, este espacio toma un nuevo rumbo bajo su mano permaneciendo fiel a una idea escrita a fuego en su ADN: \"somos casqueros, pero también sabemos hacer otras cosas\". ¿En qué se basa la experiencia? Se centra en tres menús degustación (M, Memoria 2015/2023 y The Menu) que anhelan recuperar esa \"cultura casquera\" madrileña reinterpretándola desde conceptos y técnicas actuales, lo que le lleva a trabajar con mollejas, sesos, manitas, callos, crestas... o esa famosísima Cabeza de cochinillo confitada y frita que todos compartimos en nuestras redes sociales.",
-    "contact_number": "+34 914 51 10 00",
-    "web_url": "https://latasqueria.com/",
-    "working_schedule": {
-        "Lunes": [
-            "13:30-15:30",
-            "20:30-22:15"
-        ],
-        "Martes": [
-            "13:30-15:30",
-            "20:30-22:15"
-        ],
-        "Miércoles": [
-            "13:30-15:30",
-            "20:30-22:15"
-        ],
-        "Jueves": [
-            "13:30-15:30",
-            "20:30-22:15"
-        ],
-        "Viernes": [
-            "13:30-15:30",
-            "20:30-22:15"
-        ],
-        "Sábado": [
-            "13:30-15:30"
-        ],
-        "Domingo": [
-            "cerrado"
-        ]
-    }
 },
 {
     "name": "Santerra",
     "price": "€€€",
     "meal_type": "Actual",
     "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/47644c6598454943aaa15252fe74f495.jpg?width=1000",
-    "star_number": 1,
-    "direction": "General Pardiñas 56, Madrid, 28001, España",
-    "description": "¿Alta cocina manchega en la capital? Es difícil que encuentres un restaurante mejor, pues aquí trasforman la denominada \"cocina de monte bajo\" para dignificarla y convertirla en una experiencia gourmet.El local, en pleno barrio de Salamanca, tiene el don de ofrecer diferentes fórmulas para comer, desde el formato de raciones y tapas (son imprescindibles las Croquetas artesanas de jamón ibérico) que se pueden degustar en la barra hasta el más gastronómico que se reserva para el comedor del semi sótano. La cocina del chef Miguel Carretero demuestra gran personalidad, trayendo los sabores del campo manchego a la ciudad a través de unos platos de temporada donde siempre se hace omnipresente la caza (Lomo de corzo asado, Pato azulón a la royale, Codorniz rellena a lo Tío Lucas, Sopa de paloma torcaz...) y que encuentra en los escabeches uno de sus mejores medios de expresión. Buen menú degustación (Monte Bajo) y carta en formato de medias raciones, ideal para hacerse un menú a medida.",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
     "contact_number": "+34 914 01 35 80",
     "web_url": "https://www.santerra.es",
     "working_schedule": {
@@ -200,138 +566,38 @@
     }
 },
 {
-    "name": "Smoked Room",
-    "price": "€€€€",
-    "meal_type": "Actual",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/a0284133438a4a3cad50414b6e982e29.jpeg?width=1000",
-    "star_number": 2,
-    "direction": "Paseo de la Castellana 57, Madrid, 28046, España",
-    "description": "Recuerda un poco a los locales clandestinos y supone toda una experiencia, pues juegan genialmente con los sabores y aromas ahumados sin saturar nunca el paladar.Presenta un acceso independiente respecto al Hotel Hyatt Regency Hesperia Madrid y, enfocándose como una opción exclusiva, comparte espacio con el restaurante Leña Madrid. En la sala, íntima y cuidada desde el punto de vista estético, encontrará una barra de aire nipón frente a la cocina y solo dos mesas. La sutil propuesta, sujeta a un único menú degustación denominado \"Todo es humo\", tiene como hilo conductor la ejecución de ligeros ahumados y el trabajo con brasas, siempre desde acertadas combinaciones en base al mejor producto de temporada, pescados y carnes maduradas, algas... ¡Las reservas se abren los días 15 de cada mes!",
-    "contact_number": "+34 911 08 62 77",
-    "web_url": "https://grupodanigarcia.com/es/",
-    "working_schedule": {
-        "Lunes": [
-            "cerrado"
-        ],
-        "Martes": [
-            "13:30-14:00",
-            "20:15-21:00"
-        ],
-        "Miércoles": [
-            "13:30-14:00",
-            "20:15-21:00"
-        ],
-        "Jueves": [
-            "13:30-14:00",
-            "20:15-21:00"
-        ],
-        "Viernes": [
-            "13:30-14:00",
-            "20:15-21:00"
-        ],
-        "Sábado": [
-            "13:30-14:00",
-            "20:15-21:00"
-        ],
-        "Domingo": [
-            "cerrado"
-        ]
-    }
-},
-{
-    "name": "OSA",
-    "price": "€€€€",
-    "meal_type": "Moderna",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/aab06d37153a419d9d32781301a46850.jpeg?width=1000",
-    "star_number": 1,
-    "direction": "Ribera del Manzanares 123, Madrid, 28008, España",
-    "description": "Sí, está algo alejado del centro al encontrarse en un pequeño chalé a orillas del Manzanares, sin embargo lo tiene todo para enamorar a los gastrónomos, con la cocina abierta a la entrada, pequeños salones comunicados entre sí y, en el piso superior, tanto la bodega como la zona de sobremesa.Salmonete amakase, Anguila-anago, Pichón dokuganryu, Zampone casero... el equilibrado tándem de chefs al frente, Jorge Muñoz y Sara Peral, demuestra que su paso por grandes casas como Mugaritz no ha sido en balde. Su propuesta, centrada en un único menú degustación (formato corto o largo) al que se le permite añadir algún extra, puede parecer sobria al buscar la sencillez de complementos para resaltar el sabor de sus escogidos productos de temporada; sin embargo, no es así, pues esconde ahumados, maduraciones, puntos de cocción exactos y unos fondos que son toda una explosión de sabor. ¡Muestran las materias primas en la mesa para explicar el origen y las técnicas de cocinado!",
-    "contact_number": "+34 670 83 55 07",
-    "web_url": "http://www.osarestaurante.com",
-    "working_schedule": {}
-},
-{
-    "name": "Toki",
-    "price": "€€€€",
-    "meal_type": "Japonesa",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/a835d8399821407480619450f5973ef0.jpg?width=1000",
-    "star_number": 1,
-    "direction": "Sagasta 28, Madrid, 28004, España",
-    "description": "¡Alta cocina japonesa en un formato de exclusividad! Este restaurante, bajo la firma del célebre sumiller Marcos Granda, es de esos para disfrutar sin mirar el reloj; no en vano, el término Toki significa precisamente eso… ¡tiempo!El sobrio pero elegante local, centrado en una única barra de sushi y sumamente íntimo para personalizar el trato con los clientes (solo seis asientos), tiene al frente de su propuesta al chef Tadayoshi Teddy Motoa, un auténtico \"itamae\" que nos guía en un maravilloso viaje al pasado de la cocina nipona para mostrarnos su evolución, pues desde su menú degustación busca que entendamos cómo ha cambiado la manera de hacer los nigiris (y sobre todo de tratar el arroz) a lo largo de la historia; para ello, entra en un diálogo con el comensal a través de tres recetas (una actual, otra del s. XVIII y, finalmente, una del s. XVI) que, siempre desde la máxima delicadeza y el uso de productos premium, cautivan el paladar. ¡Amplia carta de sakes!",
-    "contact_number": "+34 918 02 28 16",
-    "web_url": "http://restaurantetoki.com",
-    "working_schedule": {}
-},
-{
-    "name": "El Club Allard",
-    "price": "€€€€",
-    "meal_type": "Actual",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/a39be42584534dee9bafb5baebe4930a.jpg?width=1000",
-    "star_number": 1,
-    "direction": "Ferraz 2, Madrid, 28008, España",
-    "description": "¿Aún no conoces la cocina de El Club Allard? En este restaurante, ubicado dentro de la Casa Gallardo (un majestuoso edificio modernista, de 1914, ubicado junto a la renovada Plaza de España), podrás degustarla y descubrir su calidad gastronómica en un marco de absoluta exclusividad.La nueva oferta gastronómica de El Club Allard toma cuerpo en dos menús degustación (10 y 12 Tiempos), donde el joven pero experimentado chef Juan Rodero demuestra tener una personalidad propia e incorpora pequeñas pinceladas que nos hablan de la cocina clásica, combinando las notas de ayer con otras más atrevidas y actuales. Aquí el producto nacional ejerce como claro hilo conductor, lo que no quita para que en ocasiones se enriquezcan las propuestas con algún que otro ingrediente más exótico. ¿Qué tipo de platos encontrarás? Codorniz, foie, chantarella, ravioli in brodo; Carabinero y su jugo, curry verde y vinagreta de mango; Cacao, avellana, mezcal y espadín...",
-    "contact_number": "+34 915 59 09 39",
-    "web_url": "http://www.allardmadrid.es",
-    "working_schedule": {
-        "Lunes": [
-            "cerrado"
-        ],
-        "Martes": [
-            "20:30-21:30"
-        ],
-        "Miércoles": [
-            "13:30-14:30",
-            "20:30-21:30"
-        ],
-        "Jueves": [
-            "13:30-14:30",
-            "20:30-21:30"
-        ],
-        "Viernes": [
-            "13:30-14:30",
-            "20:30-21:30"
-        ],
-        "Sábado": [
-            "13:30-14:30",
-            "20:30-21:30"
-        ],
-        "Domingo": [
-            "cerrado"
-        ]
-    }
-},
-{
-    "name": "Deessa",
+    "name": "Ramón Freixa Madrid",
     "price": "€€€€",
     "meal_type": "Creativa",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/2d74b605ddb443a5ab2ed64f327547ae.jpeg?width=1000",
-    "star_number": 2,
-    "direction": "Plaza de la Lealtad 5, Madrid, 28014, España",
-    "description": "Deessa no es un restaurante más, en absoluto, pues se presenta como el buque insignia de las distintas propuestas gastronómicas que puedes disfrutar en el Mandarin Oriental Ritz de Madrid.El incomparable comedor, montado con mimo en el lujoso salón Alfonso XIII y asomado al jardín, se muestra como el escenario perfecto para degustar esa \"belleza\" intrínseca a la elaborada culinaria del gran Quique Dacosta, que tutela todo lo que aquí acontece y sigue de cerca el trabajo de Domenico Vildacci (el chef residente al frente). Los elegantes platos, que nos trasladan con el paladar a los sabores del Mediterráneo y de Extremadura, ven la luz en dos menús degustación: uno llamado \"Histórico Quique Dacosta\", con los platos más significativos de su triestrellado restaurante en Dénia, y \"Contemporáneo QDRITZ\". ¡Entre semana, solo al mediodía, también ofrecen una versión reducida de ambos menús bajo el apelativo \"Esencia\"!",
-    "contact_number": "+34 917 01 68 20",
-    "web_url": "https://www.mandarinoriental.es/",
+    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/18d8318390e64178851d1a03022355ab.jpg?width=1000",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
+    "contact_number": "+34 917 81 82 62",
+    "web_url": "http://www.ramonfreixamadrid.com",
     "working_schedule": {
         "Lunes": [
             "cerrado"
         ],
         "Martes": [
-            "cerrado"
+            "13:30-17:30",
+            "20:30-00:00"
         ],
         "Miércoles": [
-            "13:30-17:00",
-            "20:00-00:00"
+            "13:30-17:30",
+            "20:30-00:00"
         ],
         "Jueves": [
-            "13:30-17:00",
-            "20:00-00:00"
+            "13:30-17:30",
+            "20:30-00:00"
         ],
         "Viernes": [
-            "13:30-17:00",
-            "20:00-00:00"
+            "13:30-17:30",
+            "20:30-00:00"
         ],
         "Sábado": [
-            "13:30-17:00",
-            "20:00-00:00"
+            "13:30-17:30",
+            "20:30-00:00"
         ],
         "Domingo": [
             "cerrado"
@@ -343,9 +609,9 @@
     "price": "€€€",
     "meal_type": "Moderna",
     "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/98239255b9944109aa70996e9cf31861.jpg?width=1000",
-    "star_number": 1,
-    "direction": "Raimundo Fernández Villaverde 24, Madrid, 28003, España",
-    "description": "La gran apuesta del sumiller y restaurador Marcos Granda, el propietario del famoso restaurante Skina de Marbella, que ha llegado a la capital con una propuesta diferente donde la cocina y la bodega estén a la misma altura.El local, de ambiente contemporáneo, resulta perfecto para degustar una cocina actual de marcados tintes creativos, tomando siempre como base los sabores tradicionales y los productos de los mejores proveedores nacionales. Aquí el planteamiento gastronómico busca exaltar una máxima de esta casa: \"Los grandes restaurantes son aquellos que hacen y logran que el cliente se sienta importante\". ¿Sabe lo que significa \"Clos\"? Es un término francés con el que se hace referencia a una explotación vinícola, normalmente de contrastada calidad, cercada y protegida por un muro.",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
     "contact_number": "+34 910 64 88 05",
     "web_url": "https://www.restauranteclosmadrid.es/",
     "working_schedule": {
@@ -379,52 +645,13 @@
     }
 },
 {
-    "name": "Ramón Freixa Madrid",
-    "price": "€€€€",
-    "meal_type": "Creativa",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/18d8318390e64178851d1a03022355ab.jpg?width=1000",
-    "star_number": 2,
-    "direction": "Claudio Coello 67, Madrid, 28001, España",
-    "description": "Pasional, perfeccionista, cercano, divertido... el chef Ramón Freixa, formado desde niño en el restaurante familiar de Barcelona (El Racó d'en Freixa), defiende un estilo de conducta más que una doctrina culinaria, por eso comenta sobre ella: \"Toda la filosofía de mi cocina, igual que en el arte y en la vida, gira alrededor de la obtención de la felicidad\".El elegante local, ubicado dentro del Hotel Único Madrid y que sorprende por sus bellísimos suelos, cuenta con un comedor principal, un privado y una terraza acristalada a modo de cenador, un espacio que podemos considerar de auténtico lujo en el barrio de Salamanca. La cuidada propuesta, que juega con sabores complejos, se centra en varios menús degustación (Temporalidad RFM, Descubriendo RFM, Universo Freixa y, para los almuerzos entre semana de martes a viernes, el Petit Menú) con un punto de locura, aunque esta se transforma en sensatez al hallar el equilibrio perfecto entre vanguardia y tradición.",
-    "contact_number": "+34 917 81 82 62",
-    "web_url": "http://www.ramonfreixamadrid.com",
-    "working_schedule": {
-        "Lunes": [
-            "cerrado"
-        ],
-        "Martes": [
-            "13:30-17:30",
-            "20:30-00:00"
-        ],
-        "Miércoles": [
-            "13:30-17:30",
-            "20:30-00:00"
-        ],
-        "Jueves": [
-            "13:30-17:30",
-            "20:30-00:00"
-        ],
-        "Viernes": [
-            "13:30-17:30",
-            "20:30-00:00"
-        ],
-        "Sábado": [
-            "13:30-17:30",
-            "20:30-00:00"
-        ],
-        "Domingo": [
-            "cerrado"
-        ]
-    }
-},
-{
     "name": "Quimbaya",
     "price": "€€€",
     "meal_type": "Colombiana",
     "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/c5e6065f247b462a887920a33c01ffcc.jpeg?width=1000",
-    "star_number": 1,
-    "direction": "Zurbano 63, Madrid, 28010, España",
-    "description": "¿Quieres viajar con el paladar? Aquí tienes una maravillosa oportunidad para hacerlo, pues el chef Edwin Rodríguez ha sabido trasladar al plato los sabores de su Colombia natal, la cuna del movimiento conocido como Realismo Mágico.El local, que toma el nombre de una etnia indígena famosa por su labor de orfebrería áurea, se presenta con una pequeña barra donde encontraremos una magnífica relación de destilados colombianos y a continuación el comedor, minimalista y con la cocina abierta para que, en cierto modo, el cliente pueda interactuar con los cocineros. Centran su propuesta en un único menú degustación, llamado Memorias, que a través de 10 pases y según sus propias palabras busca sumergirnos en \"un viaje con destino a nuestras memorias, para recordar los sabores que nos alimentan el alma y revivir las historias de platos que expresan colombianidad\".",
+    "star_number": 0,
+    "direction": null,
+    "description": "",
     "contact_number": "+34 912 40 18 96",
     "web_url": "https://quimbayarestaurant.com/",
     "working_schedule": {
@@ -452,233 +679,6 @@
         ],
         "Domingo": [
             "13:30-16:30"
-        ]
-    }
-},
-{
-    "name": "Coque",
-    "price": "€€€€",
-    "meal_type": "Creativa",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/cfffdf8b5efb44bdbeaf671aabd04b5f.jpeg?width=1000",
-    "star_number": 3,
-    "direction": "Marqués de Riscal 11, Madrid, 28010, España",
-    "description": "Hablar de los hermanos Sandoval (con Mario tras los fogones, Diego al frente de sala y Rafael como sumiller) supone, sin duda, descubrirse ante tres grandes ases de la hostelería española.El magnífico restaurante, con unos 1.100 m², eleva la experiencia al plantearse por etapas que permiten multiplicar las sensaciones, con paradas en su vistoso bar de estilo inglés, en la salita dedicada a los whiskies The Macallan, en la espectacular bodega (atesora hasta una \"sacristía\" donde, con una venencia, escancian vinos de Jerez) y, antes de pasar al comedor, un último aperitivo en la cocina. Mario Sandoval, que siempre vela por un conocimiento más profundo de las materias primas, plantea a través de su menú \"Chamberí\" (hay una opción vegana-vegetariana) una cocina creativa que otorga todo el protagonismo a los mejores productos de temporada (quisquilla de Motril, almeja gallega salvaje, toro bravo...). ¡Descubre los trabajos de investigación desarrollados en su Agrolab (El Jaral de la Mira)!",
-    "contact_number": "+34 916 04 02 02",
-    "web_url": "https://www.restaurantecoque.com/",
-    "working_schedule": {
-        "Lunes": [
-            "18:30-00:00"
-        ],
-        "Martes": [
-            "18:30-00:00"
-        ],
-        "Miércoles": [
-            "18:30-00:00"
-        ],
-        "Jueves": [
-            "13:00-17:00",
-            "19:00-00:00"
-        ],
-        "Viernes": [
-            "13:00-17:00",
-            "19:00-00:00"
-        ],
-        "Sábado": [
-            "13:00-17:00",
-            "19:00-00:00"
-        ],
-        "Domingo": [
-            "cerrado"
-        ]
-    }
-},
-{
-    "name": "Zuara Sushi",
-    "price": "€€€€",
-    "meal_type": "Japonesa",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/8b5805ee84d34b0ca653c87404406f53.jpg?width=1000",
-    "star_number": 1,
-    "direction": "Pensamiento 28, Madrid, 28020, España",
-    "description": "¡Una de las barras de sushi más interesantes de la capital!El establecimiento, no exento de cierto pedigrí al ocupar el antiguo local donde DiverXO empezó a brillar, se presenta con un ambiente japo-minimalista y una sala donde la barra nipona en forma de \"U\" acapara todo el protagonismo, pues en ella David Arauz ejerce de \"itamae\" a la hora de ofrecer una propuesta respetuosa con la técnica nipona pero fiel a un extraordinario producto nacional. El menú Shibui (nos ha gustado mucho su Wagyu Kamado y la deliciosa sopa Osuimono), que podríamos traducir como la filosofía que se fija en la belleza de lo sencillo, discreto y natural, sorprende con algunos guiños de autor, logrados sabores umami y unos maravillosos nigiris que toman como base el famoso arroz Koshihikari, una variedad de grano corto traída al restaurante directamente desde Japón. ¿Curiosidades? El nombre del local oculta un pequeño juego de palabras, pues… ¡es el apellido del chef al revés!",
-    "contact_number": "+34 633 46 77 80",
-    "web_url": "http://www.zuarasushi.com",
-    "working_schedule": {
-        "Lunes": [
-            "14:00-14:15",
-            "21:00-21:15"
-        ],
-        "Martes": [
-            "14:00-14:15",
-            "21:00-21:15"
-        ],
-        "Miércoles": [
-            "14:00-14:15",
-            "21:00-21:15"
-        ],
-        "Jueves": [
-            "14:00-14:15",
-            "21:00-21:15"
-        ],
-        "Viernes": [
-            "14:00-14:15",
-            "21:00-21:15"
-        ],
-        "Sábado": [
-            "cerrado"
-        ],
-        "Domingo": [
-            "cerrado"
-        ]
-    }
-},
-{
-    "name": "DSTAgE",
-    "price": "€€€€",
-    "meal_type": "Creativa",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/80a54923f6914601967c6add1e66beb0.jpg?width=1000",
-    "star_number": 2,
-    "direction": "Regueros 8, Madrid, 28004, España",
-    "description": "Lo que más llama la atención de este restaurante, en un gran loft industrial ubicado en el barrio de las Salesas, es lo que representa en sí mismo, pues refleja la apuesta del chef vitoriano Diego Guerrero por la libertad para poder crear, para sorprender y para romper las barreras asociadas a la personal zona de confort.Encontrarás un interior de techos altos y carácter informal, con las paredes en ladrillo visto, detalles retro, un patio interior, la cocina abierta a la sala para potenciar la conexión entre los cocineros y los comensales... y un anexo (DSPOT Studio & Events) dedicado a la creatividad, a la investigación y a la organización de eventos. El chef, que desde un espíritu divergente defiende el aprovechamiento y la evolución culinaria, propone a través de sus menús (Dtaste, Dstage y Denjoy) un divertido viaje gastronómico por el mundo, fusionando todo tipo de productos y recreando increíbles trampantojos. ¡Para una experiencia más completa añade la opción del maridaje!",
-    "contact_number": "+34 917 02 15 86",
-    "web_url": "https://dstageconcept.com",
-    "working_schedule": {
-        "Lunes": [
-            "cerrado"
-        ],
-        "Martes": [
-            "20:30-21:30"
-        ],
-        "Miércoles": [
-            "20:30-21:30"
-        ],
-        "Jueves": [
-            "20:30-21:30"
-        ],
-        "Viernes": [
-            "13:15-15:00",
-            "20:30-21:30"
-        ],
-        "Sábado": [
-            "13:30-15:00",
-            "20:30-21:30"
-        ],
-        "Domingo": [
-            "cerrado"
-        ]
-    }
-},
-{
-    "name": "Yugo The Bunker",
-    "price": "€€€€",
-    "meal_type": "Japonesa",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/30f7e9b9fd4f46f4929bf698859e578d.jpg?width=1000",
-    "star_number": 1,
-    "direction": "San Blas 4, Madrid, 28014, España",
-    "description": "¿Conoce las tradicionales tabernas japonesas (Izakayas)? Aquí descubrirá la esencia de estas casas, el punto de encuentro habitual en el día a día de cualquier nipón.Sorprende por su cuidada decoración, con dos ambientes bien diferenciados, una barra de sushi, profusión de maderas, máscaras, banderas... y una cocina mimada hasta el más ínfimo detalle, pues Julián Mármol ha sabido fusionar las cocinas japonesa y mediterránea respetando la sutileza oriental. Todo parte del producto y, a través de él, busca provocarnos... ¡una sucesión de sensaciones! ¿Hay sorpresas? Pues sí, ya que en el sótano esconden \"The Bunker\", un espacio de uso exclusivo para socios, ideado como un búnker de la II Guerra Mundial, que también se utiliza para clientes con reserva cuando la sala principal está llena.",
-    "contact_number": "+34 914 44 90 34",
-    "web_url": "https://yugothebunker.com/",
-    "working_schedule": {
-        "Lunes": [
-            "cerrado"
-        ],
-        "Martes": [
-            "13:30-15:30",
-            "20:30-23:00"
-        ],
-        "Miércoles": [
-            "13:30-15:30",
-            "20:30-23:00"
-        ],
-        "Jueves": [
-            "13:30-15:30",
-            "20:30-23:00"
-        ],
-        "Viernes": [
-            "13:30-15:30",
-            "20:30-23:00"
-        ],
-        "Sábado": [
-            "13:30-15:30",
-            "20:30-23:00"
-        ],
-        "Domingo": [
-            "cerrado"
-        ]
-    }
-},
-{
-    "name": "Chirón",
-    "price": "€€€",
-    "meal_type": "Moderna",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/151963580eeb48e1b24a6174db04de2e.jpg?width=1000",
-    "star_number": 1,
-    "direction": "Alarcón 27, Valdemoro, 28341, España",
-    "description": "Cuando decimos que Chirón es una de las mejores opciones para comer a las afueras de Madrid no hablamos en balde, pues este negocio familiar se halla... ¡a solo 25 km de la capital!El chef Iván Muñoz, que trabaja junto a su hermano Raúl (sumiller), apuesta por la gastronomía madrileña, defendiendo que las raíces castizas no están reñidas con el hecho de ofrecer una cocina moderna y creativa. Encontrará unos interesantísimos menús, con toques manchegos, en los que se nos invita a una ruta por las vegas del Tajo, del Jarama o del Tajuña. ¿Curiosidades? La pasión del chef por el terruño y los productos de proximidad no resta un ápice de su capacidad para reinterpretar otros sabores, lo que le llevó a ganar, en 2020, el Concurso Internacional de Cocina Creativa de la Gamba Roja de Dénia.",
-    "contact_number": "+34 918 95 69 74",
-    "web_url": "https://www.restaurantechiron.com/",
-    "working_schedule": {
-        "Lunes": [
-            "cerrado"
-        ],
-        "Martes": [
-            "13:30-17:00"
-        ],
-        "Miércoles": [
-            "13:30-17:00"
-        ],
-        "Jueves": [
-            "13:30-17:00",
-            "20:30-00:00"
-        ],
-        "Viernes": [
-            "13:30-17:00",
-            "20:30-00:00"
-        ],
-        "Sábado": [
-            "13:30-17:00",
-            "20:30-00:00"
-        ],
-        "Domingo": [
-            "13:30-17:00"
-        ]
-    }
-},
-{
-    "name": "Ugo Chan",
-    "price": "€€€€",
-    "meal_type": "Fusión",
-    "restaurant_photo_url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/2d8b29386ea54a7193a3f1244e471903.jpeg?width=1000",
-    "star_number": 1,
-    "direction": "Félix Boix 6, Madrid, 28036, España",
-    "description": "Un restaurante contemporáneo, con la cocina vista, dos barras y alma nipona, que no está exento de personalidad; no en vano, su cambiante y mimada propuesta se cimenta en pensamientos clásicos como los del filósofo griego Heráclito: \"Nadie puede bañarse dos veces en el mismo río\".El chef Hugo Muñoz, que juega con el nombre del local recordando el apelativo que le puso su abuelo siendo aún muy niño (\"Hugochan\", semejante a Huguito), defiende una cocina japonesa (ofrecen servicio a la carta y un menú Omakase que hacen a medida) donde el producto de temporada es el gran protagonista, modulándola de manera divertida con detalles de otras culturas y, sobre todo, con guiños tanto a los iconos culinarios de Madrid (como la Gyoza de callos a la madrileña o su versión de los Soldaditos de Pavía) como a algunos chefs emblemáticos (Martín Berasategui, Robuchon...). ¿Un plato que nos ha encantado? Su Lenteja caviar con torcaz al curry japonés y aire de coco, un plato de cuchara... ¡para recordar!",
-    "contact_number": "+34 913 50 65 78",
-    "web_url": "http://www.ugochan.com",
-    "working_schedule": {
-        "Lunes": [
-            "cerrado"
-        ],
-        "Martes": [
-            "13:30-16:00",
-            "20:30-00:00"
-        ],
-        "Miércoles": [
-            "13:30-16:00",
-            "20:30-00:00"
-        ],
-        "Jueves": [
-            "13:30-16:00",
-            "20:30-00:00"
-        ],
-        "Viernes": [
-            "13:30-16:00",
-            "20:30-00:00"
-        ],
-        "Sábado": [
-            "13:30-16:00",
-            "20:30-00:00"
-        ],
-        "Domingo": [
-            "cerrado"
         ]
     }
 }]

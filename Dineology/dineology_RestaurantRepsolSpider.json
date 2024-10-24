@@ -49,37 +49,72 @@
     "meal_type": [
         "Andaluza",
         "Marinera"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+    ]
 },
 {
-    "name": "Paco Roncero",
-    "soles_number": 3,
-    "description": "Paco Roncero Restaurante propone una experiencia gastronómica singular, un tanto minimalista y de gran impacto visual, que aúna las técnicas de vanguardia con la cocina de raíces. En su extensa oferta destacan las tapas que han sido una de sus señas de identidad desde hace años. El aceite de oliva virgen extra es un referente constante y un primoroso servicio de sala complementan una propuesta de gran altura.",
-    "short_menu_description": "Olivo Milenario",
+    "name": "Lú Cocina y Alma",
+    "soles_number": 2,
+    "description": "El chef jerezano Juanlu Fernández ha logrado lo aparentemente imposible: enseñarle andaluz a las clásicas recetas francesas. Gastronómicamente significa fusionar la sobriedad de la escuela gala con el saborío del sur de España. Todo entre fogones, morteros y largos fondos que persisten en boca. Cocina paciente y de retaguardia para pensar en vanguardia, tal y como le gusta decir a este cocinero con alma de panadero.",
+    "short_menu_description": "<El Festin>",
+    "menu_options": [],
+    "restaurant_services": [
+        "Establecimiento accesible",
+        "Carta en inglés",
+        "Acepta Waylet",
+        "Opciones para grupos",
+        "Vinos terroir",
+        "Vende productos propios",
+        "Organiza eventos"
+    ],
+    "owners_name": [],
+    "web_url": "http://lucocinayalma.com",
+    "instagram_user": "@lucocinayalma",
+    "contact_number": "695408481",
+    "direction": "Calle Zaragoza, 2. 11402 Jerez de la Frontera (Cádiz)",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-d9-5d-d95d631d-757e-4653-967b-4c93693e1c0c-reducida_12895-lu-cocina-y-alma-9e187d6c67694b4eb7a6aeeb26118443.jpeg",
+    "meal_type": [
+        "Andaluza",
+        "Francesa"
+    ]
+},
+{
+    "name": "Los Marinos José",
+    "soles_number": 2,
+    "description": "Todo un clásico de la Costal del Sol. La familia Sánchez cuenta con un amplio comedor interior y una agradable terraza en el paseo marítimo. Especializados en pescado y marisco de primerísima calidad, muestran su amplia oferta al público que puede elegir las piezas directamente.",
+    "short_menu_description": "CoquinaGallineta frita",
+    "menu_options": [],
+    "restaurant_services": [
+        "Establecimiento accesible",
+        "Aparcamiento propio",
+        "Terraza abierta",
+        "Jardín",
+        "Comedor privado",
+        "Carta en inglés",
+        "Vende productos propios"
+    ],
+    "owners_name": [
+        "Familia Sánchez López"
+    ],
+    "web_url": "http://www.losmarinosjose.com",
+    "instagram_user": "@pablomarinojose",
+    "contact_number": "952661012",
+    "direction": "Paseo Marítimo Rey de España, 161. 29640 Fuengirola (Málaga)",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-7b-11-7b1185aa-b0dd-4a15-b1b4-99f29ec7f11d-los_marinos_jose_2019_16.jpg",
+    "meal_type": [
+        "Marinera",
+        "Mediterránea"
+    ]
+},
+{
+    "name": "Restaurante El Campero",
+    "soles_number": 2,
+    "description": "Uno de los restaurantes de referecia en la costa de Cádiz para descubrir el atún rojo salvaje de almadraba, su gran especialidad, presentado con maestría de mil maneras. Ofrece también pescados de su litoral y platos de la tradición gaditana. Espacio moderno y luminoso que se divide entre el comerdor y la barra y mesas altas de tapeo.",
+    "short_menu_description": "Morrillo de atún a la plancha.",
     "menu_options": [
         {
             "name": "Menú Degustación",
-            "price": "210.00€",
-            "description": "Menú Afirmación"
-        },
-        {
-            "name": "Menú Degustación",
-            "price": "95.00€",
-            "description": "Menú Esencia"
-        },
-        {
-            "name": "Menú Degustación",
-            "price": "159.00€",
-            "description": "Menú Reivindicación"
+            "price": "98.00€",
+            "description": "Susurro de los Atunes"
         },
         {
             "name": "Opciones veganas",
@@ -88,11 +123,6 @@
         },
         {
             "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Carro de postres",
             "price": null,
             "description": ""
         }
@@ -101,125 +131,40 @@
         "Establecimiento accesible",
         "Terraza abierta",
         "Comedor privado",
-        "Buenas vistas",
         "Carta en inglés",
+        "Tronas de niños",
+        "Cambiador para bebés",
         "Opciones para grupos",
-        "Organiza eventos"
+        "Acepta mascotas",
+        "Vinos terroir",
+        "Barra"
     ],
     "owners_name": [
-        "NH Hoteles"
+        "José Melero"
     ],
-    "web_url": "http://www.pacoroncerorestaurante.com",
-    "instagram_user": "@PacoRonceroRestaurante",
-    "contact_number": "915321275",
-    "direction": "Calle Alcalá, 15 28014 Madrid",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-d7-1f-d71ff95c-50b9-473b-bb0d-ab80b875ed2b-tmptmputsvhhm1cc9dbfa1359946219862773695ce4176.jpeg",
+    "web_url": "http://www.restauranteelcampero.es",
+    "instagram_user": "@restauranteelcampero",
+    "contact_number": "956432300",
+    "direction": "Av. Constitución, Local 5 C, 11160 Barbate, Cádiz",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-16-06-1606c675-565e-450b-99a3-0e4c3ce27465-gadira-campero002.jpg",
     "meal_type": [
         "Creativa   De autor",
-        "Internacional"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+        "Marinera"
+    ]
 },
 {
-    "name": "DSTAgE",
-    "soles_number": 3,
-    "description": "Diego Guerrero experto profesional de larga trayectoria ha logrado un ambiente gastronómico cosmopolita y de gran técnica a trevés de sus menús degustación: menú Dtaste (16 platos- 175€); menú Dstage (18 platos - 200€.); Denjoy (22 platos - 220€.) como muestra Coliflor asada Aceituna Caviar, Maya, Anguila ó Pollo ó Pichón Koji . Todo un lujo de sensaciones.",
-    "short_menu_description": "Menú degustación",
+    "name": "Etereo by Pedro Nel",
+    "soles_number": 2,
+    "description": "El colombiano Pedro Nel Restrepo lleva años cosechando éxitos al frente de su restaurante tinerfeño. Aferrado a la materia prima y a la parrilla, se sirve de la despensa canaria para abordar una cocina de mercado con marcados toques latinos especialmente apreciables cuando elabora platos como el bacalao encocado o el ceviche de sama roquera con camote, canchas y sorbete de piña-cilantro. No obstante, junto al contraste evidente entre el producto nacional desnudo (jamón de bellota 100% ibérico, anchoas de Santoña, quesos) y platos reinterpretados de inspiración latinoamericana, merecen apartado propio las carnes maduradas de vacas simmental, frisona, rubia gallega y black angus. La fusión, meditada y contenida, está servida.",
+    "short_menu_description": "Empanadillas de carne, jarrete de ternera, carne madurada",
     "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "175.00€",
-            "description": "DTASTE (16 elaboraciones,) Maridaje 90€"
-        },
-        {
-            "name": "Menú Degustación",
-            "price": "200.00€",
-            "description": "DSTAGE (18 elaboraciones) Maridaje 105€"
-        },
-        {
-            "name": "Menú Degustación",
-            "price": "220.00€",
-            "description": "DENJOY (22 elaboraciones) Maridaje 120€"
-        },
         {
             "name": "Opciones para celíacos",
             "price": null,
             "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Carta en inglés",
-        "Opciones para grupos",
-        "Organiza eventos"
-    ],
-    "owners_name": [
-        "Diego Guerrero"
-    ],
-    "web_url": "http://www.dstageconcept.com",
-    "instagram_user": "@diegoguerrero",
-    "contact_number": "917021586",
-    "direction": "Calle Regueros, 8 28004 Madrid",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-c6-25-c625fa6d-07c5-4f69-821f-2e130e3da82f-15463-dstage-b989b3ad37cf44a7bfadd53c0e3d104b.png",
-    "meal_type": [
-        "Creativa   De autor",
-        "Internacional"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "La Salita",
-    "soles_number": 3,
-    "description": "La placidez que emana del palacete en Ruzafa es un reflejo del momento tan espectacular de su cocina, que acaba de cumplir 18 años. En ‘La Salita’, Begoña Rodrigo se deleita con el producto que mejor expresa su visión del territorio y profundiza en el universo vegetal que la rodea sin perder esa gozosa acidez que siempre le ha definido. Sus platos tienen la frescura y la salinidad del Mediterráneo y el arrojo de una cocinera a la que no se le pone nada por delante. Sabores profundos, de acidez controlada que potencian los matices de las verduras, que lo mismo abrazan, que estallan o dulcifican.",
-    "short_menu_description": "Cualquiera de nuestros platos vegetales y los bocados de aperitivo con los que empieza el menú.",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "118.00€",
-            "description": "Novençà"
         },
         {
-            "name": "Menú Degustación",
-            "price": "148.00€",
-            "description": "Sangonereta"
-        },
-        {
-            "name": "Menú Degustación",
-            "price": "118.00€",
-            "description": "Llauro (ovo lácteo vegetariano)"
-        },
-        {
-            "name": "Menú Degustación",
-            "price": "148.00€",
-            "description": "Llauro-Sangonereta (ovo lácteo vegetariano)"
-        },
-        {
-            "name": "Menú infantil",
-            "price": "50.00€",
-            "description": "Menú infantil"
-        },
-        {
-            "name": "Opciones veganas",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Opciones para celíacos",
+            "name": "Platos fuera de carta",
             "price": null,
             "description": ""
         },
@@ -227,415 +172,61 @@
             "name": "Carro de quesos",
             "price": null,
             "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Terraza abierta",
-        "Jardín",
-        "Comedor privado",
-        "Carta en inglés",
-        "Tronas de niños",
-        "Opciones para grupos",
-        "Vinos terroir",
-        "Abre lunes",
-        "Organiza eventos"
-    ],
-    "owners_name": [
-        "Begoña Rodrigo"
-    ],
-    "web_url": "https://www.anarkiagroup.com/",
-    "instagram_user": "@lasalita_rte",
-    "contact_number": "609330760",
-    "direction": "C. Pere III el Gran, 11, 46005 Valencia",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-11-c0-11c05013-244d-44ce-9226-b0e509ed4bb4-12903-la-salita-d7ec7a1f44644305a52261782fea06a4.jpeg",
-    "meal_type": [
-        "Creativa   De autor",
-        "Mercado"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Ricardo Sanz Wellington",
-    "soles_number": 3,
-    "description": "Una apuesta de éxito en el elegante comedor de este céntrico hotel madrileño. El sushiman Ricardo Sanz y su equipo, siguen enamorando con esta cocina de técnica japonesa y aires mediterráneos elaborada con los mejores productos locales.",
-    "short_menu_description": "Menú Kabuki",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "110.00€",
-            "description": "Menú Kabuki"
         },
         {
-            "name": "Opciones para celíacos",
+            "name": "Carro de bebidas",
             "price": null,
             "description": ""
         }
     ],
     "restaurant_services": [
         "Establecimiento accesible",
-        "Aparcamiento propio",
-        "Aparcacoches",
         "Comedor privado",
         "Carta en inglés",
         "Tronas de niños",
-        "Barra"
-    ],
-    "owners_name": [
-        "Ricardo Sanz",
-        "José Antonio Aparicio"
-    ],
-    "web_url": "http://www.restaurantekabuki.com",
-    "contact_number": "915777877",
-    "direction": "Calle Velázquez, 6. 28001 Madrid",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-c2-44-c2443d76-74a1-48c6-bb64-76883246c9b8-ricardo_sanz_dsc_3332.jpg",
-    "meal_type": [
-        "Japonesa",
-        "Mediterránea"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Quique Dacosta",
-    "soles_number": 3,
-    "description": "Quique Dacosta sigue investigando e innovando con productos de la zona. Una creatividad plasmada en sus menús degustación con los que permite escoger los clásicos o las novedades. El mérito de Quique y su exquisita culinaria es que, con naturalidad y lejos de toda rigidez, logra instalarse en el universo de las sensaciones. Más que degustar, obviamente, se experimenta, se siente, que para algunos puede llegar a ser emocionante por su exaltación magistral del Mediterráneo.",
-    "short_menu_description": "Fideua azafranada",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "295.00€",
-            "description": "Por amor al arte"
-        },
-        {
-            "name": "Carro de salazones",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Terraza abierta",
-        "Jardín",
-        "Carta en inglés",
-        "Opciones para grupos"
-    ],
-    "owners_name": [],
-    "web_url": "http://www.quiquedacosta.es",
-    "instagram_user": "@QiqeDacosta",
-    "contact_number": "965784179",
-    "direction": "C. Rascassa, 1 03700 Denia (Alicante)",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-1c-3c-1c3c1513-0153-4c92-b722-40c9aedd35c1-8863-quique-dacosta-ae547bb2292543749396072ccb400973.jpeg",
-    "meal_type": [
-        "Creativa   De autor"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "L'Escaleta",
-    "soles_number": 3,
-    "description": "En la montaña alicantina, Kiko Moya y Alberto Redrado, proponen un viaje por la gastronomía local recreada con una cocina respetuosa, a ratos sorprendente y original, que les ha situado en la cúspide de la Comunidad Valenciana.",
-    "short_menu_description": "Nuestro Arroz al Cuadrado",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "125.00€",
-            "description": "Menú Sabor; 4snacks, 4 aperitivos, 7 platos y 2 postres, Petit Fours"
-        },
-        {
-            "name": "Menú Degustación",
-            "price": "165.00€",
-            "description": "Menú Saboer: 4snacks, 4 aperitivos, 9 Platos 3 Postres, Petit Fours"
-        },
-        {
-            "name": "Opciones veganas",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Aparcamiento propio",
-        "Terraza abierta",
-        "Jardín",
-        "Comedor privado",
-        "Buenas vistas",
-        "Carta en inglés",
-        "Tronas de niños",
+        "Cambiador para bebés",
+        "Acepta Waylet",
         "Opciones para grupos",
         "Acepta mascotas",
-        "Terraza de verano",
-        "Organiza eventos",
-        "Huerto propio"
-    ],
-    "owners_name": [
-        "Alberto Redrado",
-        "Kiko Moya"
-    ],
-    "web_url": "http://www.lescaleta.com",
-    "instagram_user": "@lescaleta",
-    "contact_number": "965592100",
-    "direction": "Subida Estación Norte 205 03820 Concetaina (Alicante)",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-a6-9c-a69cea1a-39da-47f7-b2ed-328d82c7b02e-reducida_kiko_moya_dsc_3717.jpg",
-    "meal_type": [
-        "Creativa   De autor",
-        "Mediterránea"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "BonAmb",
-    "soles_number": 3,
-    "description": "\"Sé que es difícil categorizarme porque usamos productos mediterráneos, maravillosos, pero luego trabajo con ellos como lo siento en el momento. Ese sentimiento puede llevarme hacia lo tradicional o hacia lo moderno\", asegura Alberto Ferruz.En su restaurante, lugar de peregrinaje en Xàbia al que acuden cada vez más devotos, recupera métodos tradicionales de salazón, fermentados, encurtidos, hidromieles y oreados que plasma en platos sorprendentes que radiografían la memoria culinaria de la Marina Alta.",
-    "short_menu_description": "Flan tembloroso de Bogamari y limón valenciano / Magros marinos / Ostras marinadas y secadas al sol, jugo de caracoles guisados tradicionalmente y setas / Crepe de morteruelo de pescadores, apio bola a la sal y jugo de descartes / Dashi de setas",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "115.00€",
-            "description": "LA TAULA"
-        },
-        {
-            "name": "Menú Degustación",
-            "price": "155.00€",
-            "description": "ELS TESTOS"
-        },
-        {
-            "name": "Menú Degustación",
-            "price": "185.00€",
-            "description": "LA CATEDRAL"
-        },
-        {
-            "name": "Opciones veganas",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Aparcamiento propio",
-        "Jardín",
-        "Comedor privado",
-        "Buenas vistas",
-        "Carta en inglés",
-        "Tronas de niños",
-        "Terraza de verano",
-        "Vende productos propios",
-        "Huerto propio"
-    ],
-    "owners_name": [
-        "Alberto Ferruz",
-        "Pablo Catalá"
-    ],
-    "web_url": "https://bonamb.com",
-    "instagram_user": "@bonambrestaurant",
-    "contact_number": "965084440",
-    "direction": "Ctra. Benitachell, 100 03730 Jávea (Alicante)",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-2c-20-2c20ef18-fd07-4a10-a01c-190aac8e2d55-2020_reapertura-bonamb-3.jpg",
-    "meal_type": [
-        "Creativa   De autor",
-        "Mediterránea"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "DiverXO",
-    "soles_number": 3,
-    "description": "Rompedor y atrevido, siempre en constante evolución desde hace más de una década, David \"Dabiz\" Muñoz propone un viaje lleno de sorpresas y de ambientes a partir de su fusión de sabores de Oriente y Occidente. Un espectáculo gastronómico único, envuelto en \"cerdos voladores\", y donde ningún \"plato-lienzo\" acaba de terminarse del todo al irse añadiendo otros ingredientes desde los fogones. Un restaurante cosmopolita donde los haya que propone dos espectaculares menús-degustación, el segundo casi interminable, que consiguen el efecto de \"epatar\" al comensal",
-    "short_menu_description": "Menú degustación.",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "365.00€",
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Aparcamiento propio",
-        "Carta en inglés"
-    ],
-    "owners_name": [
-        "Dabiz Muñoz"
-    ],
-    "web_url": "http://www.diverxo.com",
-    "instagram_user": "@dabizdiverxo",
-    "contact_number": "915700766",
-    "direction": "Calle Padre Damián, 23 28036 Madrid",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-f1-80-f180d12d-5b07-4aa4-8872-4f042a851f15-diverxo_sala04.jpg",
-    "meal_type": [
-        "Creativa   De autor",
-        "Internacional"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Corral de la Morería",
-    "soles_number": 3,
-    "description": "Aquí todo es arte del auténtico. Traspasar el umbral supone penetrar en un mundo donde cada movimiento tiene una razón y la elegancia racial provoca emociones intensas. Los platos memorables del cocinero vasco David García trenzan sus propios orígenes con los de este templo del flamenco. Mestizaje puro donde los generosos que atesora Juanma del Rey, con más de 1.200 referencias del Marco de Jerez, lo convierten en algo irrepetible.",
-    "short_menu_description": null,
-    "menu_options": [
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Carta en inglés"
-    ],
-    "owners_name": [
-        "Familia del Rey"
-    ],
-    "web_url": "http://www.corraldelamoreria.com",
-    "instagram_user": "@corralmoreria",
-    "contact_number": "913658446",
-    "direction": "Calle Morería, 17. 28005 Madrid (Madrid)",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-a2-8e-a28e412b-b5e8-4516-bb0a-8a5fc2ecc75b-03_corraldelamoreria_davidgarcia_juanmadelrey.jpg",
-    "meal_type": [
-        "Creativa   De autor",
-        "Mercado"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Coque",
-    "soles_number": 3,
-    "description": "Una experiencia original y única en más de mil metros cuadrados en el corazón de Madrid, un viaje sensorial a través de cuatro \"pasos\": coctelería, bodega, cocina y sala, en un recorrido personalizado y muy estudiado. Los hermanos Sandoval, (Mario, en la cocina; Rafael, como sumiller, responsable de una espectacular bodega que asemeja una plaza de toros; y Juan Diego, como director de sala), Premios Nacional de Gastronomía -mejor cocinero, merjor director de sala y mejor sumiller- respectivamente, son un equipo cohesionado que ha tenido un gran recibimiento en su primera experiencia en la capital, tras su éxito de tantos años en Humanes. El escenario también resulta espectacular. Han lanzado un proyecto muy ambicioso alrededor de la carne de toro de lidia, mientras ponen en marcha una espectacular finca en los alrededores de El Escorial.",
-    "short_menu_description": "Ventresca de atún curada con polifenoles, gazpachuelo de médula de atún a la brasa, atún toro en escabeche de amontillado.",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "365.00€",
-            "description": ""
-        },
-        {
-            "name": "Opciones veganas",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Aparcacoches",
-        "Comedor privado",
-        "Carta en inglés",
-        "Opciones para grupos",
+        "Cerca de carretera",
+        "Parrilla",
         "Vinos terroir",
+        "Vende productos propios",
+        "Abre lunes",
         "Organiza eventos",
-        "Huerto propio"
+        "Organiza promoción productos"
     ],
-    "owners_name": [
-        "Hermanos Sandoval"
-    ],
-    "web_url": "http://www.restaurantecoque.com",
-    "instagram_user": "@coquemadrid",
-    "contact_number": "916040202",
-    "direction": "C. Marqués de Riscal, 11 28010 Madrid",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-67-42-6742259c-e6ca-421c-a856-405ddb637e6a-reducida_19534-coque-597875264d4545efba2a190c3220e003.jpeg",
+    "owners_name": [],
+    "web_url": "https://etereobypedronel.com",
+    "instagram_user": "@etereo.restaurante",
+    "contact_number": "922194195",
+    "direction": "C. San Antonio 63, 38001, Santa Cruz de Tenerife",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-08-e6-08e6ba80-1ab1-4509-9e08-43625cab4fcb-12928-etereo-by-pedro-nel-fa0eac065e7c404ca0ff2cc2ab7cdddd.jpeg",
     "meal_type": [
         "Creativa   De autor",
         "Internacional"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+    ]
 },
 {
-    "name": "Vía Veneto",
-    "soles_number": 3,
-    "description": "Con medio siglo de historia entre sus paredes, los Monje, padre e hijo, ambos Premios Nacional de Gastronomía, dirigen este maravilloso y elegante restaurante donde el lujo y el clasicismo hacen disfrutar a sus clientes. Sergio Humada, jefe de cocina, transmite pasión y sentido a sus platos de corte tradicional renovados a los tiempos actuales.",
-    "short_menu_description": "“Coulant” de patata y judía verde con ibéricos y yema de huevo de “calaf”. Pichón “wellington” con setas gírgolas de los castaños. Flan cremoso de vainilla con chantilly.",
+    "name": "Cancook",
+    "soles_number": 2,
+    "description": "Ramcés González y Diego Millán, responsables de cocina y sala, se sitúan desde 2014 al frente de este restaurante ubicado en el barrio de La Romareda, donde han buscado construir un espacio acogedor apoyados en luz natural, madera y colores cálidos. Señalan la cocina vanguardista como vocación y plasman su visión de la misma en menús degustación de diferente extensión, cuyo ánimo es no dejar indiferente al comensal con constantes juegos y contrastes de sabor, textura y temperatura. La experiencia incluye escala en la cocina, en su despensa prima el producto aragonés y la bodega esconde asimismo alguna rareza muy apetecible.",
+    "short_menu_description": "Ensalada de encurtidos y salazonesMenestra de verduras de la ribera",
     "menu_options": [
         {
             "name": "Menú Degustación",
-            "price": "80.00€",
-            "description": "Nuestro Menu degustacion incluye 4 platos (elaborados a diario con el mejor producto fresco del día) y el postre elaborado integramente por nuestro personal pastelero"
+            "price": "90.00€",
+            "description": "Gran Menú"
         },
         {
             "name": "Menú Degustación",
-            "price": "145.00€",
-            "description": "Gran Menú degustación. Platos más emblemáticos de nuestra carta"
+            "price": "120.00€",
+            "description": "festival"
         },
         {
-            "name": "Opciones veganas",
-            "price": null,
-            "description": ""
+            "name": "Menú Degustación",
+            "price": "150.00€",
+            "description": "Evolucion"
         },
         {
             "name": "Opciones halal",
@@ -653,16 +244,6 @@
             "description": ""
         },
         {
-            "name": "Platos fuera de carta",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Carro de quesos",
-            "price": null,
-            "description": ""
-        },
-        {
             "name": "Carro de bebidas",
             "price": null,
             "description": ""
@@ -670,202 +251,39 @@
     ],
     "restaurant_services": [
         "Establecimiento accesible",
-        "Aparcamiento propio",
-        "Aparcacoches",
         "Comedor privado",
-        "Buenas vistas",
         "Carta en inglés",
-        "Tronas de niños",
-        "Cambiador para bebés",
         "Opciones para grupos",
-        "Cerca de carretera",
-        "Parrilla",
         "Vinos terroir",
         "Vende productos propios",
-        "Sala de lactancia",
         "Organiza eventos",
+        "Huerto propio",
         "Organiza promoción productos"
     ],
     "owners_name": [
-        "Pedro Monje San",
-        "José Monje Canut"
+        "Ramces González",
+        "Diego Millán"
     ],
-    "web_url": "https://www.viavenetobarcelona.com/",
-    "instagram_user": "@viavenetobarcelona",
-    "contact_number": "932007244",
-    "direction": "Calle Ganduxer, 10. 08021 Barcelona",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-a3-49-a349ab8c-1bb9-4183-a04f-8691125a05b0-tmptmpir003vkw52a1b64c22bc4498aa5f5f2891fad077.jpeg",
+    "web_url": "http://www.cancookrestaurant.com",
+    "instagram_user": "@cancook_restaurante",
+    "contact_number": "976239516",
+    "direction": "Calle Leon XIII, 2 , 50008 Zaragoza, España",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-0c-d0-0cd0300d-b4a7-428c-a945-2d15265a839b-tmptmpsahy722h549d8c08cf2945498bbb17e8703e8aad.jpeg",
     "meal_type": [
-        "Catalana",
+        "Creativa   De autor",
         "Mercado"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+    ]
 },
 {
-    "name": "Miramar",
-    "soles_number": 3,
-    "description": "El bosque y el litoral de La Mar d’Amunt inspiran a Paco Pérez a la hora de armar la propuesta de ‘Miramar’, un fastuoso restaurante de cocina marinera clásica que ocupa el edificio que un día fue hostal regentado por los padres de su pareja, la maître Montse Serra. De hecho, cinco suites permiten estirar la experiencia y amanecer al día siguiente a pie de playa. A un paso de Francia, Paco ofrece una carta marinera clásica, lo que toca en un espacio cuyos ventanales permiten contemplar resguardado a los pescadores que salen a faenar, pero no elude brochazos de ánimo vanguardista en los dos menús degustación de distinta extensión y componente creativo.",
-    "short_menu_description": "Menú Degustación MAR",
+    "name": "Bogey",
+    "soles_number": 2,
+    "description": "Jesús González es un referente de la cocina creativa y canaria. Ofrece una propuesta primordialmente europea, adaptada a la clientela internacional del hotel Las Madrigueras, donde se ubica. Al margen de la carta, propone también un menú degustación  basado en platos de tradición canaria.",
+    "short_menu_description": "Huevo escalfado con Parmentier trufado, edamame y caldo de jamón ibérico.\r\nSalmón noruego marinado en casa, con ginebra, lima y jengibre, brotes de ensalada.\r\nLomo de bacalao braseado, salsa de tomate y encebollado tradicional, polvo de aceituna negra.",
     "menu_options": [
         {
             "name": "Menú Degustación",
-            "price": "240.00€",
-            "description": "MAR"
-        },
-        {
-            "name": "Otros menús",
-            "price": "205.00€",
-            "description": "Memoria, Territorio y Cultura"
-        },
-        {
-            "name": "Otros menús",
-            "price": "180.00€",
-            "description": "CARTA"
-        },
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Jardín",
-        "Comedor privado",
-        "Vistas al mar",
-        "Buenas vistas",
-        "Carta en inglés",
-        "Terraza de verano",
-        "Vinos terroir",
-        "Vende productos propios",
-        "Huerto propio"
-    ],
-    "owners_name": [
-        "Montse Serra"
-    ],
-    "web_url": "https://www.restaurantmiramar.com/",
-    "instagram_user": "@pacoperezmiramar",
-    "contact_number": "972380132",
-    "direction": "Passeig Marítim 7, 17490 Llançà (Girona)",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-4e-22-4e221d95-228c-49ab-8d6e-b27fad7ddfac-16077-miramar-8aec488ae32e4f4abb85e6c9e7673ee3.jpeg",
-    "meal_type": [
-        "Catalana",
-        "Creativa   De autor"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Ramón Freixa",
-    "soles_number": 3,
-    "description": "Ramón Freixa auna producto, conocimiento, presentación en busca permanente de la excelencia y la autenticidad de sabores. Ofrece varios tipos de menú degustación que el chef adapta a las preferencias y gustos de los comensales. Amplio y elegante comedor con terraza acristalada que mira al jardín interior. Un espacio para el disfrute en pleno corazón de Barrio de Salamanca.",
-    "short_menu_description": "Menú degustación",
-    "menu_options": [],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Aparcamiento propio",
-        "Aparcacoches",
-        "Terraza abierta",
-        "Jardín",
-        "Comedor privado",
-        "Carta en inglés",
-        "Vinos terroir"
-    ],
-    "owners_name": [],
-    "web_url": "http://www.ramonfreixamadrid.com",
-    "instagram_user": "@ramonfreixa",
-    "contact_number": "917818262",
-    "direction": "Calle Claudio Coello, 67. 28001 Madrid",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-9c-10-9c1087b5-a4df-4a79-bdd8-1632b5613a9d-freixa_gastronomico_noviembre17_03.jpg",
-    "meal_type": [
-        "Creativa   De autor"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Casa Duque",
-    "soles_number": 1,
-    "description": "Uno de los grandes templos de cocina segoviana en un edificio del s. XVI en tres plantas. Marisa Duque, cuarta generación de la familia, dirige esta casa fundada en 1895 que conserva con mimo la tradición y el buen hacer que le han dado nombre. Judiones, cochinillo asado en horno de leña o suflé de colas de cangrejo de río con salsa de gambas (creado por Dionisio, maestro asador de Segovia por el nacimiento de su nieta Andrea), son los reyes de la carta que se acompaña en su oferta de vinos con una bodega acorde en la que predominan los Rioja y Ribera del Duero. De la misma propiedad y para tapear Las Cuevas del Duque (Calle Sta. Engracia, 6).",
-    "short_menu_description": "Cochinillo asado en nuestro horno de leña marca de calidad, también rico asado de cordero lechal.",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "40.00€",
-            "description": ""
-        },
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Comedor privado",
-        "Carta en inglés",
-        "Tronas de niños",
-        "Barra"
-    ],
-    "owners_name": [
-        "Marisa Duque"
-    ],
-    "web_url": "http://www.restauranteduque.es",
-    "instagram_user": "@duquerestaurante",
-    "contact_number": "921462487",
-    "direction": "Calle de Cervantes,  12. 40001 Segovia (Segovia)",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-c8-c7-c8c7a5d7-f161-4d52-916b-72c7f08b7bff-duque_2018_4.jpg",
-    "meal_type": [
-        "Carnes",
-        "Castellana"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Les Cols",
-    "soles_number": 3,
-    "description": "Solo con pisar la masía donde Fina Puigdevall nació, creció y se convirtió en una gran cocinera, se capta perfectamente cómo una construcción tradicional de Olot se metamorfosea hasta convertirse en un súper premiado desarrollo arquitectónico. Igual que en la cocina. Los tubérculos y las hierbas o las gallinas que forman parte del paisaje de La Garrotxa brotan en el plato. Sobrios y exultantes. Fina y Martina, su hija y jefa de cocina, ponen en valor a través de sus composiciones el alma de una tierra introvertida que se ha nutrido del campo desde hace siglos y que gracias a ellas rebosa juventud sin relegar la madurez. Y así llevan 30 años.Rodeada de un huerto ecológico de 4.000 metros cuadrados que se extiende a las puertas de su Casa Horitzó, en Sant Pere Despuig, Fina tiene a su alcance una gran despensa vegetal con la que nutre platos como la mongeta del cuc, una judía verde en tempura al carbón con una salsa de romesco; las célebres judías de Santa Pau en versión picante; las mini-hortalizas, cuyo sabor recuerda a lo que nuestros abuelos solían comer en un caldo tibio de verduras; o la cebolla dulce con una suave base de queso de oveja. La berenjena blanca o el alforfón son ya un icono de su gastronomía, lo mismo que las setas peu de rata reina en otoño, tan poco usadas en la tradición culinaria.",
-    "short_menu_description": "Tatin de pato de corral con peras",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "165.00€",
-            "description": "HORIZONTE verde&sostenible"
-        },
-        {
-            "name": "Menú Degustación",
-            "price": "165.00€",
-            "description": "NATURALEZA viva&mística"
+            "price": "90.00€",
+            "description": "Según mercado"
         },
         {
             "name": "Opciones veganas",
@@ -876,6 +294,53 @@
             "name": "Opciones para celíacos",
             "price": null,
             "description": ""
+        },
+        {
+            "name": "Platos fuera de carta",
+            "price": null,
+            "description": ""
+        }
+    ],
+    "restaurant_services": [
+        "Establecimiento accesible",
+        "Aparcamiento propio",
+        "Aparcacoches",
+        "Terraza abierta",
+        "Jardín",
+        "Comedor privado",
+        "Buenas vistas",
+        "Carta en inglés",
+        "Acepta Waylet",
+        "Abre lunes"
+    ],
+    "owners_name": [
+        "Playas de Troya, S.A."
+    ],
+    "web_url": "https://www.hotellasmadrigueras.com",
+    "instagram_user": "@hotellasmadrigueras",
+    "contact_number": "922777818",
+    "direction": "C/ Meandro, 3 - Playa de Las Américas, Santa Cruz de Tenerife",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-e9-80-e980df36-ca56-4865-b7d9-d44a54aa6fd2-8873-bogey-ff9cc6c39efd496db47749125dc6d5bd.jpeg",
+    "meal_type": [
+        "Canaria",
+        "Europea"
+    ]
+},
+{
+    "name": "Mantúa",
+    "soles_number": 2,
+    "description": "Israel Ramos busca en ‘Mantúa’ trazar un recorrido por la tradición de su tierra con escalas en algunos de los platos más típicos de la cocina jerezana. Todos los matices que ofrece Jerez, su campiña, su huerta y la mar gaditana se procuran atrapar en dos menús degustación que también conceden protagonismo a la cultura enológica de la comarca. Y no solo por existir la posibilidad de buscar su armonía con una bodega bien surtida de vinos de Jerez, también porque los vinos del Marco se incorporan con naturalidad en varias creaciones del chef.",
+    "short_menu_description": "Puerros a la brasa con escabeche de boletus",
+    "menu_options": [
+        {
+            "name": "Menú Degustación",
+            "price": "145.00€",
+            "description": "Caliza. Armonia de vino 60€"
+        },
+        {
+            "name": "Menú Degustación",
+            "price": "115.00€",
+            "description": "Arcilla. Armonia de vino 50€"
         },
         {
             "name": "Carro de quesos",
@@ -885,227 +350,196 @@
     ],
     "restaurant_services": [
         "Establecimiento accesible",
-        "Aparcamiento propio",
-        "Terraza abierta",
-        "Jardín",
-        "Comedor privado",
-        "Buenas vistas",
-        "Carta en inglés",
-        "Tronas de niños",
-        "Cambiador para bebés",
-        "Opciones para grupos",
-        "Sala de lactancia",
-        "Organiza eventos",
-        "Huerto propio"
+        "Carta en inglés"
     ],
     "owners_name": [
-        "Manel Puigvert",
-        "Fina Puigdevall"
+        "Israel Ramos"
     ],
-    "web_url": "http://www.lescols.com",
-    "instagram_user": "@lescols_finapuigdevall",
-    "contact_number": "972269209",
-    "direction": "Mas Les Cols - Crtra de la Canya, s/n 17800 Olot, Girona",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-d6-6c-d66c9ce0-8506-4610-a355-9f15dcb02859-tmptmpix68m4_mecee7b7308e74c74a79c6c0ab49519d5.jpeg",
+    "web_url": "http://www.restaurantemantua.com",
+    "instagram_user": "@mantuajerez",
+    "contact_number": "856652739",
+    "direction": "Plaza Aladro, 7. 11402 Jerez de la Frontera (Cádiz)",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-aa-9c-aa9ce861-fa00-4718-af89-3937e27730ba-age_age_02_mantua_israelramos.jpg",
     "meal_type": [
-        "Catalana",
+        "Andaluza",
         "Creativa   De autor"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+    ]
 },
 {
-    "name": "Damasqueros",
-    "soles_number": 1,
-    "description": "Ubicado en El Realejo, antiguo barrio judío, el restaurante toma su nombre de quienes practicaban el damasquinado, trabajo artesano consistente en realizar figuras y dibujos con hilos y láminas de oro y plata en acero o hierro. Con idéntico mimo, la granadina Lola Marín anuncia cocina de sentimiento y anhela sabores rotundos y exquisita presencia en un menú degustación que renueva cada semana. En él parte de aromas, sabores y más matices de su tierra, pero cobra vuelo sin renunciar a otras influencias, incluidas las cocinas árabe y vasca.",
-    "short_menu_description": "Menú Degustación, platos de barra",
+    "name": "Tohqa",
+    "soles_number": 2,
+    "description": "Especialista en técnicas de brasa y producto local, Edu Pérez fue jefe de cocina en ‘A Fuego Negro’ (San Sebastián), sublimó el pescado andaluz y su despiece en la parrilla de ‘Cataria’ y puso a andar ‘Awita’, taberna andaluza ambulante, antes de abrir ‘Tohqa’. Lo llaman restaurante andaluz de candela libre, y es cierto que en él se respira libertad y alta cocina gaditana. Sin trucos y a modo de altavoz del sector primario. Todo un ejercicio de rebeldía a un paso del cauce del río Guadalete, en un edificio histórico que fue convento antes que bar y hoy exhibe moderna rusticidad.",
+    "short_menu_description": "Morena y Toronja\r\nGamba al sarmiento y grasa de txuleta\r\nOstra de Conil y escabeche de hierbas casi helado\r\nCebolla asada al extremo, praliné salado y cream",
     "menu_options": [
         {
-            "name": "Menú Degustación",
-            "price": "69.00€",
-            "description": "Incluye servicio de pan con Aceite de Oliva Extra Premium y agua."
+            "name": "Otros menús",
+            "price": "55.00€",
+            "description": "Menú Anafe"
         },
         {
-            "name": "Menú Degustación",
-            "price": "99.00€",
-            "description": "Menu degustación con maridaje"
+            "name": "Otros menús",
+            "price": "80.00€",
+            "description": "Menú TohQa"
         },
         {
             "name": "Opciones veganas",
+            "price": null,
+            "description": ""
+        },
+        {
+            "name": "Opciones para celíacos",
+            "price": null,
+            "description": ""
+        },
+        {
+            "name": "Platos fuera de carta",
             "price": null,
             "description": ""
         }
     ],
     "restaurant_services": [
         "Establecimiento accesible",
+        "Terraza abierta",
+        "Jardín",
         "Comedor privado",
-        "Carta en inglés",
-        "Tronas de niños",
         "Opciones para grupos",
+        "Parrilla",
         "Vinos terroir",
-        "Barra",
-        "Organiza eventos",
-        "Huerto propio"
+        "Abre lunes",
+        "Organiza eventos"
     ],
     "owners_name": [],
-    "web_url": "http://www.damasqueros.com",
-    "instagram_user": "@damasqueros",
-    "contact_number": "958210550",
-    "direction": "Calle Damasqueros, 3, 18009, Granada",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-d0-56-d056d435-73f2-466d-84c3-8ade8824494f-13068-damasqueros-b728dee66c554c16aca5fcd790a72364.png",
-    "meal_type": [
-        "Creativa   De autor",
-        "Mercado"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+    "web_url": "http://tohqa.com/",
+    "instagram_user": "@tohqa_",
+    "contact_number": "635258908",
+    "direction": "C. los Moros 4, 11500 El Puerto de Santa María, Cádiz",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-0a-f4-0af446b6-44ca-4492-870e-8c210cf077e2-13069-tohqa-cf1fe460f8cd49939d4376f4ff728e67.jpeg",
+    "meal_type": []
 },
 {
-    "name": "Horcher",
+    "name": "La Costa",
     "soles_number": 2,
-    "description": "La familia Horcher sigue al frente de este clásico y elegante local, inaugurado en 1943, manteniendo a alto nivel la cocina centro-europea. En la oferta destacan los platos de caza y los postres, algunos verdaderamente extraordinarios como la perdiz a la prensa, el lomo de corzo o el delicioso pastel baumkuchen. Elisabeth Horcher ha cambiado lo justo para que todo siga igual, igual de bien. Gran bodega y servicio de alta escuela.",
+    "description": "José Álvarez lleva toda la vida cocinando en El Ejido. Fue en los años 60 cuando ‘La Costa’ abrió por primera vez sus puertas como un local humilde de menús del día en un polígono industrial. El negocio ha evolucionado y ahora es un restaurante donde prima la calidad del producto de la zona y todo lo que ofrece el Mediterráneo. En una tierra donde el mar es verde y la tierra azul por los invernaderos, el negocio ha evolucionado con el mejor pescado de las lonjas de Adra y Almería, sin olvidar las excelentes verduras de la huerta almeriense. Una experiencia completa para ofrecer al comensal un retrato fiel del paisaje al plato.",
     "short_menu_description": null,
-    "menu_options": [],
+    "menu_options": [
+        {
+            "name": "Menú Degustación",
+            "price": null,
+            "description": ""
+        }
+    ],
     "restaurant_services": [
-        "Aparcamiento propio",
-        "Aparcacoches",
+        "Establecimiento accesible",
         "Comedor privado",
         "Carta en inglés"
     ],
     "owners_name": [
-        "Gustavo Horcher Weber"
+        "Familia Álvarez Moreno"
     ],
-    "web_url": "http://www.restaurantehorcher.com",
-    "instagram_user": "@restaurantehorcher",
-    "contact_number": "915220731",
-    "direction": "Calle Alfonso XII, 6. 28014 Madrid",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-49-0c-490c8c8f-d9ea-4b84-99b3-688106fd3181-horcher_2019_3.jpg",
+    "web_url": "http://www.restaurantelacosta.com",
+    "contact_number": "950481777",
+    "direction": "Avenida Bulevar, 48. 04700 El Ejido (Almería)",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-ce-2a-ce2a97b0-a722-45ff-ad73-1516a739b6fa-la_costa_2018_1.jpg",
     "meal_type": [
-        "Internacional",
+        "Creativa   De autor",
         "Mercado"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+    ]
 },
 {
-    "name": "Casa Consuelo",
-    "soles_number": 1,
-    "description": "Antaño parada obligada para los viajeros por el occidente astur. La casa sigue conservando, junto al trato cálido de la familia López, el de la cocina tradicional asturiana, generosa en la carta ofertada, la calidad del producto y las raciones servidas. Interesante bodega de riojas clásicos.",
-    "short_menu_description": null,
-    "menu_options": [],
+    "name": "Sollo",
+    "soles_number": 2,
+    "description": "El llamado chef del caviar, Diego Gallegos, continúa dando carrete a su producto fetiche e introduciendo en la alta cocina los pescados de río: esturión, trucha, tilapia... Así, surgen creaciones como un bagre cocinado en ceniza o una sopa fría de temporada y crustáceos de agua dulce. Todo, en un restaurante acristalado, luminoso y conectado con el paisaje y la cocina.",
+    "short_menu_description": "Sólo menú de degustación.",
+    "menu_options": [
+        {
+            "name": "Menú Degustación",
+            "price": "150.00€",
+            "description": "Caminho 2023"
+        }
+    ],
     "restaurant_services": [
         "Establecimiento accesible",
         "Aparcamiento propio",
         "Terraza abierta",
-        "Jardín",
         "Comedor privado",
+        "Vistas al mar",
+        "Buenas vistas",
         "Carta en inglés",
-        "Tronas de niños",
-        "Barra"
-    ],
-    "owners_name": [
-        "Hermanos García López"
-    ],
-    "web_url": "http://www.casaconsuelo.es",
-    "contact_number": "985641696",
-    "direction": "Carretera N - 634, San Sebastián - Santiago, km. 511,150. 33792 Otur (Asturias)",
-    "meal_type": [
-        "Asturiana",
-        "Casera"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Casa Pilar",
-    "soles_number": 1,
-    "description": "Pilar Granda y Toño González miman con todo lujo de detalles los pescados que pasan por sus manos. Esta recoleta casa, envuelta en un paisaje verde casi misterioso, es un ejemplo de la buena cocina asturiana. Atención casi exclusiva por los mejores productos del Cantábrico y los ríos asturianos, porque el arroz con bogavante, las patatas con centollos, la caldereta de marisco o las fabes con almejas se pueden hacer de muchas maneras, pero en 'Casa Pilar' se busca la excelencia. No en vano, para los lugareños es \"La Casa del pescado\".",
-    "short_menu_description": "Salpicón de bogavante, berberechos al ajillo, arroz meloso con bogavante, fabes de \"la granxa\" con pulpo y carabinero, calamares frescos de potera en su tinta con arroz, platos de caza en temporada, pescados y mariscos del Cantábrico, tarta de queso.",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Aparcamiento propio",
-        "Tronas de niños",
+        "Opciones para grupos",
         "Terraza de verano",
+        "Cerca de carretera",
+        "Vinos terroir",
+        "Vende productos propios",
         "Organiza eventos",
         "Huerto propio",
         "Organiza promoción productos"
     ],
     "owners_name": [
-        "Pilar Granda"
+        "Diego Gallegos"
     ],
-    "web_url": null,
-    "contact_number": "985410177",
-    "direction": "Barrio La Nogalera, s/n 33592 Nueva de llanes (Asturias)",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-ae-31-ae3112ff-c8ef-4f27-8d50-78d456173936-casa_pilar_2018_2.jpg",
+    "web_url": "http://www.sollo.es",
+    "instagram_user": "@sollorestaurante; @diegogallegoschef",
+    "contact_number": "951385622",
+    "direction": "Avenida El Higuerón, 48 29640 Fuengirola (Málaga)",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-7e-06-7e066732-5aa1-450f-983b-b402dc0e6059-12879-sollo-7db6bd7e9733486ca541c7ae719b7a12.jpeg",
     "meal_type": [
-        "Marinera",
-        "Mercado"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+        "Creativa   De autor"
+    ]
 },
 {
-    "name": "Casa Belarmino",
-    "soles_number": 1,
-    "description": "En las cercanías del cabo Peñas, rodeada de un paisaje que hace honor al nombre del lugar, esta antigua tienda-bar y estanco se ha convertido, de la mano de Ramona Menéndez en cocina y Juan L. Álvarez que ejerce de perfecto anfitrión, en lugar de peregrinación para los partidarios de recetas tradicionales refinadas y aligeradas. Amplia bodega.",
-    "short_menu_description": "Croquetas, Pote Asturiano, Arroz Con Pitu , Rollo de Bonito, Pastel de Puerros, Simplemente Lubina, Steak Tartar, Pita Pinta Guisada.",
+    "name": "José Carlos García",
+    "soles_number": 2,
+    "description": "El esmero y oficio, bien heredado de su padre, hace que este bello restaurante, también lo sea en sus creaciones culinarias. José Carlos, junto a su esposa Lourdes, en sala, cuidan al detalle todo, que se comprueba tanto en sala como en las excelsas creaciones que sorprenden por creatividad y colindancia de sabores. Dispone de terraza frente al mar y distintos espacios. Es el gran referente malagueño.",
+    "short_menu_description": "El ajoblanco, la merluza, el salmonete, las quisquillas, el alistado, el erizo de mar, el steak tartar o las mollejas son manjares que tendrán presencia en el menú degustación de José Carlos García y que podrán variar cada día, en función de su disponibilidad en la lonja o el mercado.",
     "menu_options": [
         {
             "name": "Menú Degustación",
-            "price": "40.00€",
-            "description": "Esencia de Nuestra Tierra."
+            "price": null,
+            "description": ""
         },
         {
             "name": "Menú Degustación",
-            "price": "65.00€",
-            "description": "Menú 92 años de Evolución."
+            "price": null,
+            "description": ""
         },
+        {
+            "name": "Menú Degustación",
+            "price": null,
+            "description": ""
+        }
+    ],
+    "restaurant_services": [
+        "Establecimiento accesible",
+        "Aparcamiento propio",
+        "Terraza abierta",
+        "Comedor privado",
+        "Vistas al mar",
+        "Buenas vistas",
+        "Carta en inglés",
+        "Acepta Waylet",
+        "Opciones para grupos",
+        "Organiza eventos"
+    ],
+    "owners_name": [
+        "Café de París Muelle Uno, S.L."
+    ],
+    "web_url": "http://www.restaurantejcg.com",
+    "instagram_user": "@jcgrestaurante",
+    "contact_number": "952003588",
+    "direction": "Plaza de la Capilla, s/n. Puerto de Málaga.",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-ba-ad-baadfb1a-1874-4b6e-ac7d-c18898c8c17c-tmptmph_owqzj27fc6a63a2795410a9950a250f07695fc.jpeg",
+    "meal_type": [
+        "Andaluza",
+        "Creativa   De autor,",
+        "Mercado"
+    ]
+},
+{
+    "name": "El Lago",
+    "soles_number": 2,
+    "description": "En ‘El Lago’ se demuestra que el tan cacareado producto de proximidad o kilómetro 0 y el aprovechamiento responsable de cuanto ofrece el entorno, no están en absoluto reñidos con el ejercicio de la alta cocina. Así, verduras de temporada y más productos vegetales de áreas cercanas a Marbella asumen el protagonismo en una propuesta gastronómica donde recurrentemente asoman etiquetas y coletillas como vegano, ecológico y sostenible. Pinceladas de carne y pescado completan una propuesta elegante y sabrosa en consonancia con un espacio igualmente distinguido ubicado en un campo de golf frente al lago que inspira su nombre.",
+    "short_menu_description": "Laminas de vaca madurada, queso pecorino trufado y crema de pimiento rojo ahumado; puerro asado y gratinado con salsa Mornay y queso Stilton; paletilla de chivo malagueño al romero; solomillo de atún, beurre blanc de vermouth y hojas nobles...",
+    "menu_options": [
         {
             "name": "Opciones para celíacos",
             "price": null,
@@ -1120,55 +554,7 @@
     "restaurant_services": [
         "Establecimiento accesible",
         "Aparcamiento propio",
-        "Terraza abierta",
-        "Jardín",
         "Comedor privado",
-        "Carta en inglés",
-        "Carta en braile",
-        "Opciones para grupos",
-        "Terraza de verano",
-        "Vinos terroir",
-        "Vende productos propios",
-        "Organiza eventos",
-        "Huerto propio",
-        "Organiza promoción productos"
-    ],
-    "owners_name": [
-        "Ramona Menéndez"
-    ],
-    "web_url": "http://www.casabelarmino.es",
-    "instagram_user": "@casabelarmino",
-    "contact_number": "985880807",
-    "direction": "Aldea Cerra 16, Manzaneda, Gozón, Asturias",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-a0-af-a0afbb70-7349-4ab1-b1ca-217e7b4ae2b9-casa_belarmino_2018_4.jpg",
-    "meal_type": [
-        "Asturiana",
-        "Casera"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Alenda",
-    "soles_number": 1,
-    "description": "Cocina creativa de cercanía, un huerto propio y mucha sensibilidad son los ingredientes de este inspirador concepto, en el que la pareja formada por Iñaki Gómez y Lola Palacio dan rienda suelta a sus sueños gastronómicos para deleite de todo aquel que se sienta en su mesa. No hay carta, sino tres menús degustación, elaborados con productos de proximidad como la ternera asturiana IGP, la acelga roja o el bonito del Cantábrico. De postre, más territorio: “Laurel, manzana, sidra y eucalipto” con vistas al jardín, en esta casa de color mostaza que encierra talento y pasión a raudales. En la copa, vinos de pequeños viticultores y algún que otro clásico.",
-    "short_menu_description": "Nos sentimos mas comodos trabajando pescados y verduras. No te pierdas nuestra merluza y nuestras combinaciones de mar y montaña.",
-    "menu_options": [
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Jardín",
         "Buenas vistas",
         "Carta en inglés",
         "Tronas de niños",
@@ -1176,323 +562,19 @@
         "Acepta mascotas",
         "Terraza de verano",
         "Vinos terroir",
-        "Vende productos propios",
         "Organiza eventos",
-        "Huerto propio"
-    ],
-    "owners_name": [
-        "Lola Palacio Silva",
-        "Iñaki Gomez Gonzalez"
-    ],
-    "web_url": null,
-    "instagram_user": "@alendarestaurante",
-    "contact_number": "676517632",
-    "direction": "Castiello de Selorio, n23A, 33316, Villaviciosa",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-bd-c9-bdc97fd8-3877-4ea4-be02-517641637bb3-15008-alenda-19c3aa2b30064c44b504fad7fffd1d46.jpeg",
-    "meal_type": [],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Lumbre",
-    "soles_number": 1,
-    "description": "Este proyecto con alma, que nació a finales de 2019, interpreta la cocina tradicional riojana desde un enfoque innovador a través de la mirada de su jefe de cocina, Sergio Hernando. Proponen dos menús degustación, en cuyos platos tienen cabida los productos de cercanía, pero también otros más lejanos: vainas a la brasa con gambas de Huelva, potaje de avellanas con chorizo a la brasa o cuello y lecherillas de cordero con alcachofas. Su impactante bodega tiene más de 400 referencias. En su espacio Calado, los fines de semana a mediodía sirven vinos por copas con aperitivos como conservas del Cantábrico, espárragos de Navarra o embutidos y quesos riojanos.",
-    "short_menu_description": "Puerro Asado con ensalada de setas",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "95.00€",
-            "description": "Menú Degustación"
-        },
-        {
-            "name": "Menú Degustación",
-            "price": "60.00€",
-            "description": "Menú Degustación"
-        },
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Aparcamiento propio",
-        "Comedor privado",
-        "Buenas vistas",
-        "Carta en inglés",
-        "Tronas de niños",
-        "Cambiador para bebés",
-        "Opciones para grupos",
-        "Cerca de carretera",
-        "Parrilla",
-        "Vinos terroir",
-        "Vende productos propios",
-        "Abre lunes",
-        "Huerto propio",
         "Organiza promoción productos"
-    ],
-    "owners_name": [
-        "Jorge Blanco"
-    ],
-    "web_url": "https://lumbrerestaurante.com/",
-    "instagram_user": "@lumbrerestaurante",
-    "contact_number": "941324122",
-    "direction": "Travesía Jardines, 15 26230 Casalarreina",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-84-5f-845fb89f-5f70-40f1-9734-fa60945ce3bc-tmptmp81l9bkoabf7ca82b76fa4615bc240f56a9056564.jpeg",
-    "meal_type": [
-        "Riojana"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Echaurren Tradición",
-    "soles_number": 1,
-    "description": "El mismo equipo culinario dirigido por Francis Paniego versiona la cocina riojana de producto con el recetario de su madre Marisa (Premio Nacional de Gastronómia en 1987). Allí se disfrutan las emblemáticas croquetas de nuestra madre de pollo y jamón, la jugosa merluza a la romana o los caparrones a la riojana y el delicioso pastel de requesón con crema helada al licor Valvanera. Todo bien servido y en su punto de sabor, técnica y tradición.",
-    "short_menu_description": "CARPACCIO DE GAMBA, sobre tartar de tomate y ajo blanco.OREJA DE CERDO GLASEADA, con habitas repeladas y salsa de zanahoriaPIMIENTOS DEL CRISTAL CARAMELIZADOS con yema de huevo.LAMINAS DE BACALAO LIGADAS AL PILPIL con yema de huevo, sobre una riojana de caracolesCALLOS CON MORROS DE TERNERA A LA RIOJANA",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "95.00€",
-            "description": "Menú Tradición"
-        },
-        {
-            "name": "Opciones veganas",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Platos fuera de carta",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Carro de bebidas",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Aparcamiento propio",
-        "Terraza abierta",
-        "Jardín",
-        "Comedor privado",
-        "Buenas vistas",
-        "Carta en inglés",
-        "Tronas de niños",
-        "Opciones para grupos",
-        "Terraza de verano",
-        "Parrilla",
-        "Vinos terroir",
-        "Barra",
-        "Abre lunes",
-        "Sala de lactancia"
     ],
     "owners_name": [],
-    "web_url": "http://www.echaurren.com",
-    "contact_number": "941354047",
-    "direction": "Calle Padre José García, 19. 26280 Ezcaray (Rioja, La)",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-36-10-361096cd-3df9-488e-825d-996df60d8eff-tmptmpuhchpspp8653461ec51348e8820f67103ae90886.jpeg",
+    "web_url": "http://www.restauranteellago.com",
+    "instagram_user": "@ellagorestaurante",
+    "contact_number": "952932371",
+    "direction": "Avda Marco Polo, s/n. 29604 Marbella (Málaga)",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-14-45-144586b2-1c1d-4637-9b76-9b7cd1756f25-lago.jpg",
     "meal_type": [
-        "Casera",
-        "Riojana"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Ca' Suso",
-    "soles_number": 1,
-    "description": "Los hermanos Iván y Vicente Fernández Feito, responsables de cocina y sala, respectivamente, gobiernan desde 2006 este restaurante ubicado en el casco antiguo donde se respira y se saborea asturianidad. De hecho, son famosas sus croquetas fluidas de queso La Peral, sirven Chosco de Tineo y también fabada. La materia prima es siempre sobresaliente aquí, gestionan muy bien tiempos y puntos de asado y cochura, exhiben rasgos de modernidad y existe el aliciente de comprobar cómo trabajan ingredientes poco habituales, ya sean pescados olvidados en las cartas de sus colegas o quesos y verduras que hay que buscar con ahínco.",
-    "short_menu_description": "Croquetas de Queso La Peral\r\nGolondro en Caldereta \r\nChipirones a lo Pelayo\r\nSalmonetes en su Jugo al Hinojo\r\nCabrito Lechal a Las Hierbas\r\nCoulant de Casadiella\r\nTatin de Manzana con Natas Vaqueiras",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "60.00€",
-            "description": "Menú  Gastronómico  Ca' Suso"
-        },
-        {
-            "name": "Menú del día",
-            "price": "35.00€",
-            "description": "Menú  Bistro"
-        },
-        {
-            "name": "Opciones veganas",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Platos fuera de carta",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Carro de postres",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Comedor privado",
-        "Carta en inglés",
-        "Opciones para grupos",
-        "Vinos terroir",
-        "Organiza promoción productos"
-    ],
-    "owners_name": [
-        "Vicente Fernández Feito",
-        "Iván Fernández Feito"
-    ],
-    "web_url": "http://www.ca-suso.com",
-    "instagram_user": "@?hl=es",
-    "contact_number": "985228232",
-    "direction": "Calle Marqués de Gastañaga, 13. 33009 Oviedo (Asturias)",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-25-62-25622f84-9cc0-4845-b32c-5eb2aa3c038e-reducida_dig_002177_europe_iso_coated.jpg",
-    "meal_type": [
-        "Asturiana",
+        "Andaluza",
         "Creativa   De autor"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Casa Masip",
-    "soles_number": 1,
-    "description": "'Casa Masip' es uno de los negocios de la familia Masip, junto con el bar, el hotel y el asador de pollos en Zorraquín. El restaurante, en los bajos del hotel, nació en agosto de 1995 debido a las inquietudes por la gastronomía de Pedro Masip. Inspirado por su madre Vicenta Pérez, sigue creyendo que la cocina tradicional con matices modernos es la que mejor se adapta al entorno. Trabajan las setas con excelencia en toda su época y en invierno aparece la caza. Ragout de venado, Liebre royal, perdiz roja o lomo de ciervo. Buen punto y buena atención.",
-    "short_menu_description": "Tartar de Tomate con Queso de cabra de Tondeluna y aceite de Alabhaca\r\nCaparrones de la Rioja, Lomo de Cierva asado al Horno, Boletus salteados,",
-    "menu_options": [
-        {
-            "name": "Opciones veganas",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Platos fuera de carta",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Aparcamiento propio",
-        "Jardín",
-        "Carta en inglés",
-        "Carta en braile",
-        "Tronas de niños",
-        "Opciones para grupos",
-        "Acepta mascotas",
-        "Terraza de verano",
-        "Cerca de carretera",
-        "Parrilla",
-        "Vinos terroir",
-        "Barra",
-        "Abre lunes"
-    ],
-    "owners_name": [],
-    "web_url": "http://www.casamasip.com",
-    "instagram_user": "@casasilvanomaracaibo",
-    "contact_number": "941354327",
-    "direction": "Avenida Academia Militar, 6. 26280 Ezcaray (Rioja, La)",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-d0-e3-d0e3c0e6-e6ad-4113-bc49-57efa2bf172e-reducida_tmptmp3tb_xoye860bc8707bc84b1e9574c9cfc1a86227.jpeg",
-    "meal_type": [
-        "Casera",
-        "Mercado"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Aitor Esnal",
-    "soles_number": 1,
-    "description": "El cocinero que pone nombre al restaurante presenta, junto a su compañera de vida y de proyecto, Beatriz Martínez, una propuesta elegante y cuidada de cocina fusión con raíces vascas pero influencias asiáticas, por sus inspiradores viajes al sudeste de aquel continente. En el imaginario de Esnal se entremezclan el oficio de su padre, que era ebanista, con la dedicación gastronómica de su abuela o el buen hacer culinario de su madre. Su planteamiento se basa en tres menús degustación de diferente longitud, que también pueden acompañarse con maridaje de vinos.",
-    "short_menu_description": "Menú Amari",
-    "menu_options": [
-        {
-            "name": "Menú Degustación",
-            "price": "95.00€",
-            "description": "MENÚ AMARI"
-        },
-        {
-            "name": "Menú Degustación",
-            "price": "70.00€",
-            "description": "MENÚ AZOKA"
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Carta en inglés",
-        "Vinos terroir",
-        "Organiza promoción productos"
-    ],
-    "owners_name": [],
-    "web_url": "https://aitoresnal.com/",
-    "instagram_user": "@aitoresnal",
-    "contact_number": "941241283",
-    "direction": "Calle Sagasta 13, bajo, 26001, Logroño",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-db-4d-db4de8d4-6e05-4d87-98f7-1a084b4e87e9-15000-aitor-esnal-a3ada9310fb3412eb8df335d73d7109c.jpeg",
-    "meal_type": [],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+    ]
 },
 {
     "name": "Venezuela",
@@ -1523,16 +605,108 @@
     "meal_type": [
         "Marinera",
         "Mediterránea"
+    ]
+},
+{
+    "name": "Choco",
+    "soles_number": 2,
+    "description": "Francisco García, Kisko, propone un interesante y sabroso recorrido por la gastronomía y la historia andaluzas. Sus platos son fruto de un constante trabajo de investigación sobre los fundamentos y origen de la cocina andaluza, con la aplicación de técnicas y productos que ha rescatado del olvido.",
+    "short_menu_description": "GAZPACHUELO  DE CHISQUILLAS",
+    "menu_options": [
+        {
+            "name": "Menú Degustación",
+            "price": "140.00€",
+            "description": "KISKO GARCIA"
+        },
+        {
+            "name": "Menú Degustación",
+            "price": "110.00€",
+            "description": "BARRIO ANTIGUO"
+        },
+        {
+            "name": "Otros menús",
+            "price": "95.00€",
+            "description": "MENÚ A LA CARTA"
+        },
+        {
+            "name": "Opciones para celíacos",
+            "price": null,
+            "description": ""
+        },
+        {
+            "name": "Carro de quesos",
+            "price": null,
+            "description": ""
+        }
     ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+    "restaurant_services": [
+        "Establecimiento accesible",
+        "Comedor privado",
+        "Carta en inglés",
+        "Vinos terroir",
+        "Vende productos propios",
+        "Huerto propio"
+    ],
+    "owners_name": [
+        "Kisko García"
+    ],
+    "web_url": "http://www.restaurantechoco.com",
+    "instagram_user": "@kiskogarciachef",
+    "contact_number": "957264863",
+    "direction": "Calle Compositor Serrano Lucena, s/n. 14010 Córdoba  (Córdoba)",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-fe-3f-fe3f41cd-be02-4c95-bd80-efc0de212171-choco_2018_9.jpg",
+    "meal_type": [
+        "Andaluza",
+        "Creativa   De autor"
+    ]
+},
+{
+    "name": "Kaleja",
+    "soles_number": 2,
+    "description": "Dani Carnero, chef y propietario también de ‘La Cosmopolita’, reivindica en ‘Kaleja’ la vigencia de guisos y fondos, la plena contemporaneidad de una culinaria tradicional que cosecha etiquetas de modernidad para elaboraciones como el gazpachuelo, los maimones y los pimientos asados a la candela. También para ingredientes tan populares como la acelga, la pringá de puchero y la zurrapa. La judería malagueña sirve de marco a esta propuesta de apariencia minimalista donde se estimula la memoria con la parrilla como pilar fundamental, donde las mesas conviven con una barra asomada a la cocina y donde se persigue el sabor de los platos de las abuelas.",
+    "short_menu_description": "Cualquier pase del menú degustación",
+    "menu_options": [
+        {
+            "name": "Menú Degustación",
+            "price": "125.00€",
+            "description": "Gran menú Memoria"
+        },
+        {
+            "name": "Menú Degustación",
+            "price": "950000.00€",
+            "description": "Menú Memoria"
+        },
+        {
+            "name": "Opciones para celíacos",
+            "price": null,
+            "description": ""
+        },
+        {
+            "name": "Carro de quesos",
+            "price": null,
+            "description": ""
+        }
+    ],
+    "restaurant_services": [
+        "Establecimiento accesible",
+        "Carta en inglés",
+        "Tronas de niños",
+        "Acepta mascotas",
+        "Parrilla",
+        "Vinos terroir",
+        "Organiza promoción productos"
+    ],
+    "owners_name": [
+        "Daniel Carnero Sierra"
+    ],
+    "web_url": "https://www.restaurantekaleja.com",
+    "instagram_user": "@restaurantekaleja",
+    "contact_number": "952600000",
+    "direction": "Calle Marquesa de Moya, 9, 29015 Málaga",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-d7-6f-d76f92ae-6047-4bda-b57d-3cedd2c8fb42-reducida_kaleja_daniel_carnero_malaga_r.jpg",
+    "meal_type": [
+        "Andaluza"
+    ]
 },
 {
     "name": "Taúlla",
@@ -1590,39 +764,7 @@
     "contact_number": "868079980",
     "direction": "C. Antonio Flores Guillamón, 2, 30100 Murcia",
     "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-55-34-553457b3-ac03-4ccc-a710-d18427c36207-taulla_rodi_fernandez_murcia_r.jpg",
-    "meal_type": [],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Por Herencia",
-    "soles_number": 1,
-    "description": "Es la tercera generación de la familia “Los Navarros”, propietaria de ‘Bodegón Los Toneles’, la que lleva las riendas de este proyecto. Miguel Hernández Navarro, nieto del fundador, ha trazado su propio camino, no exento de riesgo, para crear platos que respetan la tradición pero que reinventan la cocina murciana. Su madre, Fuensanta Navarro, es su mentora y quien hace sentir al comensal como en casa. En la carta, albóndigas de manitas de cerdo y pulpo con puré de chirivía y hierbabuena; corvina con mole de calabaza totanera o tarta de queso azul murciano Ruperto. Su amplísima carta de vinos, gestionada con maestría por Eduardo, completan su propuesta.",
-    "short_menu_description": null,
-    "menu_options": [],
-    "restaurant_services": [],
-    "owners_name": [],
-    "web_url": null,
-    "contact_number": "+34868974600",
-    "direction": "Calle Cánovas del Castillo, 9. 30003 Murcia",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-1e-f8-1ef8a04c-481b-41ad-846b-cbec3d2c21f8-reducida_gk8a1741-editada.jpg",
-    "meal_type": [],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+    "meal_type": []
 },
 {
     "name": "Polea",
@@ -1655,22 +797,52 @@
     "contact_number": "614146978",
     "direction": "C. Almohajar, 2 3002 Murcia",
     "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-60-7c-607c378f-96c2-4a72-81cc-4b866a3de30d-13573-polea-339a390a189240fab938dc7efd8b4625.jpeg",
-    "meal_type": [],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+    "meal_type": []
 },
 {
-    "name": "Pepe Tomás",
+    "name": "Iraeta",
     "soles_number": 1,
-    "description": "Antiguo merendero entre limoneros, un oasis de calma en pleno valle del Segura, en las faldas del monte Miravete, 'Pepe Tomás' creció como salón de celebraciones y ahora colma sus aspiraciones gastronómicas con las capacidades de la cocinera Karina Martínez y el sumiller Fran Saura. Su visión renovada y atrevida de platos y productos de la región (tomate de Cehegín, cordero segureño...), un ejemplo de renovación particular con pilares en la huerta, la brasa y la maestría con los arroces, se complementa a la perfección con una carta de vinos donde están representadas más de 80 zonas productoras y 20 países.",
-    "short_menu_description": "Hueva de Mújol en semisalazón, berberechos a la brasa, Mollejas de cordero segureño a la brasa con calabaza totanera, nuestros platos de cuchara o pescados de nuestras costas cocinados a la parrilla",
+    "description": "Cocina tradicional vasca sin complicaciones con la cuarta generación manteniendo la misma filosofía desde hace más de 100 años: el producto es sagrado y la temporada su vocación. Ensalada de tomate y jamón ibérico; revuelto de hongos; bacalao Errota; chuleta de buey; callos de ternera y la merluza como estrella de la casa elaborada en diferentes versiones: frita, a la plancha o en salsa verde. Todo, en un típico caserón vasco de pueblo con capacidad para 35 comensales (algo más con la terraza). Conviene reservar porque se pone hasta la bandera.",
+    "short_menu_description": "-hongos con su yema de huevo( en temporada)-paloma torcaz , liebre , pato azulon ( en temporada)-alcachofas con almejas (en temporada)-pochas con almejas (en temporada)-merluza frita y en salsa con almejas",
+    "menu_options": [
+        {
+            "name": "Menú Degustación",
+            "price": null,
+            "description": ""
+        },
+        {
+            "name": "Platos fuera de carta",
+            "price": null,
+            "description": ""
+        }
+    ],
+    "restaurant_services": [
+        "Jardín",
+        "Comedor privado",
+        "Buenas vistas",
+        "Carta en inglés",
+        "Tronas de niños",
+        "Terraza de verano",
+        "Cerca de carretera",
+        "Vinos terroir",
+        "Abre lunes"
+    ],
+    "owners_name": [
+        "Jon Goikoetxea"
+    ],
+    "web_url": "http://iraetajatetxea.eus",
+    "contact_number": "943147067",
+    "direction": "Calle iraeta bidea nº10, 20740 Zestoa (Gipuzkoa)",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-4e-e8-4ee84ec7-24dc-4733-a8d6-69ecfb5509a3-iraeta_2017_1.jpg",
+    "meal_type": [
+        "Vasca"
+    ]
+},
+{
+    "name": "Local de Ensayo",
+    "soles_number": 1,
+    "description": "Un corazón sirve de explícito logotipo a este despacho de cocina apasionada, experimental y ocurrente basada preferentemente en producto de temporada fresco y ecológico. David López, referente local de la micología y de la trufa, mira con modernidad, valentía, técnica, experiencia y respeto al tomate de temporada, las salazones de pescado, homenajes a la huerta como el zarangollo y productos tan arraigados como la hueva de mújol y el chato murciano, el cerdo autóctono.",
+    "short_menu_description": "Estofado de setas silvestres y cultivadas, salsa périgueux y coulant de yema campera.Paparajote y su hoja comestible.Lenguado brasa au beurre blanc, galleta de su piel y caviar.",
     "menu_options": [
         {
             "name": "Opciones veganas",
@@ -1691,274 +863,55 @@
             "name": "Carro de quesos",
             "price": null,
             "description": ""
-        },
-        {
-            "name": "Carro de bebidas",
-            "price": null,
-            "description": ""
         }
     ],
     "restaurant_services": [
         "Establecimiento accesible",
-        "Aparcamiento propio",
-        "Terraza abierta",
-        "Jardín",
-        "Comedor privado",
-        "Buenas vistas",
         "Carta en inglés",
         "Tronas de niños",
-        "Cambiador para bebés",
-        "Opciones para grupos",
-        "Acepta mascotas",
-        "Parrilla",
         "Vinos terroir",
         "Vende productos propios",
-        "Abre lunes",
-        "Sala de lactancia",
         "Organiza eventos",
-        "Huerto propio",
         "Organiza promoción productos"
     ],
     "owners_name": [],
-    "web_url": "https://www.restaurantepepetomas.com/",
-    "instagram_user": "@restaurantepepetomas",
-    "contact_number": "968822376",
-    "direction": "Carril Pepe Tomás, 6 - 30579 Torreagüera, Murcia",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-32-c0-32c00095-e5a4-480f-8f7e-1782db574ccf-reducida_tmptmp57hthda506d3808668984ad5bc584881617956e9.jpeg",
-    "meal_type": [
-        "Mercado"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Juan Carlos Ferrando",
-    "soles_number": 1,
-    "description": "El chef Juan Carlos Ferrando presta nombre compuesto y apellido a este despacho de cocina atrevida y gustosa. Sentado a la mesa se aprecian el ánimo de eludir los caminos más transitados y algún ligero guiño al origen argentino del anfitrión, bien sea una empanada en el aperitivo, bondiola como guarnición o molleja de ternera como ingrediente principal. La profusa decoración de espíritu pop llama la atención y entretiene a quien cruza el discreto umbral de un restaurante que anuncia cocina riojana actual y cumple su palabra con preparaciones de espárrago, alcachofa o pimiento.",
-    "short_menu_description": "Kokotxas de merluza al pil pil y gallo de corral guisado\r\nCebolleta confitada, parmentier de patata y anguila ahumada \r\nMorcilla de La Rioja , membrillo, mostaza y jugo \r\nBerenjena a la parrilla, escabeche de codorniz y papada ibérica",
-    "menu_options": [
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Platos fuera de carta",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Comedor privado",
-        "Tronas de niños",
-        "Acepta Waylet",
-        "Opciones para grupos",
-        "Terraza de verano",
-        "Vinos terroir",
-        "Organiza eventos"
-    ],
-    "owners_name": [
-        "Juan Carlos Ferrando",
-        "Zuriñe Ortiz"
-    ],
-    "web_url": "https://www.juancarlosferrando.com/",
-    "instagram_user": "@restaurantejcferrando",
-    "contact_number": "941214795",
-    "direction": "María Teresa Gil de Gárate, 7, 26002, Logroño, La Rioja",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-08-d1-08d195f2-a4aa-413b-9a9c-39ed9c5150d4-tmptmpo87bpsnb8b145cc823c746898818fe3dd73e220a.jpeg",
+    "web_url": "http://www.localdensayo.com",
+    "instagram_user": "@localdensayo",
+    "contact_number": "968247054",
+    "direction": "C. Fuensanta, 5, 30001 Murcia",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-15-a7-15a7a689-a69e-46a1-85bc-2aa1b61ffc3f-david_lopez_local_de_ensayo.jpeg",
     "meal_type": [
         "Creativa   De autor"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+    ]
 },
 {
-    "name": "Morales",
-    "soles_number": 1,
-    "description": "Cocina tradicional y de mercado -con especial atención al marisco y los guisos- gestionada por la segunda generación de la familia Morales. Platos sencillos donde lo que prima es el producto siempre seleccionado en la temporada pertinente.",
-    "short_menu_description": "Paletilla de Cabrito Lechal al Horno\r\nCocochas de Merluza al Pil Pil\r\nCogote de Merluza",
-    "menu_options": [
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Comedor privado",
-        "Carta en inglés",
-        "Tronas de niños",
-        "Cambiador para bebés",
-        "Opciones para grupos",
-        "Terraza de verano",
-        "Vinos terroir",
-        "Abre lunes",
-        "Organiza promoción productos"
-    ],
-    "owners_name": [],
-    "web_url": "http://restaurantemorales.es/",
-    "instagram_user": "@restaurantemorales",
-    "contact_number": "968231026",
-    "direction": "Avenida de la Constitución, s/n  30008 Murcia",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-9b-bd-9bbd846c-aa03-4a8b-98da-109a54107616-restaurante_morales_-_09.jpg",
-    "meal_type": [
-        "Española",
-        "Mercado"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "La Posada del Laurel",
-    "soles_number": 1,
-    "description": "El enorme laurel bicentenario que vecinos y visitantes se encuentran a la entrada de Préjano da nombre al restaurante donde oficia el chef Dámaso Navajas. De hecho, ‘La Posada del Laurel’ se encuentra prácticamente a la sombra del mismo, en las faldas de Peña Isasa y Peñalmonte, en un enclave con preciosas vistas. La calma invade así un establecimiento dotado con porche, terraza, jardín y huerto, además de chimenea para cuando hace falta, donde se arriman a la brasa verduras, pescados y carnes, donde el vino cobra protagonismo y donde saben estupendamente bocados tan sencillos como los caracoles a la sartén y los pimientos a la leña.",
-    "short_menu_description": "Verduras, pimientos, carnes y pescados a la parrilla",
-    "menu_options": [
-        {
-            "name": "Opciones veganas",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Aparcamiento propio",
-        "Jardín",
-        "Comedor privado",
-        "Buenas vistas",
-        "Carta en inglés",
-        "Acepta mascotas",
-        "Terraza de verano",
-        "Parrilla"
-    ],
-    "owners_name": [
-        "Dámaso Navajas"
-    ],
-    "web_url": "http://laposadadellaurel.com",
-    "contact_number": "941399044",
-    "direction": "Calle Carretera, 3. 26589 Préjano (La Rioja)",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-e3-31-e3311ad7-9566-44df-bfd2-08cf5e840ed4-age_01_laposadadellaurel_damasonavajas.jpg",
-    "meal_type": [
-        "Casera",
-        "Mercado"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "La Cocina de Ramón",
-    "soles_number": 1,
-    "description": "Muy bien ubicado en plena calle Portales y de decoración elegante y acogedora, ofrece una cocina basada en el producto riojano. Destaca su tratamiento de las verduras y la incorporación de ingredientes y elaboraciones tendentes a buscar una mayor sofisticación en algunos de sus platos.",
-    "short_menu_description": "Las Verduras (Según Temporada)",
-    "menu_options": [
-        {
-            "name": "Menú del día",
-            "price": "25.00€",
-            "description": "Menú ejecutivo"
-        },
-        {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
-        },
-        {
-            "name": "Platos fuera de carta",
-            "price": null,
-            "description": ""
-        }
-    ],
-    "restaurant_services": [
-        "Establecimiento accesible",
-        "Comedor privado",
-        "Carta en inglés",
-        "Opciones para grupos",
-        "Terraza de verano",
-        "Vinos terroir",
-        "Vende productos propios",
-        "Abre lunes",
-        "Organiza eventos",
-        "Organiza promoción productos"
-    ],
-    "owners_name": [
-        "Ramón Piñeiro"
-    ],
-    "web_url": "http://www.lacocinaderamon.es",
-    "instagram_user": "@lacocinaderamon",
-    "contact_number": "941289808",
-    "direction": "Calle Portales, 30. 26001 Logroño (Rioja, La)",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-26-a7-26a72208-1447-4037-be80-65544b40f1f5-tmptmpinwnsugff775641182a84bf9858007519fe762a9.jpeg",
-    "meal_type": [
-        "Mercado",
-        "Riojana"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
-},
-{
-    "name": "Malvasía",
-    "soles_number": 1,
-    "description": "Desde el año 2005 ha crecido en la calidad de su cocina y servicio constituyendo un referente de la zona en la oferta de cocina mediterránea de autor. Situado junto al Mar Menor este local, de moderna fachada y de reducidas dimensiones (diez mesas y un reservado) atiende en un ambiente acogedor, decorado con una temática relacionada con el mundo del vino, a sus clientes con un servicio de gran calidad y una excelente bodega.",
-    "short_menu_description": "Alcachofas a la parrilla con crema de foie, jamón y parmesanoCochinillo confitado con verduras en tempura, naranja, miel y cinco bayas.",
+    "name": "Bardal",
+    "soles_number": 2,
+    "description": "Todo en ‘Bardal’ es Ronda y todo en Ronda es ‘Bardal’. Un restaurante andaluz de pies a cabeza, con despensa propia en la finca Rabadán, que defiende con franqueza una cocina en la que abunda lo reconocible y hermoso. El chef Benito Gómez cree a pies juntillas en el producto a flor de piel, sin sorpresas ni formas extrañas en el plato. Toda la carta honra el pulso diario de los productores de la comarca, desde el respeto, la esencia y la autenticidad. Una parada obligatoria para entender el potencial de Málaga, liderando la escuela de “la Nueva Cocina Andaluza”.",
+    "short_menu_description": "Piel de pollo y gamba, Codorniz engrasada, Blanqueta de conejo, Espardeña ibérica, Cresta de gallo con bearnesa",
     "menu_options": [
         {
             "name": "Menú Degustación",
-            "price": "39.00€",
-            "description": "Menú Sensaciones"
+            "price": "180.00€",
+            "description": "Menú Bardal"
         },
         {
-            "name": "Opciones veganas",
-            "price": null,
-            "description": ""
+            "name": "Menú Degustación",
+            "price": "215.00€",
+            "description": "Gran Menú Bardal"
         },
         {
-            "name": "Opciones para celíacos",
-            "price": null,
-            "description": ""
+            "name": "Menú Degustación",
+            "price": "115.00€",
+            "description": "Maridaje Gran Menú Bardal"
         },
         {
-            "name": "Platos fuera de carta",
+            "name": "Menú Degustación",
+            "price": "100.00€",
+            "description": "Maridaje Menú Bardal"
+        },
+        {
+            "name": "Carro de quesos",
             "price": null,
             "description": ""
         }
@@ -1966,30 +919,58 @@
     "restaurant_services": [
         "Establecimiento accesible",
         "Comedor privado",
+        "Buenas vistas",
         "Carta en inglés",
         "Opciones para grupos",
-        "Terraza de verano",
         "Vinos terroir",
-        "Vende productos propios",
-        "Organiza eventos"
+        "Organiza eventos",
+        "Huerto propio"
     ],
     "owners_name": [
-        "Pedro Montiel"
+        "Benito Gómez."
     ],
-    "web_url": "http://www.restaurantemalvasia.com",
-    "contact_number": "968145073",
-    "direction": "Avenida Julieta Orbaiceta, 6. 30385 Playa honda (Murcia)",
-    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-3a-b6-3ab63a38-85e7-4749-b37e-a91d8480d642-reducida_malvasia_2018_2.jpg",
+    "web_url": "http://www.restaurantebardal.com",
+    "instagram_user": "@restaurantebardal",
+    "contact_number": "951489828",
+    "direction": "C. José Aparicio, 1 29400 Ronda (Málaga)",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-c1-6a-c16a00da-fe15-475a-aacf-c79a36d71b1d-gr-cms-media-featured_images-none-a8c7699e-9983-49a0-a63f-902a116c0275-05benito-gomez.jpg",
     "meal_type": [
-        "Mediterránea"
-    ],
-    "working_schedule": {
-        "Lunes": [],
-        "Martes": [],
-        "Miércoles": [],
-        "Jueves": [],
-        "Viernes": [],
-        "Sábado": [],
-        "Domingo": []
-    }
+        "Creativa   De autor",
+        "Mercado"
+    ]
 },
+{
+    "name": "Frases",
+    "soles_number": 1,
+    "description": "Marco Antonio Iniesta propone en ‘Frases’ un recorrido por la Región de Murcia a través del disfrute de platos tradicionales convenientemente versionados y presentados en vajilla artesana. El cocinero observa el recetario autóctono con un enfoque creativo y detallista, como paleta e inspiración, y procura estimular al comensal con doble ración de recuerdos y emociones que apelen a los cajones más recónditos de su memoria. María Egea brinda el contrapunto en sala a una fiesta a la que están invitados la alcachofa del campo de Cartagena, el chato murciano, la gamba roja de Águilas, el cordero segureño…",
+    "short_menu_description": "Menú degustación",
+    "menu_options": [
+        {
+            "name": "Menú Degustación",
+            "price": "70.00€",
+            "description": "Toda la esencia del restaurante y el terreno."
+        },
+        {
+            "name": "Opciones para celíacos",
+            "price": null,
+            "description": ""
+        }
+    ],
+    "restaurant_services": [
+        "Establecimiento accesible",
+        "Carta en inglés",
+        "Vinos terroir"
+    ],
+    "owners_name": [
+        "María Egea Fructuoso"
+    ],
+    "web_url": "https://www.frasesrestaurante.com",
+    "instagram_user": "@frasesrest",
+    "contact_number": "697914492",
+    "direction": "C. Soledad, 1, BAJO, 30003 Murcia",
+    "restaurant_photo_url": "https:://guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-49-77-49778aea-e310-43ae-8f6f-9e0ee25814f7-age_age_01_frases_marcoantonioiniesta_mariaegea.jpg",
+    "meal_type": [
+        "Europea",
+        "Mediterránea"
+    ]
+}]
