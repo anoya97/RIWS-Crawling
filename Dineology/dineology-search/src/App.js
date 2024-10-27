@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 import logo from './Logo.png';
@@ -28,16 +28,24 @@ function App() {
   });
   const [showFilters, setShowFilters] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation(); // Para acceder a la ubicación actual
 
+  // Manejo de búsqueda
   const handleSearch = async (e) => {
     e.preventDefault();
+    await fetchResults(query); // Llama a la función para buscar resultados
+  };
+
+  // Función para obtener resultados de búsqueda
+  const fetchResults = async (searchQuery) => {
+    if (!searchQuery) return; // No hacer nada si no hay búsqueda
     try {
       const response = await axios.post('http://localhost:9200/restaurants/_search', {
         query: {
           bool: {
             should: [
-              { wildcard: { "name": `*${query.toLowerCase()}*` } },
-              { wildcard: { "meal_type": `*${query.toLowerCase()}*` } }
+              { wildcard: { "name": `*${searchQuery.toLowerCase()}*` } },
+              { wildcard: { "meal_type": `*${searchQuery.toLowerCase()}*` } }
             ]
           }
         }
@@ -58,17 +66,27 @@ function App() {
     }
   };
 
+  // useEffect para manejar el estado al regresar a la página principal
+  useEffect(() => {
+    if (location.state && location.state.query) {
+      setQuery(location.state.query); // Restablece el query
+      fetchResults(location.state.query); // Ejecuta la búsqueda con el query
+    }
+  }, [location.state]); // Ejecutar cuando el estado de la ubicación cambie
+
+  // Manejo del clic en el resultado
   const handleResultClick = (restaurant) => {
     const restaurantName = restaurant._source.name.replace(/\s+/g, '-').toLowerCase();
-    navigate(`/${restaurantName}`, { state: { restaurant: restaurant._source, query } }); // Pasar el query al navegar
+    navigate(`/${restaurantName}`, { state: { query, restaurant: restaurant._source } }); // Pasar el query y el restaurante
   };
 
+  // Aplicar filtros a los resultados
   const applyFilters = () => {
     let filtered = results;
 
     if (filters.starsOrSoles !== 'both') {
       filtered = filtered.filter((result) =>
-        filters.starsOrSoles === 'estrellas' ? result._source.stars : result._source.soles
+        filters.starsOrSoles === 'estrellas' ? result._source.star_number > 0 : result._source.soles_number > 0
       );
     }
     if (filters.community) {
@@ -81,7 +99,7 @@ function App() {
       filtered = filtered.filter((result) => result._source.meal_type === filters.mealType);
     }
     if (filters.starNumber) {
-      filtered = filtered.filter((result) => result._source.stars === parseInt(filters.starNumber));
+      filtered = filtered.filter((result) => result._source.star_number === parseInt(filters.starNumber));
     }
 
     setFilteredResults(filtered);
@@ -90,7 +108,7 @@ function App() {
   // Función para renderizar imágenes de estrellas y soles
   const renderStarsAndSoles = (soles, stars) => {
     const starImages = stars > 0 ? Array.from({ length: stars }, (_, i) => (
-      <img key={`sun-${i}`} src={estrellaIcon} alt="Estrella" className="icon-star" />
+      <img key={`star-${i}`} src={estrellaIcon} alt="Estrella" className="icon-star" />
     )) : null;
 
     const sunImages = soles > 0 ? Array.from({ length: soles }, (_, i) => (
@@ -99,21 +117,51 @@ function App() {
 
     return (
       <div className="starsAndSoles">
-        <div className="stars">
-          <span className="titleText">Estrellas:</span>
-          <span style={{ marginLeft: '5px' }}>{starImages || '-'}</span> {/* Añadido espacio */}
-        </div>
-        <div className="soles">
-          <span className="titleText">Soles:</span>
-          <span style={{ marginLeft: '5px' }}>{sunImages || '-'}</span> {/* Añadido espacio */}
-        </div>
+        {stars > 0 && (
+          <div className="stars">
+            <span className="titleText">Estrellas:</span>
+            <span style={{ marginLeft: '5px' }}>{starImages}</span>
+          </div>
+        )}
+        {soles > 0 && (
+          <div className="soles">
+            <span className="titleText">Soles:</span>
+            <span style={{ marginLeft: '5px' }}>{sunImages}</span>
+          </div>
+        )}
       </div>
     );
   };
 
+  // Función para restablecer el estado
+  const resetState = () => {
+    setQuery('');
+    setResults([]);
+    setFilteredResults([]);
+    setNotFound(false);
+    setFilters({
+      starsOrSoles: 'both',
+      community: '',
+      priceRange: '',
+      mealType: '',
+      starNumber: '',
+    });
+    setFilterOptions({
+      communities: [],
+      priceRanges: [],
+      mealTypes: [],
+    });
+  };
+
   return (
     <div className="App">
-      <img src={logo} alt="Logo" className="App-logo" />
+      <img
+        src={logo}
+        alt="Logo"
+        className="App-logo"
+        onClick={resetState} // Agregar manejador de clics
+        style={{ cursor: 'pointer' }} // Cambiar cursor para indicar que es clickeable
+      />
       <form onSubmit={handleSearch} className="form">
         <input
           type="text"
@@ -187,7 +235,7 @@ function App() {
       )}
 
       {notFound && (
-        <p className="notFoundMessage">No se encontraron resultados</p>
+        <p className="notFound">No se encontraron resultados para "{query}".</p>
       )}
 
       <div className="resultsGrid">

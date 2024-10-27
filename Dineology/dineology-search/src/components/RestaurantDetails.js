@@ -1,14 +1,16 @@
 // RestaurantDetails.js
 import React, { useEffect, useState } from 'react';
-import { useLocation, useParams, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './RestaurantDetails.css';
 
 function RestaurantDetails() {
   const location = useLocation();
-  const { restaurantName } = useParams();
   const navigate = useNavigate();
   const restaurant = location.state?.restaurant;
-  const previousSearch = location.state?.previousSearch; // Obtener el valor de búsqueda anterior
+
+  // Recuperar query y results de location.state
+  const previousSearchQuery = location.state?.query || ''; // Almacena el query
+  const previousResults = location.state?.previousResults || []; // Almacena los resultados
 
   const [coordinates, setCoordinates] = useState(null);
   const [loading, setLoading] = useState(true); // Estado de carga para el mapa
@@ -41,7 +43,7 @@ function RestaurantDetails() {
   }
 
   const handleBackClick = () => {
-    navigate('/', { state: { previousSearch } }); // Pasar el valor de búsqueda anterior al navegar de vuelta
+    navigate('/', { state: { query: previousSearchQuery, previousResults } }); // Pasar el query y los resultados al navegar de vuelta
   };
 
   const renderStars = (num) => {
@@ -97,7 +99,7 @@ function RestaurantDetails() {
                 </tr>
               </thead>
               <tbody>
-                {restaurant.working_schedule ? (
+                {restaurant.working_schedule && Object.keys(restaurant.working_schedule).length > 0 ? (
                   // Convertir el horario en un objeto, si existe
                   Object.entries(restaurant.working_schedule).map(([day, hours]) => (
                     <tr key={day}>
