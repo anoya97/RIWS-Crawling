@@ -1,0 +1,197 @@
+/* App.css */
+.App {
+  text-align: center;
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+
+.App-logo {
+  width: 600px;
+  margin-bottom: 30px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 300px; /* Compacto */
+  padding: 8px; /* Compacto */
+  font-size: 14px; /* Tamaño de fuente pequeño */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button {
+  padding: 8px 15px; /* Compacto */
+  font-size: 14px; /* Tamaño de fuente pequeño */
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5f7be7;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s; /* Transición suave */
+}
+
+.button:hover {
+  background-color: #33bde0; /* Cambio de color en hover */
+}
+
+.notFoundMessage {
+  color: red;
+  font-size: 16px; /* Tamaño de fuente pequeño */
+  margin: 20px 0;
+}
+
+.resultsGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Compacto */
+  max-width: 1400px; /* Ancho máximo del grid */
+  margin: 0 auto;
+}
+
+.resultCard {
+  flex-basis: 18%; /* 5 tarjetas por fila */
+  max-width: 240px; /* Ancho máximo */
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s; /* Transición suave */
+}
+
+.resultCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hover */
+}
+
+.restaurantPhoto {
+  width: 100%;
+  height: 200px; /* Altura de imagen compacta */
+  object-fit: cover;
+}
+
+.resultInfo {
+  padding: 10px; /* Espacio interno compacto */
+  text-align: left;
+}
+
+.resultName {
+  font-size: 16px; /* Tamaño de fuente ajustado */
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.resultLocation {
+  font-size: 12px; /* Tamaño de fuente más pequeño */
+  color: #777;
+  margin: 5px 0;
+}
+
+.resultPrice {
+  font-size: 14px; /* Tamaño de fuente ajustado */
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
+}
+
+.resultMealType {
+  font-size: 12px; /* Tamaño de fuente más pequeño */
+  color: #555;
+  margin: 5px 0;
+}
+
+.filters {
+  margin-top: 20px;
+  padding: 15px; /* Compacto */
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center; /* Alinea los filtros al centro */
+  flex-wrap: wrap; /* Permite que los filtros se envuelvan */
+}
+
+.filterGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Alinea los filtros al centro */
+}
+
+.filter {
+  margin: 10px; /* Mayor separación */
+  flex: 1 0 120px; /* Espacio equitativo y ancho mínimo */
+  max-width: 200px; /* Ancho máximo */
+}
+
+.filter label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px; /* Tamaño de fuente más pequeño */
+  font-weight: bold; /* Negrita para visibilidad */
+}
+
+.filter select {
+  width: auto; /* Ajusta al contenido */
+  min-width: 160px; /* Ancho mínimo */
+  padding: 6px; /* Compacto */
+  font-size: 12px; /* Tamaño de fuente más pequeño */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff; /* Fondo claro */
+  transition: border-color 0.2s; /* Transición suave */
+}
+
+.filter select:focus {
+  border-color: #4285f4; /* Color de borde al enfocar */
+  outline: none; /* Sin contorno al enfocar */
+}
+
+.restaurant-details {
+  text-align: center;
+  padding: 20px;
+}
+
+.restaurant-photo {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+}
+
+.icon-star, .icon-sun {
+  width: 16px; /* Ancho reducido */
+  height: 16px; /* Alto reducido */
+  margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+.starsAndSoles {
+  display: flex;
+  gap: 10px;
+}
+
+.stars, .soles {
+  display: flex;
+  align-items: center;
+}
+
+.resultInfo .titleText {
+  font-family: inherit; /* Usa la misma fuente */
+  color: inherit; /* Usa el mismo color */
+  margin-bottom: 5px; /* Espacio entre el título y los íconos */
+}
+
+.starsAndSoles {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px; /* Espaciado */
+}
+
+.titleText {
+  color: #333; /* Asegúrate de que el color sea consistente */
+}
