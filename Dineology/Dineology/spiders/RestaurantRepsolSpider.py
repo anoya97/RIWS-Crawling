@@ -1,4 +1,5 @@
 import scrapy
+import json
 from openpyxl.utils.datetime import days_to_time
 
 from ..items import DineologyItemRepsol
@@ -90,7 +91,7 @@ class RestaurantRepsolSpider(scrapy.Spider):
         item['direction'] = response.xpath('//li[@class="basic__list__item"]//span[contains(text(), "Ubicación")]/following-sibling::p/text()').get()
 
         if response.css('div.listado-imagenes div::attr(data-path)').get():
-            item['restaurant_photo_url'] = 'https:://guiarepsol.com' + response.css('div.listado-imagenes div::attr(data-path)').get()
+            item['restaurant_photo_url'] = 'https://guiarepsol.com' + response.css('div.listado-imagenes div::attr(data-path)').get()
 
         meals = response.xpath('//span[contains(text(), "Tipo de cocina")]/following-sibling::span/span/text()').getall()
 
@@ -104,38 +105,58 @@ class RestaurantRepsolSpider(scrapy.Spider):
 
             item['meal_type'].append(cleaned_meal)
 
-        # opening_hours = {
-        #     "Lunes": [],
-        #     "Martes": [],
-        #     "Miércoles": [],
-        #     "Jueves": [],
-        #     "Viernes": [],
-        #     "Sábado": [],
-        #     "Domingo": []
-        # }
-        #
-        # # Seleccionar los elementos que contienen los días y horarios
-        # first_div = response.css('div.list-basic-component:first-of-type')
-        # print(first_div.getall())
-        # schedule_rows = first_div.css('ul.list-reset-appearance')
-        # print()
-        # print()
-        # print()
-        # print(schedule_rows.getall())
-        # print()
-        # print()
-        # print()
-        # for row in schedule_rows.css('li.title.rp-title-2'):
-        #     # Extraer el nombre del día
-        #     day_name = row.css('::text').get().strip()
-        #     day_schedule = row.css('span.rp-body-2::text').get()
-        #     if day_schedule:
-        #         if "Cerrado" in day_schedule:
-        #             opening_hours[day_name] = ["cerrado"]
-        #         else:
-        #             # Extrae horarios y los limpia
-        #             opening_hours[day_name] = [h.strip().replace(" - ", "-") for h in day_schedule.split(',')]
-        #
-        # item['working_schedule'] = opening_hours
+
+         # Seleccionar los elementos que contienen los días y horarios
+        item['working_schedule'] = {
+            'Lunes': [],
+            'Martes': [],
+            'Miércoles': [],
+            'Jueves': [],
+            'Viernes': [],
+            'Sábado': [],
+            'Domingo': []
+        }
+
+        # Selecciona la lista de horarios
+        data_hours = response.css('input.data-hours::attr(value)').get()
+
+        if data_hours:
+            # Limpiar el JSON y cargarlo
+            data_hours = data_hours.replace('&quot;', '"')  # Reemplazar entidades HTML
+            data = json.loads(data_hours)
+
+            # Obtener los horarios de apertura
+            weekday_text = data['result']['opening_hours']['weekday_text']
+
+            # Mapear solo los horarios a los días de la semana
+            for i, horario in enumerate(weekday_text):
+                dia = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'][i]
+
+                # Verificar si el día está cerrado
+                if "Closed" in horario:
+                    item['working_schedule'][dia] = ["cerrado"]
+                else:
+                    # Extraer solo la parte del horario y formatear
+                    horarios = horario.split(': ', 1)[1]
+                    # Convertir los horarios a formato 24h
+                    horarios_lista = []
+                    for periodo in horarios.split(', '):
+                        horas = periodo.split('–')
+                        hora_inicio = self.convert_to_24h(horas[0].strip())
+                        hora_fin = self.convert_to_24h(horas[1].strip())
+                        horarios_lista.append(f"{hora_inicio}-{hora_fin}")
+                    item['working_schedule'][dia] = horarios_lista
+
         yield item
 
+    def convert_to_24h(self, time_str):
+        """Convierte el tiempo de formato 12h a 24h."""
+        if 'PM' in time_str and not time_str.startswith('12'):
+            hour = int(time_str.split(':')[0]) + 12
+        elif 'AM' in time_str and time_str.startswith('12'):
+            hour = 0
+        else:
+            hour = int(time_str.split(':')[0])
+
+        # Retorna el tiempo en formato "HH:MM"
+        return f"{hour:02d}:{time_str.split(':')[1][:2]}"

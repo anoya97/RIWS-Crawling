@@ -9,7 +9,7 @@ class RestaurantMichelinSpider(scrapy.Spider):
 
     # Esta URL mejor que la que está puesta: https://guide.michelin.com/es/es/restaurantes/restaurantes-con-estrellas
     # Dejo esta porque así lo podemos ver nosotros mejor porque se ordena por ubicación
-    start_urls = ['https://guide.michelin.com/es/es/comunidad-de-madrid/restaurantes/restaurantes-con-estrellas']
+    start_urls = ['https://guide.michelin.com/es/es/selection/spain/restaurantes/restaurantes-con-estrellas']
 
     def parse(self, response):
         for restaurant in response.css('div.card__menu'):  # Selecciona cada bloque de restaurante
@@ -30,7 +30,7 @@ class RestaurantMichelinSpider(scrapy.Spider):
         #Follow the next page
         # Obtener todos los enlaces a páginas siguientes
         # HAY QUE CAMBIAR NEXT POR ARROW, ESTÁ ASÍ PARA QUE NO COJA TANTAS PÁGINAS DE GOLPE Y PODAMOS PROBAR CON UNAS POCAS SOLO
-        next_pages = response.css('li.next a::attr(href)').getall()
+        next_pages = response.css('li.arrow a::attr(href)').getall()
 
         # Extraer el número actual de la página de la URL
         current_page_number = self.extract_current_page_number(response.url)
@@ -58,12 +58,13 @@ class RestaurantMichelinSpider(scrapy.Spider):
         
         item['restaurant_photo_url'] = response.css('div.masthead__gallery-image::attr(data-bg)').get()
 
-        star_icons = response.css('div.restaurant-details__classification img.michelin-award').getall()
+        star_icons = response.css('div.data-sheet__classification-item--content img.michelin-award').getall()
         item['star_number'] = len(star_icons)
 
-        item['direction'] = response.css('ul.restaurant-details__heading--list li::text').get()
+        item['direction'] = response.css('div.data-sheet__block--text::text').get()
 
-        item['description'] = ''.join(response.css('div.restaurant-details__description--text p *::text').getall()).strip()
+        item["description"] = response.css('div.data-sheet__description::text').get().strip()
+
         item['contact_number'] = response.css('div.d-flex span::text').get().strip()
         item['web_url'] = response.css('div.collapse__block-item.link-item a::attr(href)').get()
 

@@ -36,5 +36,5 @@ for filename in os.listdir(json_directory):
             print(f"Error: El archivo {filename} no tiene formato JSON válido y será omitido.")
         except Exception as e:
             print(f"Error inesperado al indexar {filename}: {e}")
-
 print("Proceso de indexación completado.")
+
