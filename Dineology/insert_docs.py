@@ -18,22 +18,28 @@ if not es.indices.exists(index=index_name):
 def merge_documents(doc1, doc2):
     merged_doc = doc1.copy()
     for key, value in doc2.items():
-        if key not in merged_doc or not merged_doc[key]:  # Si el campo no existe o está vacío
+        if key not in merged_doc or not merged_doc[key]:
             merged_doc[key] = value
         elif isinstance(merged_doc[key], list) and isinstance(value, list):
-            # Fusionar listas sin duplicados, manejando dicts si es necesario
             if all(isinstance(item, dict) for item in merged_doc[key]) and all(isinstance(item, dict) for item in value):
-                # Para listas de diccionarios, evitar duplicados según un campo clave
                 merged_doc[key].extend(item for item in value if item not in merged_doc[key])
             else:
-                # Para listas simples
                 merged_doc[key] = list(set(merged_doc[key] + value))
         elif isinstance(merged_doc[key], dict) and isinstance(value, dict):
-            # Fusionar diccionarios (como el horario), priorizando el primero
             for sub_key, sub_value in value.items():
                 if sub_key not in merged_doc[key]:
                     merged_doc[key][sub_key] = sub_value
     return merged_doc
+
+# Sanear documentos eliminando campos con nombres vacíos
+def sanitize_document(doc):
+    sanitized_doc = {}
+    for key, value in doc.items():
+        if key.strip():
+            sanitized_doc[key] = value
+        else:
+            print(f"Advertencia: Campo con nombre vacío detectado en el documento {doc.get('name', 'sin nombre')} y será omitido.")
+    return sanitized_doc
 
 # Directorio donde están los archivos JSON
 json_directory = "."
@@ -47,49 +53,55 @@ for filename in os.listdir(json_directory):
                 data = json.load(file)
                 if isinstance(data, list):
                     for doc in data:
+                        doc = sanitize_document(doc)
                         restaurant_name = doc.get("name")
                         if not restaurant_name:
-                            continue  # Si no tiene nombre, omitimos el documento
+                            continue
 
-                        # Búsqueda en Elasticsearch para ver si ya existe un documento con ese nombre
+                        # Búsqueda con coincidencias flexibles usando match_phrase_prefix
                         query = {
                             "query": {
-                                "match": {
-                                    "name.keyword": restaurant_name  # Búsqueda exacta por nombre
+                                "match_phrase_prefix": {
+                                    "name": {
+                                        "query": restaurant_name
+                                    }
                                 }
-                            }
+                            },
+                            "min_score": 2.0  # Ajuste del umbral de similitud
                         }
                         result = es.search(index=index_name, body=query)
 
                         if result["hits"]["total"]["value"] > 0:
-                            # Si ya existe un documento con ese nombre, lo fusionamos con el nuevo
                             existing_doc = result["hits"]["hits"][0]["_source"]
-                            merged_doc = merge_documents(existing_doc, doc)
                             existing_doc_id = result["hits"]["hits"][0]["_id"]
+                            merged_doc = merge_documents(existing_doc, doc)
                             es.index(index=index_name, id=existing_doc_id, body=merged_doc)
                             print(f"Documento de {restaurant_name} fusionado y actualizado con ID {existing_doc_id}")
                         else:
-                            # Si no existe, indexamos el documento directamente
                             es.index(index=index_name, body=doc)
                             print(f"Documento de {restaurant_name} indexado")
                 elif isinstance(data, dict):
+                    data = sanitize_document(data)
                     restaurant_name = data.get("name")
                     if not restaurant_name:
                         continue
 
                     query = {
                         "query": {
-                            "match": {
-                                "name.keyword": restaurant_name
-                            }
+                            "match_phrase_prefix": {
+                                "name": {
+                                    "query": restaurant_name
+                                }
+                            },
+                            "min_score": 2.0
                         }
                     }
                     result = es.search(index=index_name, body=query)
 
                     if result["hits"]["total"]["value"] > 0:
                         existing_doc = result["hits"]["hits"][0]["_source"]
-                        merged_doc = merge_documents(existing_doc, data)
                         existing_doc_id = result["hits"]["hits"][0]["_id"]
+                        merged_doc = merge_documents(existing_doc, data)
                         es.index(index=index_name, id=existing_doc_id, body=merged_doc)
                         print(f"Documento de {restaurant_name} fusionado y actualizado con ID {existing_doc_id}")
                     else:

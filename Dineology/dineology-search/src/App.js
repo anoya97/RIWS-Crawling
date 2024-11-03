@@ -84,11 +84,12 @@ function App() {
   const applyFilters = () => {
     let filtered = results;
 
-    if (filters.starsOrSoles !== 'both') {
-      filtered = filtered.filter((result) =>
-        filters.starsOrSoles === 'estrellas' ? result._source.star_number > 0 : result._source.soles_number > 0
-      );
-    }
+      if (filters.starsOrSoles === 'estrellas') {
+         filtered = filtered.filter((result) => (result._source.star_number > 0 && !result._source.soles_number));
+      } else if (filters.starsOrSoles === 'soles') {
+         filtered = filtered.filter((result) => (result._source.soles_number > 0 && !result._source.star_number));
+      }
+
     if (filters.community) {
       filtered = filtered.filter((result) => result._source.community === filters.community);
     }
@@ -101,7 +102,6 @@ function App() {
     if (filters.starNumber) {
       filtered = filtered.filter((result) => result._source.star_number === parseInt(filters.starNumber));
     }
-
     setFilteredResults(filtered);
   };
 

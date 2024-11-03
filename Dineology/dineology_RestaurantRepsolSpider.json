@@ -50471,9 +50471,9 @@
     "soles_number": 3,
     "description": "Qué rico sabe Toledo sobre la mesa de Iván Cerdeño. En el histórico 'Cigarral del Ángel', el chef manchego fija la mirada sobre la ciudad Imperial, la ribera del Tajo y los Montes de Toledo para crear un suculento menú donde rescata recetas olvidadas que transforma en una auténtica ambrosía. Una cocina conceptualmente brillante, elegante en emplatados y sutil en cada detalle, de principio a fin.",
     "short_menu_description": "Platos de caza, escabeches, anguila...",
-    "menu_options": [
+    "": [
         {
-            "name": "Menú Degustación",
+            "name": "Memenu_optionsnú Degustación",
             "price": "120.00€",
             "description": "Menú Monte y Ribera"
         },
