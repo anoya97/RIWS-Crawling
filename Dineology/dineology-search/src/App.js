@@ -16,15 +16,12 @@ function App() {
   const [notFound, setNotFound] = useState(false);
   const [filters, setFilters] = useState({
     starsOrSoles: 'both',
-    community: '',
     priceRange: '',
     mealType: '',
     starNumber: '',
   });
   const [filterOptions, setFilterOptions] = useState({
-    communities: [],
     priceRanges: [],
-    mealTypes: [],
   });
   const [showFilters, setShowFilters] = useState(false);
   const navigate = useNavigate();
@@ -57,10 +54,10 @@ function App() {
 
       // Rellenar opciones de filtros basados en los resultados de la búsqueda
       setFilterOptions({
-        communities: [...new Set(hits.map((hit) => hit._source.community))],
         priceRanges: [...new Set(hits.map((hit) => hit._source.price))],
-        mealTypes: [...new Set(hits.map((hit) => hit._source.meal_type))],
+        mealTypes: [...new Set(hits.flatMap((hit) => hit._source.meal_type.split(',').map((type) => type.trim())))],
       });
+
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -87,12 +84,8 @@ function App() {
       if (filters.starsOrSoles === 'estrellas') {
          filtered = filtered.filter((result) => (result._source.star_number > 0 && !result._source.soles_number));
       } else if (filters.starsOrSoles === 'soles') {
-         filtered = filtered.filter((result) => (result._source.soles_number > 0 && !result._source.star_number));
+        filtered = filtered.filter((result) => (result._source.soles_number > 0 && !result._source.star_number));
       }
-
-    if (filters.community) {
-      filtered = filtered.filter((result) => result._source.community === filters.community);
-    }
     if (filters.priceRange) {
       filtered = filtered.filter((result) => result._source.price === filters.priceRange);
     }
@@ -141,13 +134,11 @@ function App() {
     setNotFound(false);
     setFilters({
       starsOrSoles: 'both',
-      community: '',
       priceRange: '',
       mealType: '',
       starNumber: '',
     });
     setFilterOptions({
-      communities: [],
       priceRanges: [],
       mealTypes: [],
     });
@@ -187,16 +178,6 @@ function App() {
                 <option value="both">Tipo de estrellas</option>
                 <option value="estrellas">Solo Estrellas</option>
                 <option value="soles">Solo Soles</option>
-              </select>
-            </div>
-            <div className="filter">
-              <select
-                value={filters.community}
-                onChange={(e) => setFilters({ ...filters, community: e.target.value })}>
-                <option value="">Comunidades</option>
-                {filterOptions.communities.map((community, index) => (
-                  <option key={index} value={community}>{community}</option>
-                ))}
               </select>
             </div>
             <div className="filter">

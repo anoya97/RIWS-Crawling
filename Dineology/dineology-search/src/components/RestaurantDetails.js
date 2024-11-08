@@ -59,30 +59,41 @@ function RestaurantDetails() {
       <div className="restaurantCard">
         <div className="imageWrapper">
           <img
-            src={restaurant.restaurant_photo_url || "default-image.jpg"}
-            alt={restaurant.name || "Foto del restaurante"}
-            className="restaurantImage"
+              src={restaurant.restaurant_photo_url || "default-image.jpg"}
+              alt={restaurant.name || "Foto del restaurante"}
+              className="restaurantImage"
           />
         </div>
         <div className="restaurantInfo">
-          <h1 className="detailsTitle">{restaurant.name || "Nombre no disponible"}</h1>
-          <p className="detailsDescription">{restaurant.description || "No hay descripción disponible"}</p>
+          {restaurant.name && <h1 className="detailsTitle">{restaurant.name}</h1>}
+          {restaurant.description && <p className="detailsDescription">{restaurant.description}</p>}
           <div className="detailsData">
-            <p className="detailsPrice">Precio: {restaurant.price || "No disponible"}</p>
-            <p className="detailsMealType">
-              Tipo de comida: {Array.isArray(restaurant.meal_type) ? restaurant.meal_type.join(', ') : "No disponible"}
-            </p>
-            <p className="detailsRating">Estrellas: {renderStars(restaurant.soles_number || 0)}</p>
-            <p className="detailsContact">Contacto: {restaurant.contact_number || "No disponible"}</p>
-            <p className="detailsDirection">Dirección: {restaurant.direction || "No disponible"}</p>
-            <a
-              href={restaurant.web_url || "#"}
-              className="detailsWeb"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {restaurant.web_url ? "Visitar Web" : "Web no disponible"}
-            </a>
+            {restaurant.price && <p className="detailsPrice">Precio: {restaurant.price}</p>}
+            {Array.isArray(restaurant.meal_type) && restaurant.meal_type.length > 0 && (
+                <p className="detailsMealType">
+                  Tipo de comida: {restaurant.meal_type.join(', ')}
+                </p>
+            )}
+            {restaurant.star_number !== undefined && (
+                <p className="detailsRating">Estrellas: {renderStars(restaurant.star_number)}</p>
+            )}
+            {restaurant.soles_number !== undefined && (
+                <p className="detailsRating">Soles: {renderStars(restaurant.soles_number)}</p>
+            )}
+            {restaurant.contact_number && (
+                <p className="detailsContact">Contacto: {restaurant.contact_number}</p>
+            )}
+            {restaurant.direction && <p className="detailsDirection">Dirección: {restaurant.direction}</p>}
+            {restaurant.web_url && (
+                <a
+                    href={restaurant.web_url}
+                    className="detailsWeb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                  Visitar Web
+                </a>
+            )}
           </div>
         </div>
       </div>
@@ -93,37 +104,37 @@ function RestaurantDetails() {
           <div className="workingScheduleAndMapContainer">
             <table className="workingScheduleTable">
               <thead>
-                <tr>
-                  <th>Día</th>
-                  <th>Horario</th>
-                </tr>
+              <tr>
+                <th>Día</th>
+                <th>Horario</th>
+              </tr>
               </thead>
               <tbody>
-                {restaurant.working_schedule && Object.keys(restaurant.working_schedule).length > 0 ? (
+              {restaurant.working_schedule && Object.keys(restaurant.working_schedule).length > 0 ? (
                   // Convertir el horario en un objeto, si existe
                   Object.entries(restaurant.working_schedule).map(([day, hours]) => (
-                    <tr key={day}>
-                      <td>{day}</td>
-                      <td>{hours[0] || "No disponible"}</td>
-                    </tr>
+                      <tr key={day}>
+                        <td>{day}</td>
+                        <td>{hours[0] || "No disponible"}</td>
+                      </tr>
                   ))
-                ) : (
+              ) : (
                   // Si no hay horario, mostrar todos los días con "-"
                   ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"].map((day) => (
-                    <tr key={day}>
-                      <td>{day}</td>
-                      <td>-</td>
-                    </tr>
+                      <tr key={day}>
+                        <td>{day}</td>
+                        <td>-</td>
+                      </tr>
                   ))
-                )}
+              )}
               </tbody>
             </table>
             <div className="mapContainer">
               {loading ? ( // Mostrar carga mientras se obtienen las coordenadas
-                <p>Cargando mapa...</p>
+                  <p>Cargando mapa...</p>
               ) : coordinates ? (
-                <iframe
-                  src={`https://www.openstreetmap.org/export/embed.html?bbox=${coordinates.lon - 0.01},${coordinates.lat - 0.01},${coordinates.lon + 0.01},${coordinates.lat + 0.01}&layer=mapnik&marker=${coordinates.lat},${coordinates.lon}`}
+                  <iframe
+                      src={`https://www.openstreetmap.org/export/embed.html?bbox=${coordinates.lon - 0.01},${coordinates.lat - 0.01},${coordinates.lon + 0.01},${coordinates.lat + 0.01}&layer=mapnik&marker=${coordinates.lat},${coordinates.lon}`}
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
