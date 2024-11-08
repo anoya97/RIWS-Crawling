@@ -55,7 +55,7 @@ function App() {
       // Rellenar opciones de filtros basados en los resultados de la búsqueda
       setFilterOptions({
         priceRanges: [...new Set(hits.map((hit) => hit._source.price))],
-        mealTypes: [...new Set(hits.flatMap((hit) => hit._source.meal_type.split(',').map((type) => type.trim())))],
+        mealTypes: [...new Set(hits.ap(hits.map((hit) => hit._source.meal_type)))],
       });
 
     } catch (error) {
@@ -173,8 +173,8 @@ function App() {
           <div className="filterGroup">
             <div className="filter">
               <select
-                value={filters.starsOrSoles}
-                onChange={(e) => setFilters({ ...filters, starsOrSoles: e.target.value })}>
+                  value={filters.starsOrSoles}
+                  onChange={(e) => setFilters({...filters, starsOrSoles: e.target.value})}>
                 <option value="both">Tipo de estrellas</option>
                 <option value="estrellas">Solo Estrellas</option>
                 <option value="soles">Solo Soles</option>
@@ -182,28 +182,32 @@ function App() {
             </div>
             <div className="filter">
               <select
-                value={filters.priceRange}
-                onChange={(e) => setFilters({ ...filters, priceRange: e.target.value })}>
+                  value={filters.priceRange}
+                  onChange={(e) => setFilters({...filters, priceRange: e.target.value})}>
                 <option value="">Rango de precios</option>
                 {filterOptions.priceRanges.map((price, index) => (
-                  <option key={index} value={price}>{price}</option>
+                    <option key={index} value={price}>{price}</option>
                 ))}
               </select>
             </div>
             <div className="filter">
               <select
-                value={filters.mealType}
-                onChange={(e) => setFilters({ ...filters, mealType: e.target.value })}>
+                  multiple
+                  value={filters.mealType}
+                  onChange={(e) => {
+                    const selectedOptions = Array.from(e.target.selectedOptions, option => option.value);
+                    setFilters({...filters, mealType: selectedOptions});
+                  }}>
                 <option value="">Tipo de comida</option>
                 {filterOptions.mealTypes.map((mealType, index) => (
-                  <option key={index} value={mealType}>{mealType}</option>
+                    <option key={index} value={mealType}>{mealType}</option>
                 ))}
               </select>
             </div>
             <div className="filter">
               <select
-                value={filters.starNumber}
-                onChange={(e) => setFilters({ ...filters, starNumber: e.target.value })}>
+                  value={filters.starNumber}
+                  onChange={(e) => setFilters({...filters, starNumber: e.target.value})}>
                 <option value="">Número de estrellas</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -216,16 +220,16 @@ function App() {
       )}
 
       {notFound && (
-        <p className="notFound">No se encontraron resultados para "{query}".</p>
+          <p className="notFound">No se encontraron resultados para "{query}".</p>
       )}
 
       <div className="resultsGrid">
         {filteredResults.map((result) => (
-          <div
-            key={result._id}
-            className="resultCard"
-            onClick={() => handleResultClick(result)}
-            style={{ cursor: 'pointer' }}
+            <div
+                key={result._id}
+                className="resultCard"
+                onClick={() => handleResultClick(result)}
+                style={{ cursor: 'pointer' }}
           >
             <img
               src={result._source.restaurant_photo_url}
