@@ -79,7 +79,8 @@
 .detailsMealType,
 .detailsRating,
 .detailsContact,
-.detailsDirection {
+.detailsDirection,
+.detailsInstagram {
   font-size: 1em;
   margin: 5px 0;
   color: #555;
@@ -93,6 +94,17 @@
 
 .detailsWeb:hover {
   text-decoration: underline;
+}
+
+.instagramLink {
+  color: #0066cc; /* Color del enlace */
+  text-decoration: none; /* Elimina el subrayado por defecto */
+  font-weight: bold; /* Opcional: hace el texto en negrita */
+}
+
+.instagramLink:hover {
+  text-decoration: underline; /* Muestra subrayado cuando el usuario pasa el ratón */
+  color: #005bb5; /* Color al pasar el ratón */
 }
 
 /* --- Contenedor del Horario de Trabajo y Mapa --- */
@@ -114,6 +126,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  align-items: stretch;
 }
 
 /* Tabla de horarios */
@@ -138,7 +151,6 @@
 /* Mapa */
 .mapContainer {
   flex: 1;
-  height: 320px;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
@@ -148,6 +160,11 @@
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.workingScheduleTable,
+.mapContainer {
+  flex: 1;
 }
 
 /* --- Servicios del Restaurante --- */

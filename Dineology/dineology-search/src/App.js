@@ -151,7 +151,7 @@ function App() {
         alt="Logo"
         className="App-logo"
         onClick={resetState} // Agregar manejador de clics
-        style={{ cursor: 'pointer' }} // Cambiar cursor para indicar que es clickeable
+        style={{ cursor: 'pointer' }}
       />
       <form onSubmit={handleSearch} className="form">
         <input

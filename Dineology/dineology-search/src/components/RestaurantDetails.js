@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './RestaurantDetails.css';
+import estrellaIcon from '../estrellaIcon.png';
+import solIcon from '../solIcon.png';
 
 function RestaurantDetails() {
   const location = useLocation();
@@ -46,9 +48,20 @@ function RestaurantDetails() {
     navigate('/', { state: { query: previousSearchQuery, previousResults } }); // Pasar el query y los resultados al navegar de vuelta
   };
 
-  const renderStars = (num) => {
-    if (num === 0) return ""; // No mostrar nada si son 0 estrellas
-    return "⭐".repeat(num); // Repetir el símbolo de estrella
+  const renderIcons = (num, iconSrc, altText) => {
+    if (num === 0) return null; // No mostrar nada si son 0 estrellas
+    return (
+      <>
+        {Array.from({ length: num }).map((_, index) => (
+          <img
+            key={index}
+            src={iconSrc}
+            alt={altText}
+            style={{ width: 15, height: 15, marginRight: 4 }}
+          />
+        ))}
+      </>
+    );
   };
 
   return (
@@ -75,10 +88,27 @@ function RestaurantDetails() {
                 </p>
             )}
             {restaurant.star_number !== undefined && (
-                <p className="detailsRating">Estrellas: {renderStars(restaurant.star_number)}</p>
+              <p className="detailsRating">
+                Estrellas: {renderIcons(restaurant.star_number, estrellaIcon, 'estrella')}
+              </p>
             )}
             {restaurant.soles_number !== undefined && (
-                <p className="detailsRating">Soles: {renderStars(restaurant.soles_number)}</p>
+              <p className="detailsRating">
+                Soles: {renderIcons(restaurant.soles_number, solIcon, 'sol')}
+              </p>
+            )}
+            {restaurant.instagram_user && (
+              <p className="detailsInstagram">
+                Usuario de Instagram:{' '}
+                <a
+                  href={`https://www.instagram.com/${restaurant.instagram_user}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="instagramLink"
+                >
+                  @{restaurant.instagram_user}
+                </a>
+              </p>
             )}
             {restaurant.contact_number && (
                 <p className="detailsContact">Contacto: {restaurant.contact_number}</p>
@@ -115,7 +145,22 @@ function RestaurantDetails() {
                   Object.entries(restaurant.working_schedule).map(([day, hours]) => (
                       <tr key={day}>
                         <td>{day}</td>
-                        <td>{hours[0] || "No disponible"}</td>
+                        <td>
+                          {hours.length > 0 ? (
+                              hours.map((hour, index) => (
+                                  <div
+                                      style={{
+                                        marginBottom: index !== hours.length - 1 ? '8px' : '0' // Solo aplica margen si no es la última hora
+                                      }}
+                                      key={index}
+                                  >
+                                    {hour}
+                                  </div> // Usar <div> para separar las horas por línea
+                              ))
+                          ) : (
+                              "No disponible"
+                          )}
+                        </td>
                       </tr>
                   ))
               ) : (
@@ -136,7 +181,7 @@ function RestaurantDetails() {
                   <iframe
                       src={`https://www.openstreetmap.org/export/embed.html?bbox=${coordinates.lon - 0.01},${coordinates.lat - 0.01},${coordinates.lon + 0.01},${coordinates.lat + 0.01}&layer=mapnik&marker=${coordinates.lat},${coordinates.lon}`}
                   width="100%"
-                  height="300"
+                  height="600px"
                   style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"

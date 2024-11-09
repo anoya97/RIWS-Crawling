@@ -1,5 +1,6 @@
 import scrapy
 import json
+import re
 from openpyxl.utils.datetime import days_to_time
 
 from ..items import DineologyItemRepsol
@@ -81,10 +82,13 @@ class RestaurantRepsolSpider(scrapy.Spider):
         instagram_user = response.xpath('//span[contains(text(), "Instagram")]/following-sibling::p/text()').get()
 
         if instagram_user:
-            if  instagram_user.startswith("@"):
-                item['instagram_user'] = instagram_user
-            else:
-                item['instagram_user'] = '@' + instagram_user.rstrip('/').split('/')[-1]
+            # Busca el primer nombre de usuario que empieza con @ y contiene caracteres alfanuméricos y guiones bajos
+            match = re.match(r'@([a-zA-Z0-9_]+)', instagram_user)
+            if match:
+                instagram_user = match.group(0)
+
+            instagram_user = instagram_user.lstrip('@')
+            item['instagram_user'] = instagram_user.rstrip('/').split('/')[-1]
 
         item['contact_number'] = response.xpath('//li[@class="basic__list__item"]//span[contains(text(), "Teléfono")]/following-sibling::p/text()').get()
 
@@ -126,32 +130,35 @@ class RestaurantRepsolSpider(scrapy.Spider):
             data = json.loads(data_hours)
 
             # Obtener los horarios de apertura
-            weekday_text = data['result']['opening_hours']['weekday_text']
+            if 'result' in data and 'opening_hours' in data['result']:
+                weekday_text = data['result']['opening_hours']['weekday_text']
 
-            # Mapear solo los horarios a los días de la semana
-            for i, horario in enumerate(weekday_text):
-                dia = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'][i]
+                # Mapear solo los horarios a los días de la semana
+                for i, horario in enumerate(weekday_text):
+                    dia = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'][i]
 
-                # Verificar si el día está cerrado
-                if "Closed" in horario:
-                    item['working_schedule'][dia] = ["cerrado"]
-                else:
-                    # Extraer solo la parte del horario y formatear
-                    horarios = horario.split(': ', 1)[1]
-                    # Convertir los horarios a formato 24h
-                    horarios_lista = []
-                    for periodo in horarios.split(', '):
-                        horas = periodo.split('–')
-                        hora_inicio = self.convert_to_24h(horas[0].strip())
-                        hora_fin = self.convert_to_24h(horas[1].strip())
-                        horarios_lista.append(f"{hora_inicio}-{hora_fin}")
-                    item['working_schedule'][dia] = horarios_lista
+                    # Verificar si el día está cerrado
+                    if "Closed" in horario:
+                        item['working_schedule'][dia] = ["cerrado"]
+                    else:
+                        # Extraer solo la parte del horario y formatear
+                        horarios = horario.split(': ', 1)[1]
+                        # Convertir los horarios a formato 24h
+                        horarios_lista = []
+                        for periodo in horarios.split(', '):
+                            horas = periodo.split('–')
+                            hora_inicio = self.convert_to_24h(horas[0].strip())
+                            hora_fin = self.convert_to_24h(horas[1].strip())
+                            horarios_lista.append(f"{hora_inicio}-{hora_fin}")
+                        item['working_schedule'][dia] = horarios_lista
 
         yield item
 
     def convert_to_24h(self, time_str):
         """Convierte el tiempo de formato 12h a 24h."""
-        if 'PM' in time_str and not time_str.startswith('12'):
+        if "Open 24 hours" in time_str:
+            return "00:00-23:59"
+        elif 'PM' in time_str and not time_str.startswith('12'):
             hour = int(time_str.split(':')[0]) + 12
         elif 'AM' in time_str and time_str.startswith('12'):
             hour = 0
