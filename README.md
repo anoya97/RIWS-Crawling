@@ -1,5 +1,11 @@
 # RIWS-Crawling
 
+> [!CAUTION]
+> Terminar de fusionar los docs.
+> Borderline del searchbar.
+> Pulir busqueda searchbar.
+> Refact.
+
 > [!IMPORTANT]
 > *Fecha límite de entrega: 15/11/2024*
 
@@ -13,6 +19,5 @@
 >   - Tecnologías usadas.
  
 ## Webs:
-- https://www.thefork.es/restaurantes/madrid-c328022/con-estrella-michelin-t4423
 - https://guide.michelin.com/es/es
 - https://guiarepsol.com/es/soles-repsol/ediciones-de-soles-guia-repsol/
