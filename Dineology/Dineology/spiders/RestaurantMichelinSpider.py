@@ -17,11 +17,13 @@ class RestaurantMichelinSpider(scrapy.Spider):
 
             # Limpia el nombre del restaurante
             item['name'] = restaurant.css('h3.card__menu-content--title a::text').get().strip()
-
             # Extrae solo el precio, limpiando los saltos de línea y espacios adicionales
             price_parts = restaurant.css('div.card__menu-footer--score.pl-text::text').getall()
             item['price'] = price_parts[1].strip().split('·')[0].strip()
-            item['meal_type'] = price_parts[1].strip().split('·')[1].strip()
+
+
+            item['meal_type'] = [price_parts[1].strip().split('·')[1].strip()]
+
 
             detail_page = restaurant.css('div.card__menu-image a::attr(href)').get()
             detail_page_url = response.urljoin(detail_page)
@@ -55,7 +57,7 @@ class RestaurantMichelinSpider(scrapy.Spider):
 
         # Obtenemos el item completo
         item = response.meta['item']
-        
+
         item['restaurant_photo_url'] = response.css('div.masthead__gallery-image::attr(data-bg)').get()
 
         star_icons = response.css('div.data-sheet__classification-item--content img.michelin-award').getall()
@@ -65,7 +67,10 @@ class RestaurantMichelinSpider(scrapy.Spider):
 
         item["description"] = response.css('div.data-sheet__description::text').get().strip()
 
-        item['contact_number'] = response.css('div.d-flex span::text').get().strip()
+        # item['contact_number'] = response.css('div.d-flex span::text').get().strip()
+        item['contact_number'] = re.sub(r'^\+34|\s+', '', response.css('div.d-flex span::text').get().strip())
+        #item['contact_number'] = re.sub(r'\D', '', item['contact_number']).lstrip('+')
+
         item['web_url'] = response.css('div.collapse__block-item.link-item a::attr(href)').get()
 
         # Seleccionar el contenedor padre que agrupa los días y horarios

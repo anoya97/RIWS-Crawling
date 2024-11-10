@@ -1,4 +1,8 @@
 /* App.css */
+html {
+  background-color: #f5f5f5;
+}
+
 .App {
   text-align: center;
   padding: 50px;
@@ -20,23 +24,48 @@
   width: 300px; /* Compacto */
   padding: 8px; /* Compacto */
   font-size: 14px; /* Tamaño de fuente pequeño */
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
   border-radius: 5px;
 }
 
 .button {
-  padding: 8px 15px; /* Compacto */
-  font-size: 14px; /* Tamaño de fuente pequeño */
+  padding: 8px 15px;
+  font-size: 14px;
   margin-left: 10px;
   border: none;
   border-radius: 5px;
   background-color: #5f7be7;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.2s; /* Transición suave */
+  transition: background-color 0.2s;
+  min-width: 80px; /* Añadido para garantizar un ancho mínimo consistente */
+  height: 35px; /* Añadido para garantizar una altura consistente */
+  display: inline-flex; /* Añadido para centrar el contenido */
+  align-items: center; /* Añadido para centrar el contenido verticalmente */
+  justify-content: center;
+}
+
+.buttonBorrar {
+  font-size: 14px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5f7be7;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  min-width: 40px; /* Añadido para garantizar un ancho mínimo consistente */
+  height: 35px; /* Añadido para garantizar una altura consistente */
+  display: inline-flex; /* Añadido para centrar el contenido */
+  align-items: center; /* Añadido para centrar el contenido verticalmente */
+  justify-content: center;
 }
 
 .button:hover {
+  background-color: #33bde0; /* Cambio de color en hover */
+}
+
+.buttonBorrar:hover {
   background-color: #33bde0; /* Cambio de color en hover */
 }
 
@@ -108,25 +137,26 @@
 }
 
 .filters {
+  display: inline-block;
   margin-top: 20px;
-  padding: 15px; /* Compacto */
+  padding: 15px;
   background-color: #f5f5f5;
   border-radius: 8px;
-  display: flex;
-  justify-content: center; /* Alinea los filtros al centro */
-  flex-wrap: wrap; /* Permite que los filtros se envuelvan */
+  text-align: center; /* Centra todo el contenido */
 }
 
 .filterGroup {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Alinea los filtros al centro */
+  justify-content: center;
+  align-items: center; /* Añadido para alinear verticalmente */
+  margin-bottom: 15px; /* Espacio entre los filtros y el botón *//* Espacio entre los filtros y el botón */
 }
 
 .filter {
-  margin: 10px; /* Mayor separación */
-  flex: 1 0 120px; /* Espacio equitativo y ancho mínimo */
-  max-width: 200px; /* Ancho máximo */
+  margin: 10px;
+  flex: 0 0 auto; /* Evita que los filtros se estiren */
+  max-width: 200px;
 }
 
 .filter label {
@@ -145,6 +175,10 @@
   border-radius: 5px;
   background-color: #fff; /* Fondo claro */
   transition: border-color 0.2s; /* Transición suave */
+}
+
+.filter .button{
+   margin: 0 10px; /* Ajusta el margen para que esté al lado de los filtros */
 }
 
 .filter select:focus {
