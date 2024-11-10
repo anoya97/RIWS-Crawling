@@ -1,10 +1,10 @@
 # RIWS-Crawling
 
 > [!CAUTION]
-> Terminar de fusionar los docs.
-> Borderline del searchbar.
-> Pulir busqueda searchbar.
-> Refact.
+> - Terminar de fusionar los docs.
+> - Borderline del searchbar.
+> - Pulir busqueda searchbar.
+> - Refact.
 
 > [!IMPORTANT]
 > *Fecha límite de entrega: 15/11/2024*
