@@ -1,8 +1,7 @@
-import requests
 import os
 import json
 from elasticsearch import Elasticsearch, exceptions
-from geopy.distance import geodesic
+import Levenshtein
 
 # Conexión con Elasticsearch en localhost
 es = Elasticsearch(hosts=["http://localhost:9200"])
@@ -16,30 +15,6 @@ if not es.indices.exists(index=index_name):
     except exceptions.ElasticsearchException as e:
         print(f"Error al crear el índice '{index_name}': {e}")
 
-
-# Función para obtener coordenadas usando Nominatim (con nombre o dirección)
-def get_coordinates_nominatim(address_or_name):
-    url = f"https://nominatim.openstreetmap.org/search"
-    params = {
-        "q": address_or_name,
-        "format": "json",
-        "addressdetails": 1,
-        "limit": 1
-    }
-    headers = {
-        "User-Agent": "Dineology r.delblanco@udc.es"
-    }
-    response = requests.get(url, params=params, headers=headers)
-
-    if response.status_code == 200:
-        results = response.json()
-        if results:
-            lat = results[0]['lat']
-            lon = results[0]['lon']
-            return float(lat), float(lon)
-    return None, None  # Si no se encuentran coordenadas
-
-
 # Función para fusionar documentos
 def merge_documents(doc1, doc2):
     merged_doc = doc1.copy()
@@ -47,8 +22,7 @@ def merge_documents(doc1, doc2):
         if key not in merged_doc or not merged_doc[key]:
             merged_doc[key] = value
         elif isinstance(merged_doc[key], list) and isinstance(value, list):
-            if all(isinstance(item, dict) for item in merged_doc[key]) and all(
-                    isinstance(item, dict) for item in value):
+            if all(isinstance(item, dict) for item in merged_doc[key]) and all(isinstance(item, dict) for item in value):
                 merged_doc[key].extend(item for item in value if item not in merged_doc[key])
             else:
                 merged_doc[key] = list(set(merged_doc[key] + value))
@@ -58,7 +32,6 @@ def merge_documents(doc1, doc2):
                     merged_doc[key][sub_key] = sub_value
     return merged_doc
 
-
 # Sanear documentos eliminando campos con nombres vacíos
 def sanitize_document(doc):
     sanitized_doc = {}
@@ -66,25 +39,62 @@ def sanitize_document(doc):
         if key.strip():
             sanitized_doc[key] = value
         else:
-            print(
-                f"Advertencia: Campo con nombre vacío detectado en el documento {doc.get('name', 'sin nombre')} y será omitido.")
+            print(f"Advertencia: Campo con nombre vacío detectado en el documento {doc.get('name', 'sin nombre')} y será omitido.")
     return sanitized_doc
 
-# Función para obtener un fragmento del nombre (1/3 de longitud)
-def get_name_fragment(name):
-    if name:
-        fragment_length = max(1, len(name) // 3)  # Asegurarse de que el fragmento tenga al menos 1 carácter
-        return name[:fragment_length].strip()
-    return name
+# Función para comprobar si hay otro restaurante con estrellas y sin soles
+def check_similar_restaurant_with_stars(restaurant_name):
+    query = {
+        "query": {
+            "bool": {
+                "must": [
+                    {
+                        "match": {
+                            "name": {
+                                "query": restaurant_name,
+                                "fuzziness": "AUTO"  # Fuzziness automático para mayor flexibilidad
+                            }
+                        }
+                    },
+                    {
+                        "exists": {
+                            "field": "star_number"
+                        }
+                    },
+                    {
+                        "bool": {
+                            "must_not": [
+                                {
+                                    "exists": {
+                                        "field": "soles_number"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
 
-# Función para comparar la distancia entre dos ubicaciones
-def are_locations_similar(lat1, lon1, lat2, lon2, max_distance_km=1.0):
-    if None in [lat1, lon1, lat2, lon2]:
-        return False
-    location1 = (lat1, lon1)
-    location2 = (lat2, lon2)
-    distance = geodesic(location1, location2).km
-    return distance <= max_distance_km
+    result = es.search(index=index_name, body=query)
+    return result["hits"]["hits"]
+
+# Función para comprobar si la URL y dirección coinciden
+def check_url_and_contact_equal(doc1, doc2):
+    url1 = doc1.get("web_url")
+    url2 = doc2.get("web_url")
+    contact1 = doc1.get("contact_number")
+    contact2 = doc2.get("contact_number")
+    return url1 == url2 or contact1 == contact2
+
+# Función para calcular la distancia de Levenshtein entre dos cadenas
+def levenshtein_distance(str1, str2):
+    return Levenshtein.distance(str1, str2)
+
+# Umbrales de similitud para las distancias de Levenshtein
+LEVENSHTEIN_THRESHOLD_NAME = 3
+LEVENSHTEIN_THRESHOLD_DIRECTION = 3
 
 # Directorio donde están los archivos JSON
 json_directory = "."
@@ -103,123 +113,64 @@ for filename in os.listdir(json_directory):
                         if not restaurant_name:
                             continue
 
-                        # Obtener fragmento del nombre para la búsqueda
-                        name_fragment = get_name_fragment(restaurant_name)
+                        # Comprobar si hay otro restaurante con estrellas y sin soles
+                        similar_restaurants = check_similar_restaurant_with_stars(restaurant_name)
+                        merged = False  # Indicador de si se realizó una fusión
+                        if similar_restaurants:
+                            for existing_doc_hit in similar_restaurants:
+                                existing_doc = existing_doc_hit["_source"]
+                                existing_doc_id = existing_doc_hit["_id"]
 
-                        # Obtener las coordenadas para la dirección del restaurante
-                        address = doc.get("direction")
-                        lat, lon = None, None
-                        if address:
-                            # Primero intentamos obtener las coordenadas usando la dirección
-                            lat, lon = get_coordinates_nominatim(address)
-                            if lat and lon:
-                                doc['location'] = {'lat': lat, 'lon': lon}
-                                print(f"Coordenadas encontradas usando la dirección: {address}")
-                            else:
-                                print(f"No se encontraron coordenadas para {restaurant_name}, dirección: {address}")
-                                # Si no se encuentran, intentamos con el nombre del restaurante
-                                lat, lon = get_coordinates_nominatim(restaurant_name)
-                                if lat and lon:
-                                    doc['location'] = {'lat': lat, 'lon': lon}
-                                    print(f"Coordenadas encontradas usando el nombre: {restaurant_name}")
+                                # Comprobar si la URL y número de contacto coinciden
+                                if check_url_and_contact_equal(doc, existing_doc):
+                                    merged_doc = merge_documents(existing_doc, doc)
+                                    es.index(index=index_name, id=existing_doc_id, body=merged_doc)
+                                    merged = True
+                                    break
                                 else:
-                                    print(
-                                        f"No se encontraron coordenadas ni con la dirección ni con el nombre para {restaurant_name}")
+                                    # Comparar usando Levenshtein
+                                    name_distance = levenshtein_distance(doc.get("name", ""), existing_doc.get("name", ""))
+                                    direction_distance = levenshtein_distance(doc.get("direction", ""), existing_doc.get("direction", ""))
+                                    if name_distance <= LEVENSHTEIN_THRESHOLD_NAME or direction_distance <= LEVENSHTEIN_THRESHOLD_DIRECTION:
+                                        merged_doc = merge_documents(existing_doc, doc)
+                                        es.index(index=index_name, id=existing_doc_id, body=merged_doc)
+                                        merged = True
+                                        break
 
-                        # Búsqueda con coincidencias flexibles usando un fragmento del nombre
-                        query = {
-                            "query": {
-                                "match_phrase_prefix": {
-                                    "name": {
-                                        "query": name_fragment
-                                    }
-                                }
-                            },
-                            "min_score": 2.0  # Ajuste del umbral de similitud
-                        }
-                        result = es.search(index=index_name, body=query)
-
-                        if result["hits"]["total"]["value"] > 0:
-                            # Obtener el primer documento existente coincidente
-                            existing_doc = result["hits"]["hits"][0]["_source"]
-                            existing_doc_id = result["hits"]["hits"][0]["_id"]
-
-                            # Verificar si tienen coordenadas y si las ubicaciones son similares
-                            existing_location = existing_doc.get("location", {})
-                            existing_lat = existing_location.get("lat")
-                            existing_lon = existing_location.get("lon")
-
-                            if lat and lon and are_locations_similar(lat, lon, existing_lat, existing_lon):
-                                merged_doc = merge_documents(existing_doc, doc)
-                                es.index(index=index_name, id=existing_doc_id, body=merged_doc)
-                                print(
-                                    f"Documento de {restaurant_name} fusionado y actualizado con ID {existing_doc_id}")
-                            else:
-                                es.index(index=index_name, body=doc)
-                                print(
-                                    f"Documento de {restaurant_name} indexado como nuevo porque las ubicaciones no son similares")
-                        else:
+                        if not merged:
                             es.index(index=index_name, body=doc)
-                            print(f"Documento de {restaurant_name} indexado")
                 elif isinstance(data, dict):
                     data = sanitize_document(data)
                     restaurant_name = data.get("name")
                     if not restaurant_name:
                         continue
 
-                    # Obtener fragmento del nombre para la búsqueda
-                    name_fragment = get_name_fragment(restaurant_name)
-
-                    # Obtener las coordenadas para la dirección del restaurante
-                    address = data.get("direction")
-                    lat, lon = None, None
-                    if address:
-                        # Primero intentamos obtener las coordenadas usando la dirección
-                        lat, lon = get_coordinates_nominatim(address)
-                        if lat and lon:
-                            data['location'] = {'lat': lat, 'lon': lon}
-                            print(f"Coordenadas encontradas usando la dirección: {address}")
-                        else:
-                            print(f"No se encontraron coordenadas para {restaurant_name}, dirección: {address}")
-                            # Si no se encuentran, intentamos con el nombre del restaurante
-                            lat, lon = get_coordinates_nominatim(restaurant_name)
-                            if lat and lon:
-                                data['location'] = {'lat': lat, 'lon': lon}
-                                print(f"Coordenadas encontradas usando el nombre: {restaurant_name}")
+                    # Repetir el mismo flujo que para la lista
+                    similar_restaurants = check_similar_restaurant_with_stars(restaurant_name)
+                    merged = False
+                    if similar_restaurants:
+                        for existing_doc_hit in similar_restaurants:
+                            existing_doc = existing_doc_hit["_source"]
+                            existing_doc_id = existing_doc_hit["_id"]
+                            if check_url_and_contact_equal(data, existing_doc):
+                                merged_doc = merge_documents(existing_doc, data)
+                                es.index(index=index_name, id=existing_doc_id, body=merged_doc)
+                                merged = True
+                                break
                             else:
-                                print(
-                                    f"No se encontraron coordenadas ni con la dirección ni con el nombre para {restaurant_name}")
+                                name_distance = levenshtein_distance(data.get("name", ""), existing_doc.get("name", ""))
+                                direction_distance = levenshtein_distance(data.get("direction", ""), existing_doc.get("direction", ""))
+                                if name_distance <= LEVENSHTEIN_THRESHOLD_NAME or direction_distance <= LEVENSHTEIN_THRESHOLD_DIRECTION:
+                                    merged_doc = merge_documents(existing_doc, data)
+                                    es.index(index=index_name, id=existing_doc_id, body=merged_doc)
+                                    merged = True
+                                    break
 
-                    query = {
-                        "query": {
-                            "match_phrase_prefix": {
-                                "name": {
-                                    "query": name_fragment
-                                }
-                            },
-                            "min_score": 2.0
-                        }
-                    }
-                    result = es.search(index=index_name, body=query)
-
-                    if result["hits"]["total"]["value"] > 0:
-                        existing_doc = result["hits"]["hits"][0]["_source"]
-                        existing_doc_id = result["hits"]["hits"][0]["_id"]
-
-                        existing_location = existing_doc.get("location", {})
-                        existing_lat = existing_location.get("lat")
-                        existing_lon = existing_location.get("lon")
-
-                        if lat and lon and are_locations_similar(lat, lon, existing_lat, existing_lon):
-                            merged_doc = merge_documents(existing_doc, data)
-                            es.index(index=index_name, id=existing_doc_id, body=merged_doc)
-                            print(f"Documento de {restaurant_name} fusionado y actualizado con ID {existing_doc_id}")
-                        else:
-                            es.index(index=index_name, body=data)
-                            print(
-                                f"Documento de {restaurant_name} indexado como nuevo porque las ubicaciones no son similares")
+                    if not merged:
+                        es.index(index=index_name, body=data)
         except json.JSONDecodeError:
             print(f"Error: El archivo {filename} no tiene formato JSON válido y será omitido.")
         except Exception as e:
             print(f"Error inesperado al indexar {filename}: {e}")
+
 print("Proceso de indexación completado.")

@@ -23,6 +23,7 @@ function App() {
   });
   const [filterOptions, setFilterOptions] = useState({
     priceRanges: [],
+    mealTypes:[]
   });
   const [showFilters, setShowFilters] = useState(false);
   const navigate = useNavigate();
@@ -43,13 +44,16 @@ function App() {
         query: {
           bool: {
             should: [
-              { wildcard: { "name": `*${searchQuery.toLowerCase()}*` } },
-              { wildcard: { "meal_type": `*${searchQuery.toLowerCase()}*` } }
-            ]
+              // Coincidencia exacta sin considerar mayúsculas
+              { term: { "name.keyword": searchQuery.toLowerCase() } }, // Coincidencia exacta con minúsculas
+              { match: { "name": searchQuery.toLowerCase() } },        // Coincidencia con fuzziness para "clos madrid"
+              { wildcard: { "name": `*${searchQuery.toLowerCase()}*` } }, // Coincidencia parcial
+              { wildcard: { "meal_type": `*${searchQuery.toLowerCase()}*` } } // Coincidencia parcial en tipo de comida
+            ],
+            minimum_should_match: 1 // Asegura que al menos una de las condiciones coincida
           }
         }
       });
-
       // Función para convertir el precio medio en símbolos €
       const getPriceSymbols = (averagePrice) => {
         if (averagePrice <= 50) return '€';
@@ -324,27 +328,31 @@ function App() {
       )}
 
       <div className="resultsGrid">
-      {filteredResults.map((result) => (
-            <div
-                key={result._id}
-                className="resultCard"
-                onClick={() => handleResultClick(result)}
-                style={{ cursor: 'pointer' }}
-          >
-            <img
-              src={result._source.restaurant_photo_url || "https://play-lh.googleusercontent.com/D-7VBAD71gJsTno_3uZYCEOt4TF7uf_FAesVtXBNkyjRbdJOh7y806mGu63Z3U1HYQ"}
-              alt={result._source.name}
-              className="restaurantPhoto"
-            />
-            <div className="resultInfo">
-              <h2 className="resultName">{result._source.name}</h2>
-              <p className="resultLocation">{result._source.direction}</p>
-              <p className="resultPrice">{result._source.price}</p>
-              <p className="resultMealType">{formatMealType(result._source.meal_type)}</p>
-              {renderStarsAndSoles(result._source.soles_number, result._source.star_number)}
-            </div>
-          </div>
-        ))}
+        {Array.isArray(filteredResults) && filteredResults.length > 0 ? (
+            filteredResults.map((result) => (
+                <div
+                    key={result._id}
+                    className="resultCard"
+                    onClick={() => handleResultClick(result)}
+                    style={{cursor: 'pointer'}}
+                >
+                  <img
+                      src={result._source.restaurant_photo_url || "https://play-lh.googleusercontent.com/D-7VBAD71gJsTno_3uZYCEOt4TF7uf_FAesVtXBNkyjRbdJOh7y806mGu63Z3U1HYQ"}
+                      alt={result._source.name}
+                      className="restaurantPhoto"
+                  />
+                  <div className="resultInfo">
+                    <h2 className="resultName">{result._source.name}</h2>
+                    <p className="resultLocation">{result._source.direction}</p>
+                    <p className="resultPrice">{result._source.price}</p>
+                    <p className="resultMealType">{formatMealType(result._source.meal_type)}</p>
+                    {renderStarsAndSoles(result._source.soles_number, result._source.star_number)}
+                  </div>
+                </div>
+            ))
+        ) : (
+            <p></p>
+        )}
       </div>
     </div>
   );
@@ -352,10 +360,10 @@ function App() {
 
 function AppWrapper() {
   return (
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/:restaurantName" element={<RestaurantDetails />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<App/>}/>
+        <Route path="/:restaurantName" element={<RestaurantDetails/>}/>
+      </Routes>
   );
 }
 
