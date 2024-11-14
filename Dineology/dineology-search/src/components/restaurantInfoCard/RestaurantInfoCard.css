@@ -1,0 +1,81 @@
+/* --- Tarjeta del Restaurante (RestaurantCard) --- */
+.restaurantCard {
+  display: flex;
+  flex-direction: row; /* Imagen e información en fila */
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.imageWrapper {
+  width: 300px; /* Ancho fijo para la imagen */
+  height: 450px; /* Altura fija para la imagen */
+  overflow: hidden;
+}
+
+.restaurantImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.restaurantInfo {
+  padding: 20px;
+  flex: 1;
+}
+
+.detailsTitle {
+  font-size: 2em;
+  margin: 10px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.detailsDescription {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.detailsData {
+  margin-top: 20px;
+}
+
+.detailsPrice,
+.detailsMealType,
+.detailsRating,
+.detailsContact,
+.detailsDirection,
+.detailsInstagram,
+.detailsOwners {
+  font-size: 1em;
+  margin: 5px 0;
+  color: #555;
+}
+
+.detailsWeb {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.detailsWeb:hover {
+  text-decoration: underline;
+}
+
+.instagramLink {
+  color: #0066cc; /* Color del enlace */
+  text-decoration: none; /* Elimina el subrayado por defecto */
+  font-weight: bold; /* Opcional: hace el texto en negrita */
+}
+
+.instagramLink:hover {
+  text-decoration: underline; /* Muestra subrayado cuando el usuario pasa el ratón */
+  color: #005bb5; /* Color al pasar el ratón */
+}

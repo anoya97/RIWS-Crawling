@@ -3,7 +3,7 @@ import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 import logo from './Logo.png';
-import RestaurantDetails from './components/RestaurantDetails';
+import RestaurantDetails from './components/restaurantDetails/RestaurantDetails';
 import solIcon from './solIcon.png';
 import estrellaIcon from './estrellaIcon.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
