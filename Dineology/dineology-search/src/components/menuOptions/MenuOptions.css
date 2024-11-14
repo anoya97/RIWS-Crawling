@@ -3,9 +3,9 @@
 /* Contenedor de las cartas de los menús */
 .menuCardsContainer {
   display: flex;
-  flex-wrap: wrap; /* Asegura que las cartas se acomoden en múltiples filas si es necesario */
-  gap: 20px; /* Espacio entre las cartas */
-  justify-content: center; /* Centra las cartas en la pantalla */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 /* Estilo para cada carta de menú */
@@ -13,8 +13,8 @@
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
-  width: 250px; /* Ancho fijo para cada carta */
-  height: max-content; /* Altura fija inicial para cada carta */
+  width: 250px;
+  height: max-content;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.5s ease, box-shadow 0.5s ease, height 0.5s ease;
@@ -24,10 +24,10 @@
 
 /* Efecto hover solo en la carta sobre la que se pasa el ratón */
 .menuCard:hover {
-  transform: translateY(-5px); /* Eleva solo la carta sobre la que está el ratón */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Aumenta el sombreado */
-  z-index: 1; /* Asegura que la carta que está siendo "hovered" se quede encima */
-  height: auto; /* Aumenta la altura cuando se pasa el ratón por encima */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  height: auto;
 }
 
 /* Nombre del menú */
@@ -51,27 +51,26 @@
   font-size: 1em;
   color: #666;
   line-height: 1.5;
-  text-align: justify; /* Justificar el texto */
-  max-height: 80px; /* Limitar la altura inicialmente */
-  overflow: hidden; /* Ocultar texto fuera del área visible */
-  transition: max-height 0.5s ease; /* Animación para el cambio de altura */
-  margin-top: auto; /* Asegura que la descripción siempre quede al final de la tarjeta */
-  padding-bottom: 10px; /* Espacio extra en la parte inferior para no cortar el texto */
+  text-align: justify;
+  max-height: 80px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin-top: auto;
+  padding-bottom: 10px;
 }
 
-/* Solo cuando se pasa el ratón por encima de la carta, expandir su descripción */
 .menuCard:hover .menuDescription {
-  max-height: 400px; /* Expande solo la descripción de la carta sobre la que está el ratón */
-  overflow: visible; /* Deja que el texto se vea completamente */
+  max-height: 400px;
+  overflow: visible;
 }
 
 /* Estilo para la descripción corta del menú */
 .shortMenuDescription {
-  font-size: 1em; /* Menor tamaño que el título */
-  color: #888; /* Color gris más suave para hacerlo menos protagonista */
-  margin-top: 10px; /* Espacio encima de la descripción corta */
-  margin-bottom: 20px; /* Espacio debajo de la descripción corta */
-  text-align: left; /* Centrado de la descripción */
-  line-height: 1.5; /* Mejor espaciado entre líneas */
-  font-weight: normal; /* No tan destacado como el título */
+  font-size: 1em;
+  color: #888;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.5;
+  font-weight: normal;
 }

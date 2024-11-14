@@ -1,6 +1,6 @@
 import React from 'react';
-import estrellaIcon from '../../estrellaIcon.png';
-import solIcon from '../../solIcon.png';
+import estrellaIcon from '../../assets/estrellaIcon.png';
+import solIcon from '../../assets/solIcon.png';
 import './RestaurantInfoCard.css';
 
 const renderIcons = (num, iconSrc, altText) => {

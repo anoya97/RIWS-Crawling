@@ -2,10 +2,10 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
-import logo from './Logo.png';
+import logo from './assets/Logo.png';
 import RestaurantDetails from './components/restaurantDetails/RestaurantDetails';
-import solIcon from './solIcon.png';
-import estrellaIcon from './estrellaIcon.png';
+import solIcon from './assets/solIcon.png';
+import estrellaIcon from './assets/estrellaIcon.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faFilter } from '@fortawesome/free-solid-svg-icons';
@@ -27,12 +27,13 @@ function App() {
   });
   const [showFilters, setShowFilters] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation(); // Para acceder a la ubicación actual
+  const location = useLocation();
 
   // Manejo de búsqueda
   const handleSearch = async (e) => {
     e.preventDefault();
-    await fetchResults(query); // Llama a la función para buscar resultados
+    clearFilters();
+    await fetchResults(query);
   };
 
   // Función para obtener resultados de búsqueda
@@ -45,12 +46,13 @@ function App() {
           bool: {
             should: [
               // Coincidencia exacta sin considerar mayúsculas
-              { term: { "name.keyword": searchQuery.toLowerCase() } }, // Coincidencia exacta con minúsculas
-              { match: { "name": searchQuery.toLowerCase() } },        // Coincidencia con fuzziness para "clos madrid"
-              { wildcard: { "name": `*${searchQuery.toLowerCase()}*` } }, // Coincidencia parcial
-              { wildcard: { "meal_type": `*${searchQuery.toLowerCase()}*` } } // Coincidencia parcial en tipo de comida
+              { term: { "name.keyword": searchQuery.toLowerCase() } },
+              { match: { "name": searchQuery.toLowerCase() } },
+              { wildcard: { "name": `*${searchQuery.toLowerCase()}*` } },
+              { wildcard: { "meal_type": `*${searchQuery.toLowerCase()}*` } },
+              { wildcard: { "direction": `*${searchQuery.toLowerCase()}*` } }
             ],
-            minimum_should_match: 1 // Asegura que al menos una de las condiciones coincida
+            minimum_should_match: 1
           }
         }
       });
@@ -114,22 +116,19 @@ function App() {
     }
   }, []);
 
-
-
   // useEffect para manejar el estado al regresar a la página principal
   useEffect(() => {
     if (location.state && location.state.query) {
-      setQuery(location.state.query); // Restablece el query
-      fetchResults(location.state.query); // Ejecuta la búsqueda con el query
+      setQuery(location.state.query);
+      fetchResults(location.state.query);
     }
-  }, [location.state, fetchResults]); // Ejecutar cuando el estado de la ubicación cambie
+  }, [location.state, fetchResults]);
 
   // Manejo del clic en el resultado
   const handleResultClick = (restaurant) => {
     const restaurantName = restaurant._source.name.replace(/\s+/g, '-').toLowerCase();
-    navigate(`/${restaurantName}`, { state: { query, restaurant: restaurant._source } }); // Pasar el query y el restaurante
+    navigate(`/${restaurantName}`, { state: { query, restaurant: restaurant._source } });
   };
-
 
   const processMealTypes = (mealTypeValue) => {
   if (typeof mealTypeValue === 'string') {
@@ -149,7 +148,7 @@ function App() {
     mealType: '',
     starNumber: '',
   });
-  setFilteredResults(results); // Restaura los resultados originales
+  setFilteredResults(results);
 };
 
   // Aplicar filtros a los resultados
@@ -177,14 +176,10 @@ function App() {
       const stars = result._source.star_number || 0;
       const soles = result._source.soles_number || 0;
 
-      // Casos para cada número:
-      // 1. Solo estrellas igual al número seleccionado
-      // 2. Solo soles igual al número seleccionado
-      // 3. Ambos igual al número seleccionado
       return (
-          (stars === starNum && soles === 0) || // Solo estrellas
-          (soles === starNum && stars === 0) || // Solo soles
-          (stars === starNum && soles === starNum) // Ambos iguales
+          (stars === starNum && soles === 0) ||
+          (soles === starNum && stars === 0) ||
+          (stars === starNum && soles === starNum)
       );
     });
   }
@@ -253,7 +248,7 @@ function App() {
         src={logo}
         alt="Logo"
         className="App-logo"
-        onClick={resetState} // Agregar manejador de clics
+        onClick={resetState}
         style={{ cursor: 'pointer' }}
       />
       <form onSubmit={handleSearch} className="form">
@@ -278,7 +273,7 @@ function App() {
               <select
                   value={filters.starsOrSoles}
                   onChange={(e) => setFilters({...filters, starsOrSoles: e.target.value})}>
-                <option value="both">Tipo de galardon</option>
+                <option value="both">Tipo de galardón</option>
                 <option value="estrellas">Estrellas</option>
                 <option value="soles">Soles</option>
               </select>

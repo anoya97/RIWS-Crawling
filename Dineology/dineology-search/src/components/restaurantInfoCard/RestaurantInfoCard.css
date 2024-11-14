@@ -1,7 +1,7 @@
 /* --- Tarjeta del Restaurante (RestaurantCard) --- */
 .restaurantCard {
   display: flex;
-  flex-direction: row; /* Imagen e información en fila */
+  flex-direction: row;
   align-items: center;
   border-radius: 8px;
   overflow: hidden;
@@ -13,8 +13,8 @@
 }
 
 .imageWrapper {
-  width: 300px; /* Ancho fijo para la imagen */
-  height: 450px; /* Altura fija para la imagen */
+  width: 300px;
+  height: 450px;
   overflow: hidden;
 }
 
@@ -70,12 +70,12 @@
 }
 
 .instagramLink {
-  color: #0066cc; /* Color del enlace */
-  text-decoration: none; /* Elimina el subrayado por defecto */
-  font-weight: bold; /* Opcional: hace el texto en negrita */
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .instagramLink:hover {
-  text-decoration: underline; /* Muestra subrayado cuando el usuario pasa el ratón */
-  color: #005bb5; /* Color al pasar el ratón */
+  text-decoration: underline;
+  color: #005bb5;
 }
