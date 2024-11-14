@@ -21,9 +21,9 @@ html {
 }
 
 .input {
-  width: 300px; /* Compacto */
-  padding: 8px; /* Compacto */
-  font-size: 14px; /* Tamaño de fuente pequeño */
+  width: 300px;
+  padding: 8px;
+  font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -38,10 +38,10 @@ html {
   color: #fff;
   cursor: pointer;
   transition: background-color 0.2s;
-  min-width: 80px; /* Añadido para garantizar un ancho mínimo consistente */
-  height: 35px; /* Añadido para garantizar una altura consistente */
-  display: inline-flex; /* Añadido para centrar el contenido */
-  align-items: center; /* Añadido para centrar el contenido verticalmente */
+  min-width: 80px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -54,24 +54,24 @@ html {
   color: #fff;
   cursor: pointer;
   transition: background-color 0.2s;
-  min-width: 40px; /* Añadido para garantizar un ancho mínimo consistente */
-  height: 35px; /* Añadido para garantizar una altura consistente */
-  display: inline-flex; /* Añadido para centrar el contenido */
-  align-items: center; /* Añadido para centrar el contenido verticalmente */
+  min-width: 40px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
 }
 
 .button:hover {
-  background-color: #33bde0; /* Cambio de color en hover */
+  background-color: #33bde0;
 }
 
 .buttonBorrar:hover {
-  background-color: #33bde0; /* Cambio de color en hover */
+  background-color: #33bde0;
 }
 
 .notFoundMessage {
   color: red;
-  font-size: 16px; /* Tamaño de fuente pequeño */
+  font-size: 16px;
   margin: 20px 0;
 }
 
@@ -79,111 +79,110 @@ html {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px; /* Compacto */
-  max-width: 1400px; /* Ancho máximo del grid */
+  gap: 20px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .resultCard {
-  flex-basis: 18%; /* 5 tarjetas por fila */
-  max-width: 240px; /* Ancho máximo */
+  flex-basis: 18%;
+  max-width: 240px;
   border: 1px solid #ccc;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s; /* Transición suave */
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .resultCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .restaurantPhoto {
   width: 100%;
-  height: 200px; /* Altura de imagen compacta */
+  height: 200px;
   object-fit: cover;
 }
 
 .resultInfo {
-  padding: 10px; /* Espacio interno compacto */
+  padding: 10px;
   text-align: left;
 }
 
 .resultName {
-  font-size: 16px; /* Tamaño de fuente ajustado */
+  font-size: 16px;
   font-weight: bold;
   margin: 5px 0;
 }
 
 .resultLocation {
-  font-size: 12px; /* Tamaño de fuente más pequeño */
+  font-size: 12px;
   color: #777;
   margin: 5px 0;
 }
 
 .resultPrice {
-  font-size: 14px; /* Tamaño de fuente ajustado */
+  font-size: 14px;
   font-weight: bold;
   color: #333;
   margin: 5px 0;
 }
 
 .resultMealType {
-  font-size: 12px; /* Tamaño de fuente más pequeño */
+  font-size: 12px;
   color: #555;
   margin: 5px 0;
 }
 
 .filters {
   display: inline-block;
-  margin-top: 20px;
   padding: 15px;
   background-color: #f5f5f5;
   border-radius: 8px;
-  text-align: center; /* Centra todo el contenido */
+  text-align: center;
 }
 
 .filterGroup {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center; /* Añadido para alinear verticalmente */
-  margin-bottom: 15px; /* Espacio entre los filtros y el botón *//* Espacio entre los filtros y el botón */
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .filter {
   margin: 10px;
-  flex: 0 0 auto; /* Evita que los filtros se estiren */
+  flex: 0 0 auto;
   max-width: 200px;
 }
 
 .filter label {
   display: block;
   margin-bottom: 5px;
-  font-size: 12px; /* Tamaño de fuente más pequeño */
-  font-weight: bold; /* Negrita para visibilidad */
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .filter select {
-  width: auto; /* Ajusta al contenido */
-  min-width: 160px; /* Ancho mínimo */
-  padding: 6px; /* Compacto */
-  font-size: 12px; /* Tamaño de fuente más pequeño */
+  width: auto;
+  min-width: 160px;
+  padding: 6px;
+  font-size: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff; /* Fondo claro */
-  transition: border-color 0.2s; /* Transición suave */
+  background-color: #fff;
+  transition: border-color 0.2s;
 }
 
 .filter .button{
-   margin: 0 10px; /* Ajusta el margen para que esté al lado de los filtros */
+   margin: 0 10px;
 }
 
 .filter select:focus {
-  border-color: #4285f4; /* Color de borde al enfocar */
-  outline: none; /* Sin contorno al enfocar */
+  border-color: #4285f4;
+  outline: none;
 }
 
 .restaurant-details {
@@ -199,9 +198,9 @@ html {
 }
 
 .icon-star, .icon-sun {
-  width: 16px; /* Ancho reducido */
-  height: 16px; /* Alto reducido */
-  margin-right: 5px; /* Espacio entre el icono y el texto */
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
 }
 
 .starsAndSoles {
@@ -215,17 +214,17 @@ html {
 }
 
 .resultInfo .titleText {
-  font-family: inherit; /* Usa la misma fuente */
-  color: inherit; /* Usa el mismo color */
-  margin-bottom: 5px; /* Espacio entre el título y los íconos */
+  font-family: inherit;
+  color: inherit;
+  margin-bottom: 5px;
 }
 
 .starsAndSoles {
   display: flex;
   flex-direction: column;
-  margin-top: 10px; /* Espaciado */
+  margin-top: 10px;
 }
 
 .titleText {
-  color: #333; /* Asegúrate de que el color sea consistente */
+  color: #333;
 }
