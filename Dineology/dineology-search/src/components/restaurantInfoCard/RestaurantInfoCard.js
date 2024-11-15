@@ -23,7 +23,7 @@ const RestaurantInfoCard = ({ restaurant }) => (
   <div className="restaurantCard">
     <div className="imageWrapper">
       <img
-        src={restaurant.restaurant_photo_url || "default-image.jpg"}
+        src={restaurant.restaurant_photo_url || "https://play-lh.googleusercontent.com/D-7VBAD71gJsTno_3uZYCEOt4TF7uf_FAesVtXBNkyjRbdJOh7y806mGu63Z3U1HYQ"}
         alt={restaurant.name || "Foto del restaurante"}
         className="restaurantImage"
       />
